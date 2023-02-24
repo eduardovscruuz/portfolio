@@ -32,6 +32,11 @@ a{
     text-decoration: none;
     margin-left: 40px;
     color: black;
+    transition: all 0.2s;
+}
+
+a:hover{
+   color: rgb(0, 140, 255);
 }
 
 .home{
@@ -49,28 +54,53 @@ a{
     position: absolute;
     left: 0;
 }
-.rd, .rd1{
+.space{
     align-content: left;
     left: 0;
     width: 60px;
     height: 60px;
-    border: 3px solid white;
+    border: 2px solid white;
     border-top: none;
+    transition: all 0.3s;
 }
 
-.rd1{
+#github{
     border-top: 3px solid white;
 }
+
+
+#github img,#linkedin img,#twitch img,#instagram img{
+    width: 100%;
+    padding: 12px;
+}
+
+#github:hover{
+    background-color: white;
+}
+
+#linkedin:hover{
+    background-color: #1785c5;
+}
+
+#twitch:hover{
+    background-color: rgb(146, 70, 255);
+}
+
+#instagram:hover{
+    background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
 .hello{
     flex-direction: column;
     text-align: center;
     letter-spacing: 2px;
-    width: 70vw;
+    width: 80vw;
     color: white;
 
 }
 h1{
-    font-size: 50px;
+    font-size: 65px;
     text-transform: uppercase;
     font-weight: 900;
     margin-bottom: 35px;
@@ -100,7 +130,7 @@ button {
 
 button:hover {
     text-shadow: 2px 2px 5px #363636;
-    background-color: rgb(0, 183, 255);
+    background-color: rgb(0, 140, 255);
     box-shadow: 0px 15px 20px rgba(0, 183, 255, 0.171);
     color: #fff;
     transform: translateY(-7px);
