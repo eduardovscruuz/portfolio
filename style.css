@@ -39,6 +39,10 @@ a:hover {
 	color: rgb(0, 140, 255);
 }
 
+.flag {
+	width: 20px;
+}
+
 .home {
 	background-image: url(/media/coding-background.jpg);
 	background-size: cover;
