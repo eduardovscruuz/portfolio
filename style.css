@@ -1,158 +1,171 @@
-*{
-    font-family: 'Source Sans Pro', sans-serif;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+* {
+	font-family: "Source Sans Pro", sans-serif;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
-body{
-    height: 430vh;
-    background-image: linear-gradient(to right, #1785c5 0%, #4482df 100%);
-}
-
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    top: 0;
-    position: sticky;
-    height: 10vh;
-    background-color: white;
-    color: black;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-    font-size: 13px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 5px #c0c0c0;
+body {
+	height: 430vh;
+	background-image: linear-gradient(to right, #1785c5 0%, #4482df 100%);
 }
 
-a{
-    text-transform: uppercase;
-    text-decoration: none;
-    margin-left: 40px;
-    color: black;
-    transition: all 0.2s;
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	top: 0;
+	position: sticky;
+	height: 10vh;
+	background-color: white;
+	color: black;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+	font-size: 13px;
+	font-weight: 900;
+	letter-spacing: 2px;
+	text-shadow: 2px 2px 5px #c0c0c0;
 }
 
-a:hover{
-   color: rgb(0, 140, 255);
+a {
+	text-transform: uppercase;
+	text-decoration: none;
+	margin-left: 40px;
+	color: black;
+	transition: all 0.2s;
 }
 
-.home{
-    background-image: url(/media/coding-background.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-shadow: 2px 2px 15px #000000;
+a:hover {
+	color: rgb(0, 140, 255);
 }
 
-.social-media{
-    position: absolute;
-    left: 0;
-}
-.space{
-    align-content: left;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    border: 2px solid white;
-    border-top: none;
-    transition: all 0.3s;
+.home {
+	background-image: url(/media/coding-background.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	height: 90vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-shadow: 2px 2px 15px #000000;
 }
 
-#github{
-    border-top: 3px solid white;
+.social-media {
+	position: absolute;
+	left: 0;
+}
+.space {
+	align-content: left;
+	left: 0;
+	width: 60px;
+	height: 60px;
+	border: 2px solid white;
+	border-top: none;
+	transition: all 0.3s;
 }
 
-
-#github img,#linkedin img,#twitch img,#instagram img{
-    width: 100%;
-    padding: 12px;
+#github {
+	border-top: 3px solid white;
 }
 
-#github:hover{
-    background-color: white;
+#github img,
+#linkedin img,
+#instagram img {
+	width: 100%;
+	padding: 12px;
 }
 
-#linkedin:hover{
-    background-color: #1785c5;
+#hackerrank img {
+	width: 100%;
+	padding: 5px;
 }
 
-#twitch:hover{
-    background-color: rgb(146, 70, 255);
+#github:hover {
+	background-color: white;
 }
 
-#instagram:hover{
-    background: #d6249f;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+#linkedin:hover {
+	background-color: #1785c5;
 }
 
-.hello{
-    flex-direction: column;
-    text-align: center;
-    letter-spacing: 2px;
-    width: 80vw;
-    color: white;
-
-}
-h1{
-    font-size: 65px;
-    text-transform: uppercase;
-    font-weight: 900;
-    margin-bottom: 35px;
+#hackerrank:hover {
+	background-color: rgb(0, 0, 0);
 }
 
-p{
-    width: 50vw;
-    margin: auto;
-    margin-bottom: 40px;
-    font-size: 25px
+#instagram:hover {
+	background: #d6249f;
+	background: radial-gradient(
+		circle at 30% 107%,
+		#fdf497 0%,
+		#fdf497 5%,
+		#fd5949 45%,
+		#d6249f 60%,
+		#285aeb 90%
+	);
+}
+
+.hello {
+	flex-direction: column;
+	text-align: center;
+	letter-spacing: 2px;
+	width: 80vw;
+	color: white;
+}
+h1 {
+	font-size: 90px;
+	text-transform: uppercase;
+	font-weight: 900;
+	margin-bottom: 4px;
+}
+
+p {
+	width: 50vw;
+	margin: auto;
+	margin-bottom: 4px;
+	font-size: 23px;
 }
 
 button {
-    padding: 20px;
-    width: 20%;
-    font-size: 15px;
-    letter-spacing: 2px;
-    font-weight: 800;
-    background-color: white;
-    border: none;
-    border-radius: 10px;
-    text-shadow: 2px 2px 5px #c0c0c0;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    }
+	margin-top: 25px;
+	padding: 12px;
+	width: 10%;
+	font-size: 15px;
+	letter-spacing: 2px;
+	font-weight: 800;
+	background-color: white;
+	border: none;
+	border-radius: 10px;
+	text-shadow: 2px 2px 5px #c0c0c0;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+}
 
 button:hover {
-    text-shadow: 2px 2px 5px #363636;
-    background-color: rgb(0, 140, 255);
-    box-shadow: 0px 15px 20px rgba(0, 183, 255, 0.171);
-    color: #fff;
-    transform: translateY(-7px);
+	text-shadow: 2px 2px 5px #363636;
+	background-color: rgb(0, 140, 255);
+	box-shadow: 0px 15px 20px rgba(0, 183, 255, 0.171);
+	color: #fff;
+	transform: translateY(-7px);
 }
 
-.about{
-    height: 100vh;
-    background-color: rgb(233, 233, 233);
+.about {
+	height: 100vh;
+	background-color: rgb(233, 233, 233);
 }
-.projects{
-        height: 100vh;
-        background-color: rgb(255, 255, 255);
-}
-
-.contact{
-    background-image: url(/media/coding-background.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
+.projects {
+	height: 100vh;
+	background-color: rgb(255, 255, 255);
 }
 
-footer{
-    height: 30vh;
-    background-color: black;
+.contact {
+	background-image: url(/media/coding-background.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	height: 100vh;
+}
+
+footer {
+	height: 30vh;
+	background-color: rgb(0, 140, 255);
 }
