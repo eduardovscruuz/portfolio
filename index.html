@@ -15,53 +15,57 @@
 	</head>
 
 	<body>
-		<header>
-			<div class="toggle">
-				<img src="./media/brazil-flag.png" class="flag" />
-				<img src="media/usa-flag.png" class="flag" />
-				<span>Dark/Light Mode & Language</span>
-			</div>
+		<main>
+			<section class="active">
+				<div
+					onmouseover="revealText(this)"
+					onmouseout="hideText(this)
+				"
+					class="home"
+				>
+					<img src="/media/home.png" />
+					<p>HOME</p>
+				</div>
+			</section>
 
-			<div class="nav">
-				<a href="">Início</a>
-				<a href="">Sobre mim</a>
-				<a href="">Projetos</a>
-				<a href="">Contato</a>
-			</div>
-		</header>
-
-		<section class="home">
-			<div class="social-media">
-				<div class="space" id="github">
-					<img id="github-img" src="/media/github.png" />
+			<section class="navigate">
+				<div
+					onmouseover="revealText(this)"
+					onmouseout="hideText(this)"
+					class="about"
+				>
+					<img src="/media/contact.png" />
+					<p>ABOUT ME</p>
 				</div>
 
-				<div class="space" id="linkedin">
-					<img src="/media/linkedin.png" />
+				<div
+					onmouseover="revealText(this)"
+					onmouseout="hideText(this)"
+					class="skills"
+				>
+					<img src="/media/skills.png" />
+					<p>SKILLS</p>
 				</div>
 
-				<div class="space" id="hackerrank">
-					<img id="hackerrank-img" src="/media/hackerrank1.png.PNG" />
+				<div
+					onmouseover="revealText(this)"
+					onmouseout="hideText(this)"
+					class="projects"
+				>
+					<img src="/media/projects.png" />
+					<p>PROJECTS</p>
 				</div>
 
-				<div class="space" id="instagram">
-					<img src="/media/insta.png" />
+				<div
+					onmouseover="revealText(this)"
+					onmouseout="hideText(this)"
+					class="contact"
+				>
+					<img src="/media/email.webp" />
+					<p>CONTACT</p>
 				</div>
-			</div>
-
-			<div class="hello">
-				<p>OLÁ! EU SOU</p>
-				<h1>Eduardo Cruz</h1>
-				<p>ENGENHEIRO DE SOFTWARE</p>
-				<button>CURRÍCULO</button>
-			</div>
-		</section>
-
-		<section class="about"></section>
-		<section class="projects"></section>
-		<section class="contact"></section>
-
-		<footer></footer>
+			</section>
+		</main>
 
 		<script src="/script.js"></script>
 	</body>
