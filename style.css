@@ -8,66 +8,61 @@ body {
 	background-color: rgb(27, 27, 27);
 }
 
-div {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 80px;
-	height: 100vh;
-	transition: 0.4s;
-}
-main {
-	width: 100vw;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
 img {
 	width: 25px;
 }
-.active {
+.container {
 	display: flex;
-	width: 400px;
+	height: 100vh;
+	width: 100vw;
+	background-color: rgb(24, 24, 24);
+	transition: all 0.5s;
 }
 
-.navigate {
-	width: 400px;
-	display: flex;
-	justify-content: flex-end;
+.mini-container1 {
+	padding-right: 75vw;
 }
+
+.mini-container1,
+.mini-container2,
+.mini-container3,
+.mini-container4,
+.mini-container5 {
+	height: 100vh;
+	transition: all 0.5s;
+}
+
+.home,
+.about,
+.skills,
+.projects,
+.contact {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	min-width: 5vw;
+	transition: all 0.5s;
+}
+
 .home {
-	flex-direction: column;
 	background-color: #ffcf00;
 }
-
 .about {
-	flex-direction: column;
 	background-color: #ffa100;
 }
 
 .skills {
-	flex-direction: column;
 	background-color: #ff7a00;
 }
+
 .projects {
-	flex-direction: column;
 	background-color: #ff4d00;
 }
 
 .contact {
-	flex-direction: column;
 	background-color: #db4404;
-}
-.home:hover,
-.about:hover,
-.skills:hover,
-.projects:hover,
-.contact:hover {
-	cursor: pointer;
-	width: 40%;
-}
-
-p {
-	opacity: 0;
-	transition: 1s;
 }

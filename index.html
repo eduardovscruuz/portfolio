@@ -15,57 +15,31 @@
 	</head>
 
 	<body>
-		<main>
-			<section class="active">
-				<div
-					onmouseover="revealText(this)"
-					onmouseout="hideText(this)
-				"
-					class="home"
-				>
-					<img src="/media/home.png" />
-					<p>HOME</p>
-				</div>
-			</section>
+		<div class="container">
+			<div onClick="changePadding1()" class="mini-container1">
+				<div class="home"><img src="/media/home.png" />HOME</div>
+			</div>
 
-			<section class="navigate">
-				<div
-					onmouseover="revealText(this)"
-					onmouseout="hideText(this)"
-					class="about"
-				>
-					<img src="/media/contact.png" />
-					<p>ABOUT ME</p>
-				</div>
+			<div onClick="changePadding2()" class="mini-container2">
+				<div class="about"><img src="/media/contact.png" />ABOUT</div>
+			</div>
 
-				<div
-					onmouseover="revealText(this)"
-					onmouseout="hideText(this)"
-					class="skills"
-				>
-					<img src="/media/skills.png" />
-					<p>SKILLS</p>
-				</div>
+			<div onClick="changePadding3()" class="mini-container3">
+				<div class="skills"><img src="/media/skills.png" />SKILLS</div>
+			</div>
 
-				<div
-					onmouseover="revealText(this)"
-					onmouseout="hideText(this)"
-					class="projects"
-				>
-					<img src="/media/projects.png" />
-					<p>PROJECTS</p>
+			<div onClick="changePadding4()" class="mini-container4">
+				<div class="projects">
+					<img src="/media/projects.png" />PROJECTS
 				</div>
+			</div>
 
-				<div
-					onmouseover="revealText(this)"
-					onmouseout="hideText(this)"
-					class="contact"
-				>
-					<img src="/media/email.webp" />
-					<p>CONTACT</p>
+			<div onClick="changePadding5()" class="mini-container5">
+				<div class="contact">
+					<img src="/media/email.webp" /> CONTACT
 				</div>
-			</section>
-		</main>
+			</div>
+		</div>
 
 		<script src="/script.js"></script>
 	</body>
