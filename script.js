@@ -16,6 +16,7 @@ const changePadding1 = () => {
 	box2.style.padding = "0vw";
 	box3.style.padding = "";
 	box4.style.padding = "";
+	box5.style.padding = "0vw";
 	contentContainer2.style.display = "none";
 	contentContainer3.style.display = "none";
 	contentContainer4.style.display = "none";
