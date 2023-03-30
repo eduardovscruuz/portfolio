@@ -295,4 +295,51 @@ i {
 
 /* ESTILIZANDO OS PROJECTS --------------------------------------------------------------------------*/
 
+.div-dentro {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70vh;
+	background-color: rgb(40, 40, 40);
+	margin: 0px;
+	border-radius: 30px;
+	width: 60%;
+}
+
+.div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 90vh;
+}
+
+.previus,
+.next {
+	border: none;
+	outline: none;
+	background-color: #ff5b00;
+	margin: 15px;
+	border-radius: 15%;
+	height: 60px;
+	width: 60px;
+}
+
+.nextimg,
+.previmg {
+	opacity: 0.5;
+	margin-top: 5px;
+	margin-right: -7px;
+	width: 40%;
+	transition: all 0.3s;
+}
+.previmg {
+	transform: scaleX(-1);
+	margin-top: 3px;
+	margin-right: 3px;
+}
+
+.nextimg:hover,
+.previmg:hover {
+	opacity: 1;
+}
 /* ESTILIZANDO O CONTACT --------------------------------------------------------------------------*/
