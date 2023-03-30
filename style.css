@@ -4,37 +4,42 @@
 	margin: 0;
 }
 body {
-	background-color: rgb(27, 27, 27);
+	background-color: rgb(30, 30, 30);
 }
 
-img {
-	max-width: 30%;
-}
-.container {
+.main-container {
 	display: flex;
 	height: 100vh;
 	width: 100vw;
 	transition: all 0.5s;
 }
 
-.mini-container1 {
-	padding-right: 75vw;
+/* CORES DAS COLUNAS --------------------------------------------------------------------------*/
+.home-column {
+	background-color: #ffcf00;
+}
+.about-column {
+	background-color: #ffb000;
+}
+.skills-column {
+	background-color: #ff9100;
+}
+.projects-column {
+	background-color: #ff7200;
+}
+.contact-column {
+	background-color: #ff5b00;
+}
+.column-icon {
+	max-width: 30%;
 }
 
-.mini-container1,
-.mini-container2,
-.mini-container3,
-.mini-container4,
-.mini-container5 {
-	height: 100vh;
-	transition: all 0.5s;
-}
-
-.home,
-.about,
-.skills,
-.projects,
-.contact {
+/* TAMANHO DAS COLUNAS --------------------------------------------------------------------------*/
+.home-column,
+.about-column,
+.skills-column,
+.projects-column,
+.contact-column {
 	font-weight: bold;
 	display: flex;
 	align-items: center;
@@ -46,30 +51,25 @@ img {
 	font-size: 80%;
 }
 
-.home {
-	background-color: #ffcf00;
+/* TAMANHO DOS CONTAINERS E PADDING INICIAL DA HOME --------------------------------------------------------------------------*/
+.home-container,
+.about-container,
+.skills-container,
+.projects-container,
+.contact-container {
+	height: 100vh;
+	transition: all 0.5s;
 }
-.about {
-	background-color: #ffb000;
-}
-
-.skills {
-	background-color: #ff9100;
-}
-
-.projects {
-	background-color: #ff7200;
+.home-container {
+	padding-right: 75vw;
 }
 
-.contact {
-	background-color: #ff5b00;
-}
-
-.content-container1,
-.content-container2,
-.content-container3,
-.content-container4,
-.content-container5 {
+/* CONTAINER ONDE VAI O CONTEÚDO --------------------------------------------------------------------------*/
+.home-container-content,
+.about-container-content,
+.skills-container-content,
+.projects-container-content,
+.contact-container-content {
 	position: fixed;
 	top: 0vh;
 	left: 5vw;
@@ -83,7 +83,18 @@ img {
 	animation-name: example;
 	animation-duration: 1.5s;
 }
+@keyframes example {
+	from {
+		opacity: 0;
+		transform: scale(85%);
+	}
+	to {
+		opacity: 1;
+		transform: scale(100%);
+	}
+}
 
+/* CONFIGURAÇÕES GLOBAIS PARA OS CONTEÚDOS --------------------------------------------------------------------------*/
 .content {
 	display: flex;
 	flex-direction: column;
@@ -99,7 +110,8 @@ img {
 	letter-spacing: 15px;
 }
 
-section {
+section,
+.hello-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -110,89 +122,33 @@ section {
 	border-radius: 30px;
 }
 
-@keyframes example {
-	from {
-		opacity: 0;
-		transform: scale(80%);
-	}
-	to {
-		opacity: 1;
-		transform: scale(100%);
-	}
-}
-.content-container2,
-.content-container3,
-.content-container4,
-.content-container5 {
+/* DEIXANDO OS CONTEUDOS INVISIVEIS ATÉ SEREM CLICADOS --------------------------------------------------------------------------*/
+.about-container-content,
+.skills-container-content,
+.projects-container-content,
+.contact-container-content {
 	display: none;
 }
 
-.content-container2 {
+.about-container-content {
 	left: 10vw;
 }
-.content-container3 {
+.skills-container-content {
 	left: 15vw;
 }
-.content-container4 {
+.projects-container-content {
 	left: 20vw;
 }
-.content-container5 {
+.contact-container-content {
 	left: 25vw;
 }
 
-#profile-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 40%;
-	height: 100%;
-	padding: 0;
-	margin: 50px;
-}
-#profile {
-	max-width: 100%;
-	border-radius: 50%;
-}
-
-#paragr-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 60%;
-	height: 100%;
-	margin-right: 50px;
-}
-
+/* ESTILIZANDO A HOME --------------------------------------------------------------------------*/
 p {
 	color: white;
 	margin-bottom: 25px;
 	text-align: justify;
-}
-
-.front-end {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 33.3%;
-	height: 100%;
-}
-
-.back-end {
-	background-color: rgba(45, 45, 45);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 33.3%;
-	height: 100%;
-}
-.tools {
-	background-color: rgba(50, 50, 50);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 33.3%;
-	height: 100%;
+	margin-bottom: 0px;
 }
 
 h1 {
@@ -201,21 +157,9 @@ h1 {
 	margin-bottom: 50px;
 }
 
-i {
-	text-align: center;
-	margin: 20px;
-	color: white;
-	font-size: 130px;
-}
-
-.icons {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-}
-
 .hello-container {
 	color: white;
+	background-color: transparent;
 	text-transform: uppercase;
 	font-size: 20px;
 	font-weight: bold;
@@ -223,10 +167,6 @@ i {
 
 span {
 	font-size: 100px;
-}
-
-p {
-	margin-bottom: 0px;
 }
 
 .buttons {
@@ -265,3 +205,67 @@ p {
 	border: 2px solid #6cc644;
 	color: #6cc644;
 }
+/* ESTILIZANDO O ABOUT --------------------------------------------------------------------------*/
+#profile-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	height: 100%;
+	padding: 0;
+	margin: 50px;
+}
+#profile {
+	max-width: 100%;
+	border-radius: 50%;
+}
+
+#paragr-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 60%;
+	height: 100%;
+	margin-right: 50px;
+}
+/* ESTILIZANDO AS SKILLS --------------------------------------------------------------------------*/
+i {
+	text-align: center;
+	margin: 20px;
+	color: white;
+	font-size: 130px;
+}
+.icons {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.front-end {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 33.3%;
+	height: 100%;
+}
+
+.back-end {
+	background-color: rgba(45, 45, 45);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 33.3%;
+	height: 100%;
+}
+.tools {
+	background-color: rgba(50, 50, 50);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 33.3%;
+	height: 100%;
+}
+
+/* ESTILIZANDO OS PROJECTS --------------------------------------------------------------------------*/
+
+/* ESTILIZANDO O CONTACT --------------------------------------------------------------------------*/
