@@ -144,12 +144,6 @@ section,
 }
 
 /* ESTILIZANDO A HOME --------------------------------------------------------------------------*/
-p {
-	color: white;
-	margin-bottom: 25px;
-	text-align: justify;
-	margin-bottom: 0px;
-}
 
 h1 {
 	color: white;
@@ -158,6 +152,7 @@ h1 {
 }
 
 .hello-container {
+	display: block;
 	color: white;
 	background-color: transparent;
 	text-transform: uppercase;
@@ -166,13 +161,19 @@ h1 {
 }
 
 span {
+	font-size: 30px;
+}
+.eduardo {
 	font-size: 100px;
 }
 
+.name-container {
+	margin-top: 160px;
+}
 .buttons {
 	display: flex;
 	justify-content: space-between;
-	width: 50%;
+	width: 35%;
 	margin-top: 20px;
 }
 
@@ -184,28 +185,47 @@ span {
 #linkedin,
 #github {
 	margin-right: 10px;
-	font-size: 15px;
+	font-size: 19px;
 	text-transform: uppercase;
 	font-weight: bold;
 	background-color: transparent;
-	border-radius: 15px;
+	border-radius: 5px;
 	width: 100%;
-	border: 2px solid #ff5b00;
-	color: #ff5b00;
+	border: 3px solid #ffcf00;
+	color: #ffcf00;
 	outline: none;
 	padding: 15px;
+	transition: all 0.3s;
 }
 #linkedin {
 	background-color: transparent;
-	border: 2px solid #0078c7;
-	color: #0078c7;
+	border: 3px solid #ff9100;
+	color: #ff9100;
 }
 #github {
 	background-color: transparent;
-	border: 2px solid #6cc644;
-	color: #6cc644;
+	border: 3px solid #ff5b00;
+	color: #ff5b00;
+}
+
+#github:hover {
+	color: rgb(30, 30, 30);
+	background-color: #ff5b00;
+}
+#linkedin:hover {
+	color: rgb(30, 30, 30);
+	background-color: #ff9100;
+}
+#resume:hover {
+	color: rgb(30, 30, 30);
+	background-color: #ffcf00;
 }
 /* ESTILIZANDO O ABOUT --------------------------------------------------------------------------*/
+p {
+	color: white;
+	margin-bottom: 25px;
+	text-align: justify;
+}
 #profile-container {
 	display: flex;
 	justify-content: center;
@@ -230,17 +250,7 @@ span {
 	margin-right: 50px;
 }
 /* ESTILIZANDO AS SKILLS --------------------------------------------------------------------------*/
-i {
-	text-align: center;
-	margin: 20px;
-	color: white;
-	font-size: 130px;
-}
-.icons {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-}
+
 .front-end {
 	display: flex;
 	flex-direction: column;
@@ -264,6 +274,23 @@ i {
 	align-items: center;
 	width: 33.3%;
 	height: 100%;
+	border-bottom-right-radius: 30px;
+	border-top-right-radius: 30px;
+}
+
+.icons {
+	width: 90%;
+	display: grid;
+	justify-items: center;
+	justify-content: space-around;
+	gap: 15px;
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+i {
+	opacity: 1;
+	color: white;
+	font-size: 100px;
+	transition: all 0.3s;
 }
 
 /* ESTILIZANDO OS PROJECTS --------------------------------------------------------------------------*/

@@ -91,3 +91,31 @@ aboutColumn.addEventListener("click", slideAbout);
 skillsColumn.addEventListener("click", slideSkills);
 projectsColumn.addEventListener("click", slideProjects);
 contactColumn.addEventListener("click", slideContact);
+
+//SKILLS
+
+const icons = document.querySelectorAll("i");
+
+icons.forEach((icon) => {
+	icon.addEventListener("mouseover", () => {
+		icon.classList.add("colored");
+	});
+
+	icon.addEventListener("mouseout", () => {
+		icon.classList.remove("colored");
+	});
+});
+
+// const icons = document.querySelectorAll("i");
+
+// icons.forEach((icon) => {
+// 	icon.addEventListener("mouseover", () => {
+// 		icon.style.opacity = "1";
+// 		icon.style.transform = "scale(120%)";
+// 	});
+
+// 	icon.addEventListener("mouseout", () => {
+// 		icon.style.opacity = "";
+// 		icon.style.transform = "scale(100%)";
+// 	});
+// });
