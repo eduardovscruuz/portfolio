@@ -15,7 +15,6 @@ const aboutContent = document.querySelector(".about-container-content");
 const skillsContent = document.querySelector(".skills-container-content");
 const projectsContent = document.querySelector(".projects-container-content");
 const contactContent = document.querySelector(".contact-container-content");
-
 const slideHome = () => {
 	homeContainer.style.paddingRight = "";
 	aboutContainer.style.padding = "0vw";
@@ -92,6 +91,8 @@ skillsColumn.addEventListener("click", slideSkills);
 projectsColumn.addEventListener("click", slideProjects);
 contactColumn.addEventListener("click", slideContact);
 
+//COLUNAS
+
 //SKILLS
 
 const icons = document.querySelectorAll("i");
@@ -105,17 +106,3 @@ icons.forEach((icon) => {
 		icon.classList.remove("colored");
 	});
 });
-
-// const icons = document.querySelectorAll("i");
-
-// icons.forEach((icon) => {
-// 	icon.addEventListener("mouseover", () => {
-// 		icon.style.opacity = "1";
-// 		icon.style.transform = "scale(120%)";
-// 	});
-
-// 	icon.addEventListener("mouseout", () => {
-// 		icon.style.opacity = "";
-// 		icon.style.transform = "scale(100%)";
-// 	});
-// });

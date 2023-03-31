@@ -11,27 +11,77 @@ body {
 	display: flex;
 	height: 100vh;
 	width: 100vw;
-	transition: all 0.5s;
+	transition: all 0.2s ease;
+
+	overflow: hidden;
+}
+
+/* CONFIGURAÇÕES GLOBAIS PARA OS CONTEÚDOS --------------------------------------------------------------------------*/
+.content {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.title {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	color: #ffcf00;
+	height: 10vh;
+	text-transform: uppercase;
+	letter-spacing: 15px;
+}
+
+section,
+.hello-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 90vh;
+	min-width: 900px;
+	background-color: rgb(40, 40, 40);
+	margin: 80px 200px;
+	border-radius: 30px;
 }
 
 /* CORES DAS COLUNAS --------------------------------------------------------------------------*/
 .home-column {
 	background-color: #ffcf00;
 }
+
 .about-column {
 	background-color: #ffb000;
 }
+.about {
+	color: #ffb000;
+}
+
 .skills-column {
 	background-color: #ff9100;
 }
+.skills {
+	color: #ff9100;
+}
+
 .projects-column {
 	background-color: #ff7200;
 }
+.projects {
+	color: #ff7200;
+}
+
 .contact-column {
 	background-color: #ff5b00;
 }
+.contact {
+	color: #ff5b00;
+}
+
 .column-icon {
-	max-width: 30%;
+	max-width: 20px;
+}
+.column-icon:hover {
+	max-width: 30px;
 }
 
 /* TAMANHO DAS COLUNAS --------------------------------------------------------------------------*/
@@ -94,34 +144,6 @@ body {
 	}
 }
 
-/* CONFIGURAÇÕES GLOBAIS PARA OS CONTEÚDOS --------------------------------------------------------------------------*/
-.content {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-}
-.title {
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
-	color: #ffcf00;
-	height: 10vh;
-	text-transform: uppercase;
-	letter-spacing: 15px;
-}
-
-section,
-.hello-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 90vh;
-	min-width: 900px;
-	background-color: rgb(40, 40, 40);
-	margin: 80px 200px;
-	border-radius: 30px;
-}
-
 /* DEIXANDO OS CONTEUDOS INVISIVEIS ATÉ SEREM CLICADOS --------------------------------------------------------------------------*/
 .about-container-content,
 .skills-container-content,
@@ -158,6 +180,7 @@ h1 {
 	text-transform: uppercase;
 	font-size: 20px;
 	font-weight: bold;
+	margin-top: 45px;
 }
 
 span {
@@ -221,6 +244,7 @@ span {
 	background-color: #ffcf00;
 }
 /* ESTILIZANDO O ABOUT --------------------------------------------------------------------------*/
+
 p {
 	color: white;
 	margin-bottom: 25px;
@@ -317,18 +341,19 @@ i {
 .next {
 	border: none;
 	outline: none;
-	background-color: #ff5b00;
-	margin: 15px;
+	background-color: #ff7200;
+	margin: 25px;
 	border-radius: 15%;
 	height: 60px;
 	width: 60px;
+	transition: all 0.3s;
 }
 
 .nextimg,
 .previmg {
-	opacity: 0.5;
-	margin-top: 5px;
-	margin-right: -7px;
+	opacity: 0.7;
+	margin-top: 4px;
+	margin-right: -6px;
 	width: 40%;
 	transition: all 0.3s;
 }
@@ -340,6 +365,42 @@ i {
 
 .nextimg:hover,
 .previmg:hover {
-	opacity: 1;
 }
+
+.next:hover,
+.previus:hover {
+	transform: scale(110%);
+}
+
+:is(
+		.home-column,
+		.about-column,
+		.skills-column,
+		.projects-column,
+		.contact-column
+	):hover {
+	padding: 0;
+}
+
+.div-dentro-dentro {
+	flex-grow: 1; /* faz cada div-dentro-dentro crescer para ocupar todo o espaço disponível */
+	height: 100%; /* define a altura como 100% da div-dentro */
+}
+
+/* define estilos diferentes para cada div-dentro-dentro */
+.um {
+	flex-grow: 1;
+	background-color: red;
+}
+
+.dois {
+	flex-grow: 0;
+	background-color: blue;
+}
+
+.tres {
+	flex-grow: 0;
+	background-color: green;
+}
+
 /* ESTILIZANDO O CONTACT --------------------------------------------------------------------------*/
