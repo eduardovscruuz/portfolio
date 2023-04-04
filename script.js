@@ -4,13 +4,13 @@ const skillsContainer = document.querySelector(".skills-container");
 const projectsContainer = document.querySelector(".projects-container");
 const contactContainer = document.querySelector(".contact-container");
 
-const homeColumn = document.querySelector(".home-column");
+const homeColumn = document.querySelector(".home-column");///
 const aboutColumn = document.querySelector(".about-column");
 const skillsColumn = document.querySelector(".skills-column");
 const projectsColumn = document.querySelector(".projects-column");
 const contactColumn = document.querySelector(".contact-column");
 
-const homeContent = document.querySelector(".home-container-content");
+const homeContent = document.querySelector(".home-container-content");///
 const aboutContent = document.querySelector(".about-container-content");
 const skillsContent = document.querySelector(".skills-container-content");
 const projectsContent = document.querySelector(".projects-container-content");
@@ -91,21 +91,6 @@ skillsColumn.addEventListener("click", slideSkills);
 projectsColumn.addEventListener("click", slideProjects);
 contactColumn.addEventListener("click", slideContact);
 
-//COLUNAS
-
-//SKILLS
-
-const icons = document.querySelectorAll("i");
-
-icons.forEach((icon) => {
-	icon.addEventListener("mouseover", () => {
-		icon.classList.add("colored");
-	});
-
-	icon.addEventListener("mouseout", () => {
-		icon.classList.remove("colored");
-	});
-});
 
 //======================================================================================================================
 const contentWrapper = document.querySelector(".contents-wrapper");

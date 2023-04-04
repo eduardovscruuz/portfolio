@@ -13,7 +13,6 @@ body {
   height: 100vh;
   width: 100vw;
   transition: all 0.2s ease;
-
   overflow: hidden;
 }
 
@@ -34,8 +33,7 @@ body {
   letter-spacing: 15px;
 }
 
-section,
-.hello-container {
+/* section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,7 +42,7 @@ section,
   background-color: rgb(40, 40, 40);
   margin: 80px 200px;
   border-radius: 30px;
-}
+} */
 
 /* CORES DAS COLUNAS --------------------------------------------------------------------------*/
 .home-column {
@@ -80,10 +78,12 @@ section,
 }
 
 .column-icon {
-  max-width: 20px;
+	
+transition: all 0.2s ease;
+  max-width: 25px;
 }
 .column-icon:hover {
-  max-width: 30px;
+  max-width: 35px;
 }
 
 /* TAMANHO DAS COLUNAS --------------------------------------------------------------------------*/
@@ -146,6 +146,7 @@ section,
   }
 }
 
+
 /* DEIXANDO OS CONTEUDOS INVISIVEIS ATÉ SEREM CLICADOS --------------------------------------------------------------------------*/
 .about-container-content,
 .skills-container-content,
@@ -169,32 +170,38 @@ section,
 
 /* ESTILIZANDO A HOME --------------------------------------------------------------------------*/
 
-h1 {
-  color: white;
-  margin-top: 20px;
-  margin-bottom: 50px;
-}
+.titleHome {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	color: #ffcf00;
+	height: 10vh;
+	text-transform: uppercase;
+	letter-spacing: 15px;
+  }
 
-.hello-container {
-  display: block;
+.helloContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   color: white;
   background-color: transparent;
   text-transform: uppercase;
   font-size: 20px;
   font-weight: bold;
-  margin-top: 45px;
+height: 90vh;
+min-width: 900px;
+margin: auto 150px;
 }
 
 span {
-  font-size: 30px;
+  font-size: 2.5em;
 }
 .eduardo {
-  font-size: 100px;
+  font-size: 7.5rem;
 }
 
-.name-container {
-  margin-top: 160px;
-}
 .buttons {
   display: flex;
   justify-content: space-between;
@@ -249,8 +256,23 @@ span {
 
 p {
   color: white;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
   text-align: justify;
+  letter-spacing: 2px;
+}
+
+.sectionAbout{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70vh;
+	max-width: 1300px;
+	background-color: rgb(40, 40, 40);
+	border-radius: 30px;
+	margin-top: 10vh;
+	margin-left: 10vw;
+	margin-right: 10vw;
 }
 #profile-container {
   display: flex;
@@ -258,8 +280,7 @@ p {
   align-items: center;
   width: 40%;
   height: 100%;
-  padding: 0;
-  margin: 50px;
+  padding: 30px;
 }
 #profile {
   max-width: 100%;
@@ -277,6 +298,25 @@ p {
 }
 /* ESTILIZANDO AS SKILLS --------------------------------------------------------------------------*/
 
+.sectionSkills {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70vh;
+	max-width: 1300px;
+	background-color: rgb(40, 40, 40);
+	border-radius: 30px;
+	margin-top: 10vh;
+	margin-left: 10vw;
+	margin-right: 10vw;
+	color: white;
+  } 
+
+  .sectionSkills h1{
+	padding-top: 30px;
+	font-size: 2em;
+
+  }
 .front-end {
   display: flex;
   flex-direction: column;
@@ -304,18 +344,19 @@ p {
   border-top-right-radius: 30px;
 }
 .icons-wrapp{
-	margin-left: 10px;
+	margin-top: 20%;
 	gap: 5px;
+	row-gap: 20px;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .icons {
-
 color: white;
-font-size: 13px;
-height: 120px;
-width: 90px;
+font-size: 14px;
+height: 140px;
+width: 110px;
 padding: 10px;
 transition: all 0.3s ease;
 }
@@ -345,6 +386,8 @@ transition: all 0.3s ease;
 
 /* ESTILIZANDO OS PROJECTS --------------------------------------------------------------------------*/
 
+
+
 .previus,
 .next {
   border: none;
@@ -373,7 +416,7 @@ transition: all 0.3s ease;
   transform: scale(110%);
 }
 
-/* ESTILIZANDO O CONTACT --------------------------------------------------------------------------*/
+/* ESTILIZANDO O  --------------------------------------------------------------------------*/
 .mainly-container {
   display: flex;
   justify-content: center;
@@ -431,22 +474,31 @@ transition: all 0.3s ease;
   height: 100%;
   flex-shrink: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 48px;
 }
 
-.um {
-	background-color: grey;
+
+
+.project-title{background-color: chocolate;
+height: 35%;
+width: 100%;}
+.mockupsandtechs{
+	height: 65%;
+	display: flex;
+	width: 100%;
 }
+.mockup{background-color: darkblue;width: 65%;}
+.techs{background-color: darkorchid;width: 35%;}
+
 .dois {
   background-color: white;
   /* opacity: 0; */
 }
 
-.sectionDois {
-  /* transform: scale(80%); */
-}
+
 
 .tres {
   background-color: grey;
@@ -460,25 +512,38 @@ transition: all 0.3s ease;
 }
 
 /* ESTILIZANDO O CONTACT --------------------------------------------------------------------------*/
-
-
-form{
+.contentContact{
+width: 100%;
+}
+.sectionContact{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70vh;
+	max-width: 1300px;
+	background-color: rgb(40, 40, 40);
+	border-radius: 30px;
+	margin-top: 10vh;
+	margin-left: 10vw;
+	margin-right: 10vw;
+	color: white;
 	padding: 10px 60px 10px 60px;
-	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	color: #ff5b00;
 	font-weight: bolder;
-}
-input, textarea{
-	min-width: 100%;
+} 
+input{
+	width: 100%;
 	margin-bottom: 15px;
 	padding: 10px;
+	height: 60px;
 }
-input{
-	
-	height: 40px;
+#message{
+	display: flex;
+	align-items:  flex-end;
+	height: 380px;
 }
  button{
 	font-weight: bolder;
@@ -498,3 +563,13 @@ label{
 	letter-spacing: 2px;
 	margin-bottom: 5px;
 }
+
+
+
+
+
+
+
+
+/* 
+MOBILE---------------------------------------- 1580px width */

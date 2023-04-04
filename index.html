@@ -22,47 +22,57 @@
 
 	<body>
 		<main class="main-container">
-			<div class="home-container">
-				<div class="home-column">
+
+
+
+
+			<div class="home-container"> 
+				
+				<div class="home-column"> 
 					<img class="column-icon" src="/media/home.png" />
 				</div>
 
-				<div class="home-container-content">
-					<div class="content">
-						<h1 class="title home">Home</h1>
+					<div class="home-container-content">
+						
+						<div class="contentHome">
+							
+							<h1 class="titleHome">Home</h1>
 
-						<section class="hello-container">
-							<div class="name-container">
-								<span>Hi, I'm</span><br />
-								<span class="eduardo">EDUARDO CRUZ</span>
-								<br />
-								<span>
-									Junior Software Engineer, welcome to my
-									portfolio!
-								</span>
-							</div>
-
-							<div class="buttons">
-								<button id="resume">Resume</button>
-								<div class="links">
-									<button id="linkedin">LinkedIn</button>
-									<button id="github">GitHub</button>
+							<section class="helloContainer">
+								<div class="nameContainer">
+									<span>Hi, I'm</span><br />
+									<span class="eduardo">EDUARDO CRUZ</span>
+									<br />
+									<span>
+										Junior Software Engineer, welcome to my
+										portfolio!
+									</span>
 								</div>
-							</div>
-						</section>
+
+								<div class="buttons">
+									<button id="resume">Resume</button>
+									<div class="links">
+										<button id="linkedin">LinkedIn</button>
+										<button id="github">GitHub</button>
+									</div>
+								</div>
+							</section>
+
+						</div>
 					</div>
-				</div>
 			</div>
 
 			<div class="about-container">
+
 				<div class="about-column">
 					<img class="column-icon" src="/media/aboutme.png" />
 				</div>
 				<div class="about-container-content">
-					<div class="content">
+					
+					<div class="contentAbout">
 						<h1 class="title about">About Me</h1>
 
-						<section>
+						<section class="sectionAbout">
 							<div id="profile-container">
 								<img src="./media/profile.jpg" id="profile" />
 							</div>
@@ -120,9 +130,9 @@
 					<img class="column-icon" src="/media/skills.png" />
 				</div>
 				<div class="skills-container-content">
-					<div class="content">
+					<div class="contentSkills">
 						<h1 class="title skills">Skills</h1>
-						<section>
+						<section class="sectionSkills">
 
 							<div class="front-end">
 
@@ -185,12 +195,7 @@
 										</div>
 										<div class="icon-desc">NextJS</div>
 									</div>
-									<div class="icons">
-										<div class="icon-img"> 
-											<img src="/media/dev-icons/styledcomponents.png"> 
-										</div>
-										<div class="icon-desc">Styled Components</div>
-									</div>
+									
 								</div>
 
 
@@ -328,27 +333,40 @@
 											
 											<div class="contents-wrapper">
 												
-												<div class="contents um">
-													<div class="SectionUm">Projeto 1</div>
+												<div class="contents">
+													<div class="project-title">p</div>
+													<div class="mockupsandtechs">
+														<div class="mockup">m</div>
+													<div class="techs">t</div>
+													</div>
+													
 												</div>
-												<div class="contents dois">
-													<div class="sectionDois">
-														Projeto 2
+												<div class="contents">
+													<div class="project-title">p</div>
+													<div class="mockupsandtechs">
+														<div class="mockup">m</div>
+													<div class="techs">thsfjhfjfdfdfdfdfdfdfdfdfdshdfjs</div>
 													</div>
 												</div>
-												<div class="contents tres">
-													<div class="sectionDois">
-														Projeto 3
+												<div class="contents">
+													<div class="project-title">p</div>
+													<div class="mockupsandtechs">
+														<div class="mockup">m</div>
+													<div class="techs">t</div>
 													</div>
 												</div>
-												<div class="contents quatro">
-													<div class="sectionDois">
-														Projeto 4
+												<div class="contents">
+													<div class="project-title">p</div>
+													<div class="mockupsandtechs">
+														<div class="mockup">m</div>
+													<div class="techs">t</div>
 													</div>
 												</div>
-												<div class="contents cinco">
-													<div class="sectionDois">
-														Projeto 5
+												<div class="contents">
+													<div class="project-title">p</div>
+													<div class="mockupsandtechs">
+														<div class="mockup">m</div>
+													<div class="techs">t</div>
 													</div>
 												</div>
 										
@@ -372,14 +390,13 @@
 					<img class="column-icon" src="/media/email.webp" />
 				</div>
 				<div class="contact-container-content">
-					<div class="content">
+					<div class="contentContact">
 						<h1 class="title contact">Contact</h1>
 
-						<section class="content-contact">
+		
 
-						<form onsubmit="sendEmail(); reset(); return false;">
+						<form class="sectionContact" onsubmit="sendEmail(); reset(); return false;">
 
-							
 								<label>NAME</label>
 								<input type="text" id="name" placeholder="Enter name" required>
 							
@@ -390,20 +407,19 @@
 							
 
 							
-								<label>SUBJECT</label>
-								<input type="email" id="subject" placeholder="Enter subject" required>
+								<label>MESSAGE</label>
+								<input type="text" id="message" placeholder="Enter message" required>
 							
 
 							
-								<label>MESSAGE</label>
-								<textarea type="text" id="message" rows="5" placeholder="Enter message"></textarea>
+								
 						
 						
 						<button type="submit">SUBMIT</button>
 
 						</form>
 						
-						</section>
+			
 					
 					</div>
 				</div>
