@@ -1,89 +1,89 @@
 * {
-	font-family: "Source Sans Pro", sans-serif;
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 body {
-	background-color: rgb(30, 30, 30);
+  background-color: rgb(30, 30, 30);
 }
 
 .main-container {
-	display: flex;
-	height: 100vh;
-	width: 100vw;
-	transition: all 0.2s ease;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  transition: all 0.2s ease;
 
-	overflow: hidden;
+  overflow: hidden;
 }
 
 /* CONFIGURAÇÕES GLOBAIS PARA OS CONTEÚDOS --------------------------------------------------------------------------*/
 .content {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
 .title {
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
-	color: #ffcf00;
-	height: 10vh;
-	text-transform: uppercase;
-	letter-spacing: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #ffcf00;
+  height: 10vh;
+  text-transform: uppercase;
+  letter-spacing: 15px;
 }
 
 section,
 .hello-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 90vh;
-	min-width: 900px;
-	background-color: rgb(40, 40, 40);
-	margin: 80px 200px;
-	border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  min-width: 900px;
+  background-color: rgb(40, 40, 40);
+  margin: 80px 200px;
+  border-radius: 30px;
 }
 
 /* CORES DAS COLUNAS --------------------------------------------------------------------------*/
 .home-column {
-	background-color: #ffcf00;
+  background-color: #ffcf00;
 }
 
 .about-column {
-	background-color: #ffb000;
+  background-color: #ffb000;
 }
 .about {
-	color: #ffb000;
+  color: #ffb000;
 }
 
 .skills-column {
-	background-color: #ff9100;
+  background-color: #ff9100;
 }
 .skills {
-	color: #ff9100;
+  color: #ff9100;
 }
 
 .projects-column {
-	background-color: #ff7200;
+  background-color: #ff7200;
 }
 .projects {
-	color: #ff7200;
+  color: #ff7200;
 }
 
 .contact-column {
-	background-color: #ff5b00;
+  background-color: #ff5b00;
 }
 .contact {
-	color: #ff5b00;
+  color: #ff5b00;
 }
 
 .column-icon {
-	max-width: 20px;
+  max-width: 20px;
 }
 .column-icon:hover {
-	max-width: 30px;
+  max-width: 30px;
 }
 
 /* TAMANHO DAS COLUNAS --------------------------------------------------------------------------*/
@@ -92,15 +92,15 @@ section,
 .skills-column,
 .projects-column,
 .contact-column {
-	font-weight: bold;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-	width: 5vw;
-	transition: all 0.5s;
-	flex-direction: column;
-	font-size: 80%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 5vw;
+  transition: all 0.5s;
+  flex-direction: column;
+  font-size: 80%;
 }
 
 /* TAMANHO DOS CONTAINERS E PADDING INICIAL DA HOME --------------------------------------------------------------------------*/
@@ -109,11 +109,11 @@ section,
 .skills-container,
 .projects-container,
 .contact-container {
-	height: 100vh;
-	transition: all 0.5s;
+  height: 100vh;
+  transition: all 0.5s;
 }
 .home-container {
-	padding-right: 75vw;
+  padding-right: 75vw;
 }
 
 /* CONTAINER ONDE VAI O CONTEÚDO --------------------------------------------------------------------------*/
@@ -122,28 +122,28 @@ section,
 .skills-container-content,
 .projects-container-content,
 .contact-container-content {
-	position: fixed;
-	top: 0vh;
-	left: 5vw;
-	width: 75vw;
-	height: 100vh;
-	background-color: transparent;
-	display: flex;
-	justify-content: center;
-	align-items: space-between;
-	transition: all 0.5s;
-	animation-name: example;
-	animation-duration: 1.5s;
+  position: fixed;
+  top: 0vh;
+  left: 5vw;
+  width: 75vw;
+  height: 100vh;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  transition: all 0.5s;
+  animation-name: example;
+  animation-duration: 1.5s;
 }
 @keyframes example {
-	from {
-		opacity: 0;
-		transform: scale(85%);
-	}
-	to {
-		opacity: 1;
-		transform: scale(100%);
-	}
+  from {
+    opacity: 0;
+    transform: scale(85%);
+  }
+  to {
+    opacity: 1;
+    transform: scale(100%);
+  }
 }
 
 /* DEIXANDO OS CONTEUDOS INVISIVEIS ATÉ SEREM CLICADOS --------------------------------------------------------------------------*/
@@ -151,292 +151,350 @@ section,
 .skills-container-content,
 .projects-container-content,
 .contact-container-content {
-	display: none;
+  display: none;
 }
 
 .about-container-content {
-	left: 10vw;
+  left: 10vw;
 }
 .skills-container-content {
-	left: 15vw;
+  left: 15vw;
 }
 .projects-container-content {
-	left: 20vw;
+  left: 20vw;
 }
 .contact-container-content {
-	left: 25vw;
+  left: 25vw;
 }
 
 /* ESTILIZANDO A HOME --------------------------------------------------------------------------*/
 
 h1 {
-	color: white;
-	margin-top: 20px;
-	margin-bottom: 50px;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .hello-container {
-	display: block;
-	color: white;
-	background-color: transparent;
-	text-transform: uppercase;
-	font-size: 20px;
-	font-weight: bold;
-	margin-top: 45px;
+  display: block;
+  color: white;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 45px;
 }
 
 span {
-	font-size: 30px;
+  font-size: 30px;
 }
 .eduardo {
-	font-size: 100px;
+  font-size: 100px;
 }
 
 .name-container {
-	margin-top: 160px;
+  margin-top: 160px;
 }
 .buttons {
-	display: flex;
-	justify-content: space-between;
-	width: 35%;
-	margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+  margin-top: 20px;
 }
 
 .links {
-	display: flex;
-	justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 #resume,
 #linkedin,
 #github {
-	margin-right: 10px;
-	font-size: 19px;
-	text-transform: uppercase;
-	font-weight: bold;
-	background-color: transparent;
-	border-radius: 5px;
-	width: 100%;
-	border: 3px solid #ffcf00;
-	color: #ffcf00;
-	outline: none;
-	padding: 15px;
-	transition: all 0.3s;
+  margin-right: 10px;
+  font-size: 19px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: transparent;
+  border-radius: 5px;
+  width: 100%;
+  border: 3px solid #ffcf00;
+  color: #ffcf00;
+  outline: none;
+  padding: 15px;
+  transition: all 0.3s;
 }
 #linkedin {
-	background-color: transparent;
-	border: 3px solid #ff9100;
-	color: #ff9100;
+  background-color: transparent;
+  border: 3px solid #ff9100;
+  color: #ff9100;
 }
 #github {
-	background-color: transparent;
-	border: 3px solid #ff5b00;
-	color: #ff5b00;
+  background-color: transparent;
+  border: 3px solid #ff5b00;
+  color: #ff5b00;
 }
 
 #github:hover {
-	color: rgb(30, 30, 30);
-	background-color: #ff5b00;
+  color: rgb(30, 30, 30);
+  background-color: #ff5b00;
 }
 #linkedin:hover {
-	color: rgb(30, 30, 30);
-	background-color: #ff9100;
+  color: rgb(30, 30, 30);
+  background-color: #ff9100;
 }
 #resume:hover {
-	color: rgb(30, 30, 30);
-	background-color: #ffcf00;
+  color: rgb(30, 30, 30);
+  background-color: #ffcf00;
 }
 /* ESTILIZANDO O ABOUT --------------------------------------------------------------------------*/
 
 p {
-	color: white;
-	margin-bottom: 25px;
-	text-align: justify;
+  color: white;
+  margin-bottom: 25px;
+  text-align: justify;
 }
 #profile-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 40%;
-	height: 100%;
-	padding: 0;
-	margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+  padding: 0;
+  margin: 50px;
 }
 #profile {
-	max-width: 100%;
-	border-radius: 50%;
+  max-width: 100%;
+  border-radius: 50%;
 }
 
 #paragr-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 60%;
-	height: 100%;
-	margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  margin-right: 50px;
 }
 /* ESTILIZANDO AS SKILLS --------------------------------------------------------------------------*/
 
 .front-end {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 33.3%;
-	height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33.3%;
+  height: 100%;
 }
 
 .back-end {
-	background-color: rgba(45, 45, 45);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 33.3%;
-	height: 100%;
+  background-color: rgba(45, 45, 45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33.3%;
+  height: 100%;
 }
 .tools {
-	background-color: rgba(50, 50, 50);
+  background-color: rgba(50, 50, 50);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33.3%;
+  height: 100%;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.icons-wrapp{
+	margin-left: 10px;
+	gap: 5px;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 33.3%;
-	height: 100%;
-	border-bottom-right-radius: 30px;
-	border-top-right-radius: 30px;
+	flex-wrap: wrap;
 }
 
 .icons {
-	width: 90%;
-	display: grid;
-	justify-items: center;
-	justify-content: space-around;
-	gap: 15px;
-	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+
+color: white;
+font-size: 13px;
+height: 120px;
+width: 90px;
+padding: 10px;
+transition: all 0.3s ease;
 }
-i {
-	opacity: 1;
-	color: white;
-	font-size: 100px;
-	transition: all 0.3s;
+
+.icons:hover{
+	box-shadow: rgba(0, 0, 0, 0.329) 0px 2px 8px 0px;
+	transform: scale(110%);
 }
+
+.icon-img{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70%;}
+
+.icon-img img{
+	width: 100%;}
+
+.icon-desc{
+	font-weight: bolder;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30%;
+}
+
 
 /* ESTILIZANDO OS PROJECTS --------------------------------------------------------------------------*/
 
 .previus,
 .next {
-	border: none;
-	outline: none;
-	background-color: #ff7200;
-	margin: 25px;
-	border-radius: 15%;
-	height: 60px;
-	width: 60px;
-	transition: all 0.3s;
+  border: none;
+  outline: none;
+  background-color: #00000000;
+  margin: 25px;
+  border-radius: 15%;
+  height: 60px;
+  width: 60px;
+  transition: all 0.3s;
 }
 
 .nextimg,
 .previmg {
-	opacity: 0.7;
-	margin-top: 4px;
-	margin-right: -6px;
-	width: 40%;
-	transition: all 0.3s;
+  width: 100%;
+  transition: all 0.3s;
 }
 .previmg {
-	transform: scaleX(-1);
-	margin-top: 3px;
-	margin-right: 3px;
+  transform: scaleX(-1);
+ 
 }
 
-.nextimg:hover,
-.previmg:hover {
-}
 
 .next:hover,
 .previus:hover {
-	transform: scale(110%);
+  transform: scale(110%);
 }
 
 /* ESTILIZANDO O CONTACT --------------------------------------------------------------------------*/
 .mainly-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 75vh;
-	width: 1000px;
-	overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  width: 1000px;
+  overflow: hidden;
 }
 
 .left {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
 }
 .center {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80%;
 }
 .right {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
 }
 
 .center-box {
-	width: 600px;
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
-	border-radius: 30px;
+  width: 600px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 30px;
 }
 
 .contents-wrapper {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	transition: all 0.3s ease;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: all 0.3s ease;
 }
 
 .contador {
-	color: #ff7200;
-	font-size: 30px;
-	font-weight: bold;
-	height: 40px;
+  color: #ff7200;
+  font-size: 30px;
+  font-weight: bold;
+  height: 40px;
 }
 
 .contents {
-	width: 100%;
-	height: 100%;
-	flex-shrink: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 48px;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
 }
 
 .um {
 	background-color: grey;
 }
 .dois {
-	background-color: white;
-	/* opacity: 0; */
+  background-color: white;
+  /* opacity: 0; */
 }
 
 .sectionDois {
-	/* transform: scale(80%); */
+  /* transform: scale(80%); */
 }
-
 
 .tres {
-	background-color: grey;
+  background-color: grey;
 }
 .quatro {
-	background-color: white;}
-	
+  background-color: white;
+}
+
 .cinco {
-	background-color: grey;
+  background-color: grey;
+}
+
+/* ESTILIZANDO O CONTACT --------------------------------------------------------------------------*/
+
+
+form{
+	padding: 10px 60px 10px 60px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	color: #ff5b00;
+	font-weight: bolder;
+}
+input, textarea{
+	min-width: 100%;
+	margin-bottom: 15px;
+	padding: 10px;
+}
+input{
+	
+	height: 40px;
+}
+ button{
+	font-weight: bolder;
+	background-color: #ff5b00;
+	color: rgb(30, 30, 30);
+	font-size: 18px;
+	padding: 10px;
+	width: 100%;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	letter-spacing: 3px;
+}
+
+label{
+	font-size: 14px;
+	letter-spacing: 2px;
+	margin-bottom: 5px;
+}
