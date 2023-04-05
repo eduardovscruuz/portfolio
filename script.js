@@ -93,54 +93,20 @@ contactColumn.addEventListener("click", slideContact);
 
 
 //======================================================================================================================
-const contentWrapper = document.querySelector(".contents-wrapper");
-const prevBtn = document.querySelector(".previus");
-const nextBtn = document.querySelector(".next");
-const contentDois = document.querySelector(".dois");
-const contentUm = document.querySelector(".um");
-const sectionDois = document.querySelector(".sectionDois");
-const sectionUm = document.querySelector(".sectionUm");
+const carrosel = document.querySelector(".project");
+const nextBtn = document.querySelector(".nextimg");
+const prevBtn = document.querySelector(".previmg");
 
-let currentPosition = 0;
-const contentCount = contentWrapper.children.length;
-
-function moveTo(position) {
-	currentPosition = position;
-	const translateX = -currentPosition * 780;
-	contentWrapper.style.transform = `translateX(${translateX}px)`;
-
-	// atualiza o contador
-	const contador = document.querySelector(".contador");
-	contador.textContent = `${currentPosition + 1}-${contentCount}`;
-
-	if (currentPosition + 1 === 2) {
-		contentDois.style.opacity = "1";
-		contentDois.style.transition = "all 3s";
-
-		sectionDois.style.opacity = "1";
-		sectionDois.style.transform = "scale(100%)";
-		sectionDois.style.transition = "all 2s";
-	} else {
-		contentDois.style.opacity = "";
-		contentDois.style.transition = "all 0s";
-		sectionDois.style.transform = "scale(80%)";
-		sectionDois.style.transition = "all 0s";
-	}
-}
-
-function movePrev() {
-	if (currentPosition > 0) {
-		currentPosition--;
-		moveTo(currentPosition);
-	}
-}
 
 function moveNext() {
-	if (currentPosition < contentCount - 1) {
-		currentPosition++;
-		moveTo(currentPosition);
-	}
+	carrosel.style.transform = `translateX(-100%)`;
+}
+function movePrev() {
+	carrosel.style.transform = ``;
 }
 
-prevBtn.addEventListener("click", movePrev);
+
+
+
 nextBtn.addEventListener("click", moveNext);
+prevBtn.addEventListener("click", movePrev);
