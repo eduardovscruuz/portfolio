@@ -93,20 +93,83 @@ contactColumn.addEventListener("click", slideContact);
 
 
 //======================================================================================================================
-const carrosel = document.querySelector(".project");
-const nextBtn = document.querySelector(".nextimg");
-const prevBtn = document.querySelector(".previmg");
+
+window.onload = function(){
+    const slides_count = 5;
+    let startFrom = 1; 
+    let slider_button_left = $('.button_left:eq(0)');
+    let slider_button_right = $('.button_right:eq(0)');
+    let slides_container = $('.slides_container:eq(0)');
+    let slide_width = slides_container.css('width');
+    let slide_height = slides_container.css('height');
+    let slider_navigation = $('.navigation:eq(0)');
 
 
-function moveNext() {
-	carrosel.style.transform = `translateX(-100%)`;
+
+    for(let i = 0; i < slides_count; i++){
+        newElement = document.createElement('span');
+        newElement.classList = 'nav_element';
+        slider_navigation.append(newElement);
+    }
+
+    let slider_navElements = $('.navigation:eq(0) .nav_element');
+    let slider_navAnimatedBlock = $('.navigation:eq(0) .navAnimatedBlock:eq(0)');
+    let navElementsCount = slider_navElements.length;
+
+    function slideFunction(to){
+        slides_container.css({'right':parseFloat(75)*(to-1)+'vw'})
+    }
+
+    let curentSlide = startFrom;
+
+    slideFunction(startFrom);
+
+    function navAnimation(from, to){
+        slider_navElement_width = parseFloat(slider_navElements.css('width'));
+        slider_navElement_margin = parseFloat(slider_navElements.css('margin-left'));
+
+        if(from < to){
+            animatedBoxSize = (Math.abs(from-to) * slider_navElement_margin * 2) + slider_navElement_width * (Math.abs(from-to)+1) + 'px';
+            slider_navAnimatedBlock.animate({'width':animatedBoxSize}, 200);
+            slider_navAnimatedBlock.animate({'width':slider_navElement_width, 'left':(to-1)*2*slider_navElement_width+'px'}, 200)
+        }
+
+        if(from > to){
+            animatedBoxSize = (Math.abs(from-to) * slider_navElement_margin * 2) + slider_navElement_width * (Math.abs(from-to)+1) + 'px';
+            slider_navAnimatedBlock.animate({'width':animatedBoxSize, 'left':(to-1)*2*slider_navElement_width+'px'}, 200);
+            slider_navAnimatedBlock.animate({'width':slider_navElement_width}, 200)
+        }
+    }    
+
+    slider_button_left.on( "click",  (function(){
+        console.log(curentSlide);
+        tempSlide = curentSlide;
+        if(curentSlide==1)
+            curentSlide = slides_count;
+        else {
+            curentSlide--;
+        }
+        slideFunction(curentSlide);
+        navAnimation(tempSlide, curentSlide, false);
+    }))
+
+    slider_button_right.on( "click",  (function(){
+        console.log(curentSlide);
+        tempSlide = curentSlide;
+        if(curentSlide == slides_count)
+            curentSlide = 1;
+        else {
+            curentSlide++;
+        }
+        slideFunction(curentSlide);
+        navAnimation(tempSlide, curentSlide, true);
+    }))
+
+    slider_navElements.on("click", (function(){
+        navAnimation(curentSlide, slider_navElements.index(this)+1)
+        curentSlide = slider_navElements.index(this)+1;
+        slideFunction(curentSlide);
+    }))
+
+
 }
-function movePrev() {
-	carrosel.style.transform = ``;
-}
-
-
-
-
-nextBtn.addEventListener("click", moveNext);
-prevBtn.addEventListener("click", movePrev);
