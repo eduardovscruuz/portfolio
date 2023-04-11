@@ -16,6 +16,8 @@ body {
   overflow: hidden;
 }
 
+
+
 /* CONFIGURAÇÕES GLOBAIS PARA OS CONTEÚDOS --------------------------------------------------------------------------*/
 .content {
   display: flex;
@@ -71,10 +73,9 @@ body {
 	
 transition: all 0.2s ease;
   max-width: 25px;
+  
 }
-.column-icon:hover {
-  max-width: 35px;
-}
+
 
 /* TAMANHO DAS COLUNAS --------------------------------------------------------------------------*/
 .home-column,
@@ -97,7 +98,6 @@ transition: all 0.2s ease;
 .home-container,
 .about-container,
 .skills-container,
-/* .projects-container, */
 .contact-container {
   height: 100vh;
   transition: all 0.5s;
@@ -110,7 +110,6 @@ transition: all 0.2s ease;
 .home-container-content,
 .about-container-content,
 .skills-container-content,
-/* .projects-container-content, */
 .contact-container-content {
   position: fixed;
   top: 0vh;
@@ -140,7 +139,6 @@ transition: all 0.2s ease;
 /* DEIXANDO OS CONTEUDOS INVISIVEIS ATÉ SEREM CLICADOS --------------------------------------------------------------------------*/
 .about-container-content,
 .skills-container-content,
-/* .projects-container-content, */
 .contact-container-content {
   display: none;
 }
@@ -151,9 +149,7 @@ transition: all 0.2s ease;
 .skills-container-content {
   left: 15vw;
 }
-/* .projects-container-content {
-  left: 20vw;
-} */
+
 .contact-container-content {
   left: 25vw;
 }
@@ -184,7 +180,7 @@ transition: all 0.2s ease;
   font-weight: bold;
 height: 90vh;
 min-width: 900px;
-margin: auto 150px;
+padding: 150px;
 }
 
 span {
@@ -220,22 +216,29 @@ span {
   outline: none;
   padding: 15px;
   transition: all 0.3s;
+  text-decoration: none;
+  text-align: center;
 }
+
+
 #linkedin {
   background-color: transparent;
   border: 3px solid #ff9100;
   color: #ff9100;
+  
 }
-#github a {
+#github {
   background-color: transparent;
   border: 3px solid #ff5b00;
-  color: #ff5b00;
+  color:#ff5b00;
 }
+
 
 #github:hover {
   color: rgb(30, 30, 30);
   background-color: #ff5b00;
  transform: translateY(-8%);
+ 
 }
 #linkedin:hover {
   color: rgb(30, 30, 30);
@@ -245,16 +248,15 @@ span {
 #resume:hover {
   color: rgb(30, 30, 30);
   background-color: #ffcf00;
-  
  transform: translateY(-8%);
 }
 
 
 /* ESTILIZANDO O ABOUT --------------------------------------------------------------------------*/
 
-p {
+.sectionAbout p {
   color: white;
-  margin-bottom: 30px;
+  margin-bottom: 17px;
   text-transform: uppercase;
   text-align: justify;
   letter-spacing: 2px;
@@ -541,16 +543,18 @@ padding: 20px;
 color: white;	
 text-align: center;
 letter-spacing: 2px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
 }
 .projectTitle p{
-margin-top: 5px;
 text-align: justify;
 }
 .projectDescription{
 justify-content: center;
 align-items: center;
 display: flex;
-height: 55%;
+height: 65%;
 width: 100%;
 }
 .info{
@@ -565,13 +569,16 @@ text-align: justify;
 font-size: 15px;
 font-weight: bold;
 letter-spacing: 2px;
+margin-left: 60px;
 }
 
 li{
 margin-left: 22px;
+font-size: 19px;
+font-weight: 100;
 }
 ul{
-width: 70%;
+width: 100%;
 }
 
 .projectDescription img{
@@ -590,7 +597,7 @@ font-size: 15px;
 font-weight: 900;
 letter-spacing: 2px;
 padding:10px ;
-width: 70%;
+width: 100%;
 border: 3px solid #ff6600;
 outline: none;
 margin-bottom: 15px;
@@ -607,15 +614,16 @@ transform: scale(105%);
   background-color: rgb(40, 40, 40)
 }
 
+.info h2{
+  align-self: flex-start;
+}
+
 /* ESTILIZANDO O CONTACT --------------------------------------------------------------------------*/
 
  .contentContact{
 width: 100%;
 }
 .sectionContact{
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	height: 70vh;
 	max-width: 1300px;
 	background-color: rgb(40, 40, 40);
@@ -623,15 +631,15 @@ width: 100%;
 	margin-top: 10vh;
 	margin-left: 10vw;
 	margin-right: 10vw;
-	color: white;
 	padding: 40px;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	justify-content: center;
 	color: #ff5b00;
 	font-weight: bolder;
 } 
-input{
+input,textarea{
 	width: 100%;
 	margin-bottom: 15px;
 	padding: 10px;
@@ -639,14 +647,14 @@ input{
   border-radius: 5px;
   border: none;
   outline: none;
-
+  resize: none;
 }
 
-#message{
-	display: flex;
-	align-items:  flex-end;
-	height: 380px;
+textarea{
+  height: 100%;
 }
+
+
  button{
 	font-weight: bolder;
 	background-color: #ff5b00;
@@ -660,6 +668,8 @@ input{
 	letter-spacing: 3px;
   transition: all 0.2s ease;
   margin-top: 5px;
+  align-self: center;
+  
 }
 
 button:hover{
@@ -669,6 +679,8 @@ color:#ff5b00;
   background-color: rgb(40, 40, 40)
 }
 
+
+
 label{
 	font-size: 14px;
 	letter-spacing: 2px;
@@ -677,11 +689,7 @@ label{
 
 
 
-/*///////////////////////////////////////////////////*/
-
-
-
-
+/* TOGGLE LANGUAGE BUTTON */
 
 .toggle-button-cover {
   position: relative;
@@ -748,7 +756,6 @@ label{
   z-index: 1;
 }
 
-/* Button 10 */
 #button-10 .knobs:before,
 #button-10 .knobs:after,
 #button-10 .knobs span {
@@ -801,6 +808,840 @@ label{
   background-color: black;
 }
 
-
+.move-text{
+ position: absolute;
+  color: black;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 13px;
+  transition: all 0.8s;
+  opacity: 0;
+}
 /* 
 MOBILE---------------------------------------- 1580px width */
+
+
+@media screen and (max-width: 1520px){
+
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    height: unset;
+    width: unset;
+    transition: all 0.2s ease;
+    overflow: unset;
+  }
+  
+  
+  
+  /* CONFIGURAÇÕES GLOBAIS PARA OS CONTEÚDOS --------------------------------------------------------------------------*/
+  /* .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  } */
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: #ffcf00;
+    height: 10vh;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+  }
+  
+  
+
+  .column-icon {
+    
+  transition: all 0.2s ease;
+    max-width: 25px;
+    margin-right: 10px;
+    
+  }
+  
+  
+  /* TAMANHO DAS COLUNAS --------------------------------------------------------------------------*/
+  .home-column,
+  .about-column,
+  .skills-column,
+  .projects-column,
+  .contact-column {
+    font-weight: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 100vw;
+    transition: all 0.5s;
+
+    flex-direction: unset;
+    font-size: unset;
+  }
+  
+  /* TAMANHO DOS CONTAINERS E PADDING INICIAL DA HOME --------------------------------------------------------------------------*/
+  .home-container,
+  .about-container,
+  .skills-container,
+  .projects-container,
+  .contact-container {
+    padding-right: 0vw;
+    height: 100vh;
+    transition: all 0.5s;
+  }
+
+  .about-container,.skills-container {
+    height: 150vh;
+  }
+  
+  /* CONTAINER ONDE VAI O CONTEÚDO --------------------------------------------------------------------------*/
+  .home-container-content,
+  .about-container-content,
+  .skills-container-content,
+  .contact-container-content {
+    position: unset;
+    top: unset;
+    left: unset;
+    width: unset;
+background-color: unset;
+
+    height: 90vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    animation-name: example;
+    animation-duration: 1.5s;
+  }
+  @keyframes example {
+    from {
+      opacity: 0;
+      transform: scale(85%);
+    }
+    to {
+      opacity: 1;
+      transform: scale(100%);
+    }
+  }
+  .about-container-content,.skills-container-content{
+    height: 140vh;
+  }
+
+  
+  /* DEIXANDO OS CONTEUDOS INVISIVEIS ATÉ SEREM CLICADOS --------------------------------------------------------------------------*/
+  .about-container-content,
+  .skills-container-content,
+  .contact-container-content {
+    display: unset;
+  }
+  
+  .about-container-content {
+    left: unset;
+  }
+  .skills-container-content {
+    left: unset;
+  }
+  
+  .contact-container-content {
+    left: unset;
+  }
+  
+  /* ESTILIZANDO A HOME --------------------------------------------------------------------------*/
+  .links a {
+    text-decoration: none;
+  }
+  .titleHome {
+    display: none;
+    justify-content: center;
+    align-items: flex-end;
+    color: #ffcf00;
+    height: 10vh;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    }
+  
+  .helloContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+  height: unset;
+  min-width: unset;
+  text-align: center;
+  padding: 4%;
+  }
+  
+  span {
+    font-size: 80%;
+  }
+  .eduardo {
+    font-size: 40px;
+  }
+  
+  .nameContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: unset;
+    justify-content: space-between;
+    width: unset;
+    margin-top: 20px;
+  }
+  
+  .links {
+    display: flex;
+    justify-content: flex-end;
+  }
+  #resume,
+  #linkedin,
+  #github {
+    margin-right: 0.4vw;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: transparent;
+    border-radius: 5px;
+    width: 100%;
+    border: 3px solid #ffcf00;
+    color: #ffcf00;
+    outline: none;
+    padding: 5px;
+    transition: all 0.3s;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  
+  #linkedin {
+    background-color: transparent;
+    border: 3px solid #ff9100;
+    color: #ff9100;
+    
+  }
+  #github {
+    background-color: transparent;
+    border: 3px solid #ff5b00;
+    color:#ff5b00;
+  }
+  
+  
+
+  
+  
+  /* ESTILIZANDO O ABOUT --------------------------------------------------------------------------*/
+  
+  .title{
+    display: none;
+  }
+
+  .sectionAbout p {
+    color: white;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    text-align: justify;
+    letter-spacing: 2px;
+  }
+  
+  .sectionAbout{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 130vh;
+    max-width: 1300px;
+    background-color: rgb(40, 40, 40);
+    border-radius: 30px;
+    margin-top: unset;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  #profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    padding: unset;
+  }
+  #profile {
+    height: 100%;
+    border-radius: 50%;
+  }
+  #paragr-container {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: center;
+    width: 85%;
+    font-size: 1.4vh;
+    margin-right: unset;
+  }
+  /* ESTILIZANDO AS SKILLS --------------------------------------------------------------------------*/
+  
+  .sectionSkills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 130vh;
+    max-width: 1300px;
+    background-color: rgb(40, 40, 40);
+    border-radius: 30px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    color: white;
+    } 
+  
+    .sectionSkills h1{
+    padding:15px;
+    font-size: 1em;
+  
+    }
+  .front-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  align-items: center;
+  width:  100%;
+  height: 33.3%;
+  }
+  
+  .back-end {
+    background-color: rgba(45, 45, 45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width:  100%;
+    height: 33.3%;
+  }
+  .tools {
+    background-color: rgba(50, 50, 50);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width:  100%;
+    height: 33.3%;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: unset;
+  }
+  .icons-wrapp{
+    height: 70%;
+    width: 90%;
+	gap: 4%;
+	display: flex;
+	justify-content: space-evenly;
+
+    margin-top: unset;
+    row-gap: unset;
+    flex-wrap: wrap;
+  }
+  
+  .icons {
+  color: white;
+  font-size: 0.7em;
+width: 17%;
+  height: 40%;
+  padding: 3px;
+  transition: all 0.3s ease;
+  }
+  
+  .icons:hover{
+    box-shadow: rgba(0, 0, 0, 0.329) 0px 2px 8px 0px;
+    transform: scale(110%);
+  }
+  
+  .icon-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;}
+  
+  .icon-img img{
+    width: 120%;}
+  
+  .icon-desc{
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    margin-top: 15%;
+  }
+  
+  
+  /* ESTILIZANDO OS PROJECTS --------------------------------------------------------------------------*/
+  
+
+  
+  .projects-container{
+    height: 405vh; /* +75vh em cada project */
+
+  transition: all 0.5s;
+  }
+  
+  .projects-container-content{
+    position: unset;
+    top: unset;
+    left: unset;
+    width: unset;
+
+    background-color: unset;
+
+
+    height: 100%;
+    display: flex;
+    float: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    animation-name: example;
+    animation-duration: 1.5s;
+  }
+  
+  .mainly-container{
+    width: 100%;
+    height: 100%;
+    float: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  
+  .page_section {
+    height:unset;
+    display: unset;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider {
+    width:100vw;
+    height:95vh;
+    max-width: unset;
+    position: unset;
+    overflow: unset;
+  }
+  
+  .slides_container {
+    position: unset;
+    height:100%;
+    position: relative;
+    transition: ease 1s;
+  
+  }
+  
+  .slide{
+    
+    position: unset;
+    padding: 10%;
+    height:80vh;
+    width:100%;
+    display: flex;
+    align-items: unset;
+    justify-content: center;
+    color: white;
+    font-weight: 300;
+    font-family: 'Comfortaa';
+  }
+  
+  .button_right, .button_left {
+    position: absolute;
+    top:50%;
+    height:60px;
+    width:60px;
+    background-color:#ff6600;
+    transform: translate(0, -50%);
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: rgb(30, 30, 30);
+    font-size: 34px;
+    font-weight: 300;
+    transition: ease 0.5s;
+  }
+  
+  .button_right:hover, .button_left:hover {
+    cursor: pointer;
+    transform: translate(0, -50%) scale(1.2);
+    transition: ease 0.5s;
+    color: #ff6600;
+    background-color:rgb(30, 30, 30);
+    border: 1px solid #ff6600;
+  }
+  
+  .button_right {
+    right:5%;
+  }
+  
+  .button_left {
+    left:5%;
+  }
+  
+  .navigation {
+    display: none;
+    position: absolute;
+    bottom:7%;
+    left: 50%;
+    transform: translate(-50%, 0);   
+  }
+  
+  .nav_element{
+    display: none;
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    background-color: rgb(61, 61, 61);
+    margin:0 5px;
+    float: left;
+    display: block;
+  }
+  
+  .navAnimatedBlock{
+    display: none;
+    position: absolute;
+    background-color: #ff6600;
+    margin:0 5px;
+    width:10px;
+    height:10px;
+    box-shadow: 0 0 1px 1px #ff6600;
+    border-radius: 20px;
+  }
+  
+  .nav_element:hover {
+    display: none;
+  cursor:pointer;
+  }
+  
+  
+  
+  
+  .roundEdges{
+    height: unset;
+    padding: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: rgb(40, 40, 40);
+    border-radius: 30px;
+    
+  }
+  
+  .projectTitle{
+  height: unset;
+  padding: 5%;
+color: white;	
+text-align: center;
+letter-spacing: 2px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+  }
+
+  .projectTitle h2{
+    margin-bottom:4% ;
+    font-size: 1.1em;
+    }
+  .projectTitle p{
+    font-size: 0.6em;
+    text-align: justify;
+  }
+  .projectDescription{
+  justify-content: unset;
+  align-items: unset;
+  display: unset;
+  height: unset;
+  text-align: center;
+width: 100%;
+padding: 5%;
+}
+  .info{
+  height: unset;
+
+  margin-left: unset;
+
+
+  color: white;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+width: 100%;
+text-align: justify;
+font-size: 0.7em;
+font-weight: bold;
+letter-spacing: 2px;
+padding-bottom: 5%;
+  }
+  
+  li{
+    margin-left: 20px;
+    font-size: 1em;
+    font-weight: 100;
+  }
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 5%;
+  }
+  
+  .projectDescription img{
+  width: 90%;
+  transition: all 0.3s;
+  }
+  .projectDescription img:hover{
+   transform: translateY(-2%);
+    }
+  
+  .info button{
+  color:white;
+  background-color: #ff6600;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: 900;
+  letter-spacing: 2px;
+  padding:10px ;
+  width: 100%;
+  border: 3px solid #ff6600;
+  outline: none;
+  margin-bottom: unset;
+  align-self: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  }
+  
+  .info button:hover{
+    
+  border: 3px solid #ff6600;
+  color:#ff6600;
+  transform: scale(105%);
+    background-color: rgb(40, 40, 40)
+  }
+  
+  .info h2{
+    align-self: flex-start;
+    
+  padding: 2%;
+  }
+  
+  /* ESTILIZANDO O CONTACT --------------------------------------------------------------------------*/
+  
+   .contentContact{ height: 90vh;
+    width: 100%;
+    padding: 10%;
+  }
+  .sectionContact{
+    height: 100%;
+    background-color: rgb(40, 40, 40);
+    border-radius: 30px;
+    padding: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #ff5b00;
+    font-weight: bolder;
+
+    max-width: unset;
+    margin-top: unset;
+    margin-left: unset;
+    margin-right: unset;
+  } 
+  input,textarea{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    height: 2em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  resize: none;
+  }
+  
+  textarea{
+    height: 100%;
+  }
+  
+  
+   button{
+    font-weight: bolder;
+    background-color: #ff5b00;
+    border: 3px solid #ff5b00;
+    color: white;
+    font-size: 0.7em;
+    padding: 5%;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    transition: all 0.2s ease;
+    margin-top: 5px;
+    align-self: center;
+    
+  }
+  
+  button:hover{
+    border: 3px solid #ff5b00;
+  color:#ff5b00;
+   transform: scale(102%);
+    background-color: rgb(40, 40, 40)
+  }
+  
+  
+  
+  label{
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+  } 
+  
+  
+  
+  /* TOGGLE LANGUAGE BUTTON */
+  
+  .toggle-button-cover {
+    position: relative;
+    width: 200px;
+    height: 140px;
+    box-sizing: border-box;
+  }
+  
+  .button-cover {
+    height: 100px;
+    margin-right: 63%;
+    margin-top: 1%;
+  }
+  
+  .button-cover,
+  .knobs,
+  .layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .button {
+    
+    font-weight: bolder;
+    position: relative;
+    top: 50%;
+    width: 134px;
+    height: 36px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+  }
+  
+  .button.r,
+  .button.r .layer {
+    border-radius: 100px;
+  }
+  
+  .button.b2 {
+    border-radius: 30px;
+  }
+  
+  .checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .knobs {
+    z-index: 2;
+  }
+  
+  .layer {
+    width: 100%;
+    background-color: black;
+    transition: 0.3s ease all;
+    z-index: 1;
+  }
+  
+  #button-10 .knobs:before,
+  #button-10 .knobs:after,
+  #button-10 .knobs span {
+    position: absolute;
+    top: 4px;
+    width: 55px;
+    height: 10px;
+    font-size: 10px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    border-radius: 30px;
+    transition: 0.3s ease all;
+  }
+  
+  #button-10 .knobs:before {
+    content: "";
+    left: 4px;
+    background-color: #ffd300;
+  }
+  
+  #button-10 .knobs:after {
+    content: "PT-BR";
+    right: 4px;
+    color: rgba(110,110,110)
+  }
+  
+  #button-10 .knobs span {
+    display: inline-block;
+    left: 4px;
+    color: black;
+    z-index: 1;
+  }
+  
+  #button-10 .checkbox:checked + .knobs span {
+    color: rgba(110,110,110);
+  }
+  
+  #button-10 .checkbox:checked + .knobs:before {
+    left: 67px;
+    background-color: #ffd300;
+  }
+  
+  #button-10 .checkbox:checked + .knobs:after {
+    color: black;
+  }
+  
+  #button-10 .checkbox:checked ~ .layer {
+    background-color: black;
+  }
+  
+  .move-text{
+   position: unset;
+    color: black;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 13px;
+    transition: all 0.8s;
+    opacity: 1;
+  }
+ 
+}

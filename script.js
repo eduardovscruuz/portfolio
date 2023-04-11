@@ -91,6 +91,38 @@ skillsColumn.addEventListener("click", slideSkills);
 projectsColumn.addEventListener("click", slideProjects);
 contactColumn.addEventListener("click", slideContact);
 
+//=======================================================================================
+
+const showText = (event) => {
+    const moveText = event.target.querySelector('.move-text');
+    const moveImage = event.target.querySelector('.move-image');
+    moveText.style.transform = "translateY(50%)";
+    moveImage.style.transform = "translateY(-50%)";
+    moveText.style.opacity = 1;
+  };
+  
+  const hideText = (event) => {
+    const moveText = event.target.querySelector('.move-text');
+    const moveImage = event.target.querySelector('.move-image');
+    moveText.style.transform = "translateY(0)";
+    moveImage.style.transform = "translateY(0)";
+    moveText.style.opacity = 0;
+  };
+  
+  homeColumn.addEventListener("mouseover", showText);
+  homeColumn.addEventListener("mouseleave", hideText);
+  
+  aboutColumn.addEventListener("mouseover", showText);
+  aboutColumn.addEventListener("mouseleave", hideText);
+  
+  skillsColumn.addEventListener("mouseover", showText);
+  skillsColumn.addEventListener("mouseleave", hideText);
+  
+  projectsColumn.addEventListener("mouseover", showText);
+  projectsColumn.addEventListener("mouseleave", hideText);
+  
+  contactColumn.addEventListener("mouseover", showText);
+  contactColumn.addEventListener("mouseleave", hideText);
 
 //======================================================================================================================
 
@@ -173,3 +205,33 @@ window.onload = function(){
 
 
 }
+
+
+
+function sendEmail() {
+    // Preencha com suas informações
+    const emailDestino = 'eduardovscruuz@gmail.com';
+    const senhaSMTPJS = 'a0c0dc13-a547-480a-8833-ba1b78bbe39d';
+  
+    // Obtenha os valores do formulário
+    const nome = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const mensagem = document.getElementById('message').value;
+  
+    // Configure as informações do e-mail
+    const emailConfig = {
+      To: emailDestino,
+      From: email,
+      Body: `Nome: ${nome}<br>E-mail: ${email}<br>Mensagem: ${mensagem}`,
+    };
+  
+    // Envie o e-mail usando o SMTPJS
+    Email.send({
+      SecureToken: senhaSMTPJS,
+      ...emailConfig,
+    }).then(() => {
+      alert('E-mail enviado com sucesso!');
+    }).catch((error) => {
+      alert(`Erro ao enviar o e-mail: ${error}`);
+    });
+  }
