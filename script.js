@@ -1,4 +1,58 @@
-const homeContainer = document.querySelector(".home-container");
+if (window.matchMedia("(max-width: 767px)").matches) {
+
+    const homeContainer = document.querySelector(".home-container");
+    const aboutContainer = document.querySelector(".about-container");
+    const skillsContainer = document.querySelector(".skills-container");
+    const projectsContainer = document.querySelector(".projects-container");
+    const contactContainer = document.querySelector(".contact-container");
+
+    const homeColumn = document.querySelector(".home-column");
+    const aboutColumn = document.querySelector(".about-column");
+    const skillsColumn = document.querySelector(".skills-column");
+    const projectsColumn = document.querySelector(".projects-column");
+    const contactColumn = document.querySelector(".contact-column");
+
+    const homeContent = document.querySelector(".home-container-content");
+    const aboutContent = document.querySelector(".about-container-content");
+    const skillsContent = document.querySelector(".skills-container-content");
+    const projectsContent = document.querySelector(".projects-container-content");
+    const contactContent = document.querySelector(".contact-container-content");
+
+    const slideHome = () => {};
+    const slideAbout = () => {};
+    const slideSkills = () => {};
+    const slideProjects = () => {};
+    const slideContact = () => {};
+
+    homeColumn.removeEventListener("click", slideHome);
+    aboutColumn.removeEventListener("click", slideAbout);
+    skillsColumn.removeEventListener("click", slideSkills);
+    projectsColumn.removeEventListener("click", slideProjects);
+    contactColumn.removeEventListener("click", slideContact);
+
+    homeColumn.removeEventListener("mouseover", showText);
+    homeColumn.removeEventListener("mouseleave", hideText);
+
+    aboutColumn.removeEventListener("mouseover", showText);
+    aboutColumn.removeEventListener("mouseleave", hideText);
+
+    skillsColumn.removeEventListener("mouseover", showText);
+    skillsColumn.removeEventListener("mouseleave", hideText);
+
+    projectsColumn.removeEventListener("mouseover", showText);
+    projectsColumn.removeEventListener("mouseleave", hideText);
+
+    contactColumn.removeEventListener("mouseover", showText);
+    contactColumn.removeEventListener("mouseleave", hideText);
+
+    slider_button_left.off('click');
+    slider_button_right.off('click');
+    slider_navElements.off('click'); 
+
+
+}else{ 
+
+  const homeContainer = document.querySelector(".home-container");
 const aboutContainer = document.querySelector(".about-container");
 const skillsContainer = document.querySelector(".skills-container");
 const projectsContainer = document.querySelector(".projects-container");
@@ -96,8 +150,8 @@ contactColumn.addEventListener("click", slideContact);
 const showText = (event) => {
     const moveText = event.target.querySelector('.move-text');
     const moveImage = event.target.querySelector('.move-image');
-    moveText.style.transform = "translateY(50%)";
-    moveImage.style.transform = "translateY(-50%)";
+    moveText.style.transform = "translateY(110%)";
+    moveImage.style.transform = "translateY(-40%)";
     moveText.style.opacity = 1;
   };
   
@@ -205,33 +259,4 @@ window.onload = function(){
 
 
 }
-
-
-
-function sendEmail() {
-    // Preencha com suas informações
-    const emailDestino = 'eduardovscruuz@gmail.com';
-    const senhaSMTPJS = 'a0c0dc13-a547-480a-8833-ba1b78bbe39d';
-  
-    // Obtenha os valores do formulário
-    const nome = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const mensagem = document.getElementById('message').value;
-  
-    // Configure as informações do e-mail
-    const emailConfig = {
-      To: emailDestino,
-      From: email,
-      Body: `Nome: ${nome}<br>E-mail: ${email}<br>Mensagem: ${mensagem}`,
-    };
-  
-    // Envie o e-mail usando o SMTPJS
-    Email.send({
-      SecureToken: senhaSMTPJS,
-      ...emailConfig,
-    }).then(() => {
-      alert('E-mail enviado com sucesso!');
-    }).catch((error) => {
-      alert(`Erro ao enviar o e-mail: ${error}`);
-    });
-  }
+}
