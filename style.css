@@ -96,6 +96,7 @@ transition: all 0.2s ease;
 .move-text{
   position: absolute;
    color: black;
+   font-weight: bolder;
    letter-spacing: 2px;
    text-align: center;
    font-size: 80%;
@@ -276,13 +277,9 @@ span {
   letter-spacing: 1px;
   margin-bottom: 3%;
   width: 100%;
-  font-size: 10px;
+  font-size: 0.65vw;
 }
-@media screen and (max-width: 1120px) {
-  .sectionAbout p {
-    font-size: 9px;
-  }
-}  
+
 
 
 
@@ -978,7 +975,7 @@ background-color: unset;
   }
   @keyframes example {
     from {
-      opacity: 0;
+      opacity: 1;
       transform: scale(85%);
     }
     to {
@@ -1023,6 +1020,12 @@ background-color: unset;
     letter-spacing: 15px;
     }
   
+.contentHome{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
   .helloContainer {
     display: flex;
     flex-direction: column;
@@ -1034,16 +1037,17 @@ background-color: unset;
     font-size: 120%;
     font-weight: bold;
   height: 30%;
+  width: 90%;
   min-width: unset;
   text-align: center;
   padding: 4%;
   }
   
   span {
-    font-size: 80%;
+    font-size: 4vw;
   }
   .eduardo {
-    font-size: 40px;
+    font-size: 10vw;
   }
   
   .nameContainer{
@@ -1112,7 +1116,8 @@ background-color: unset;
     text-transform: uppercase;
     text-align: justify;
     letter-spacing: 2px;
-    font-size: 1.4vh;
+    hyphens: auto;
+    font-size: 1.3vh;
   }
   
   .sectionAbout{
@@ -1147,7 +1152,7 @@ background-color: unset;
     flex-direction: column;
     justify-content: unset;
     align-items: center;
-    width: 85%;
+    width: 90%;
     margin-right: unset;
   }
   /* ESTILIZANDO AS SKILLS --------------------------------------------------------------------------*/
@@ -1419,20 +1424,22 @@ justify-content: space-around;
   }
 
   .projectTitle h2{
-    margin-bottom:4% ;
+    margin-bottom:10% ;
     font-size: 1.1em;
     }
   .projectTitle p{
-    font-size: 0.6em;
+    hyphens: auto;
+    font-size: 1.6vh;
     text-align: justify;
   }
   .projectDescription{
-  justify-content: unset;
+  justify-content: space-between;
   align-items: unset;
-  display: unset;
-  height: unset;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 width: 100%;
+height: 56%;
 padding: 5%;
 }
   .info{
@@ -1481,11 +1488,12 @@ padding-bottom: 5%;
   font-size: 1em;
   font-weight: 900;
   letter-spacing: 2px;
-  padding:10px ;
+  padding:20px ;
   width: 100%;
   border: 3px solid #ff6600;
   outline: none;
   margin-bottom: unset;
+  line-height: 0;
   align-self: center;
   cursor: pointer;
   transition: all 0.2s ease;
