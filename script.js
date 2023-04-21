@@ -110,7 +110,6 @@ const slideSkills = () => {
 	projectsContent.style.display = "none";
 	contactContent.style.display = "none";
 };
-
 const slideProjects = () => {
 	homeContainer.style.padding = "0vw";
 	aboutContainer.style.padding = "0vw";
@@ -178,6 +177,39 @@ const showText = (event) => {
   contactColumn.addEventListener("mouseover", showText);
   contactColumn.addEventListener("mouseleave", hideText);
 
+
+
+
+
+
+  const columns = document.querySelectorAll(".column");
+
+  const expandColumn = (column) => {
+    column.style.width = "8vw";
+  
+    columns.forEach((c) => {
+      if (c !== column) {
+        c.style.width = "4.25vw";
+      }
+    });
+  };
+  
+  const reduceColumns = () => {
+    columns.forEach((c) => {
+      c.style.width = "5vw";
+    });
+  };
+  
+  columns.forEach((column) => {
+    column.addEventListener("mouseover", () => {
+      expandColumn(column);
+    });
+  
+    column.addEventListener("mouseleave", () => {
+      reduceColumns();
+    });
+  });
+  
 //======================================================================================================================
 
 window.onload = function(){
@@ -260,3 +292,67 @@ window.onload = function(){
 
 }
 }
+
+
+   // Get a reference to the form element
+   const form = document.getElementById('contact-form');
+const sucess = document.querySelector('#sucessMessage')
+   // Listen for the form's submit event
+   form.addEventListener('submit', event => {
+     // Prevent the default form submission behavior
+     event.preventDefault();
+ 
+     // Create a new FormData object
+     const formData = new FormData(form);
+        console.log('Sending....');
+     // Send the form data asynchronously
+     fetch(form.action, {
+       method: form.method,
+       body: formData,
+     })
+     
+     
+       .then(response => {
+         if (response.ok) {
+           // The email was sent successfully
+           console.log('Email enviado com sucesso!'); 
+           form.reset();
+           
+           sucess.innerHTML = 'Email enviado com sucesso!'
+           sucess.style.opacity = 1
+           sucess.style.transform = 'translateY(8px)'
+           setTimeout(() => {
+            sucess.style.opacity = 0;
+            sucess.style.transform = 'translateY(0)';
+          }, 2400);
+         } else {
+           // There was an error sending the email
+          
+           console.error('Error sending email');
+         
+         }
+       })
+       .catch(error => {
+        sucess.innerHTML = 'Erro ao enviar email!'
+        sucess.style.color = 'red'
+        sucess.style.display = "block"
+        sucess.style.opacity = 1
+        sucess.style.transform = 'translateY(8px)'
+        setTimeout(() => {
+         sucess.style.opacity = 0;
+         sucess.style.transform = 'translateY(0)';
+       }, 2400);
+         // There was an error sending the email
+         
+         console.error('Error sending email:', error);
+       });
+   });
+
+
+
+
+
+
+
+
+

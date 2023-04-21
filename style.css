@@ -6,6 +6,7 @@
 }
 body {
   background-color: rgb(30, 30, 30);
+  overflow: hidden;
 }
 
 .main-container {
@@ -100,7 +101,7 @@ transition: all 0.2s ease;
    font-weight: bolder;
    letter-spacing: 2px;
    text-align: center;
-   font-size: 80%;
+   font-size: 0.8vw;
    transition: all 0.8s;
    opacity: 0;
  }
@@ -560,14 +561,14 @@ cursor:pointer;
 }
 
 .projectTitle{
-height: 30%;
+height: 35%;
 padding: 3%;
 color: white;	
 text-align: center;
 letter-spacing: 2px;
 display: flex;
 flex-direction: column;
-justify-content: space-around;
+justify-content: space-between;
 }
 .projectTitle p{
 text-align: justify;
@@ -715,7 +716,8 @@ button:hover{
   border: 3px solid #ff5b00;
 color:#ff5b00;
  transform: translateY(-8%);
-  background-color: rgb(40, 40, 40)
+  background-color: rgb(40, 40, 40);
+  cursor: pointer;
 }
 
 
@@ -742,9 +744,21 @@ width: 100%;}
   justify-content: flex-end;
 width: 100%;}
 
+#file{
+  text-decoration: none;
+  margin-top: 2px;
+  padding: 0;
+}
 
 
-
+.emailMessage p{
+  color: unset;
+  transform: translateY(14px);
+  opacity: 0;
+  color: rgb(0, 228, 0);
+  text-align: center;
+  transition: all 0.3s ease;
+}
 
 
 
@@ -1588,6 +1602,8 @@ padding-bottom: 5%;
   } 
   
   
+
+
   
   /* TOGGLE LANGUAGE BUTTON */
   

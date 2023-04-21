@@ -31,7 +31,7 @@
 
 			<div class="home-container"> 
 				
-				<div class="home-column"> 
+				<div class="column home-column"> 
 					<img class="column-icon move-image" src="./media/column-icons/home.png"/>
 					<span class="move-text">INÍCIO</span>
 				</div>
@@ -54,12 +54,12 @@
 									<span class="eduardo">EDUARDO CRUZ</span>
 									<br />
 									<span>
-										Desenvolvedor Júnior, bem-vindo(a) ao meu portfólio!
+										Desenvolvedor Full-Stack, bem-vindo(a) ao meu portfólio!
 									</span>
 								</div>
 
 								<div class="buttons">
-									<a id="resume" href="curriculo-full-stack-PTBR.pdf" download>Currículo</a>
+									<a id="resume" href="./resumes/curriculo-full-stack-PTBR.pdf" download>Currículo</a>
 									
 									<div class="links">
 										<a id="linkedin" href="https://www.linkedin.com/in/eduardovscruuz/" target="_blank">LinkedIn</a>
@@ -74,7 +74,7 @@
 
 			<div class="about-container">
 
-				<div class="about-column">
+				<div class="column about-column">
 					<img class="column-icon move-image" src="./media/column-icons/aboutme.png" />
 					<span class="move-text">SOBRE</span>
 				</div>
@@ -124,13 +124,13 @@
 			</div>
 
 			<div class="skills-container">
-				<div class="skills-column">
+				<div class="column skills-column">
 					<img class="column-icon move-image" src="./media/column-icons/skills.png" />
-					<span class="move-text">SKILLS</span>
+					<span class="move-text">HABILIDADES</span>
 				</div>
 				<div class="skills-container-content">
 					<div class="contentSkills">
-						<h1 class="title skills">Skills</h1>
+						<h1 class="title skills">Habilidades</h1>
 						<section class="sectionSkills">
 
 							<div class="front-end">
@@ -313,7 +313,7 @@
 			<div class="projects-container">
 				
 				
-				<div class="projects-column">
+				<div class="column projects-column">
 					<img class="column-icon move-image" src="./media/column-icons/projects.png" />
 					<span class="move-text">PROJETOS</span>
 				</div>
@@ -340,9 +340,7 @@
 													
 													<h2>Projeto React Users</h2>
 													
-													<p>Projeto full-stack, onde o cliente pode realizar o cadastro na página, navegar em um menu
-														variado, com diversas opções para colocar no seu carrinho, efetuar a compra e acompanhar o status do pedido
-														é possivel também através do acesso de adminstrador monitorar todas as atividades acima
+													<p>O projeto é uma aplicação web que utiliza React para a interface do usuário e Node.js para o back-end. O cliente pode cadastrar e gerenciar usuários, com nome e idade, em uma página de cadastro e outra de listagem com opção de exclusão. O servidor back-end é construído com Express.js e integra com o banco de dados MongoDB utilizando Mongoose. Axios, react-router-dom e .env também são utilizados.
 													</p>
 												</div>
 					
@@ -358,12 +356,9 @@
 															<li>HTML</li>
 															<li>CSS</li>
 															<li>Javascript</li>
-															<li>Sass</li>
 															<li>React</li>
 															<li>Node</li>
 															<li>Express</li>
-					
-															<li>React</li>
 														</ul>
 														<button>VISUALIZAR</button>
 													</div>
@@ -378,9 +373,7 @@
 												
 												<h2>Projeto Galeria Sass</h2>
 												
-												<p>Projeto full-stack, onde o cliente pode realizar o cadastro na página, navegar em um menu
-													variado, com diversas opções para colocar no seu carrinho, efetuar a compra e acompanhar o status do pedido
-													é possivel também através do acesso de adminstrador monitorar todas as atividades acima
+												<p>O projeto é uma galeria web desenvolvida com Sass (SCSS), com foco em estilização avançada e responsividade. Recursos interativos, como ampliação de imagens e efeitos de hover, também foram adicionados. O Sass permitiu criar um código CSS organizado e de fácil manutenção.
 												</p>
 											</div>
 				
@@ -397,11 +390,7 @@
 														<li>CSS</li>
 														<li>Javascript</li>
 														<li>Sass</li>
-														<li>React</li>
-														<li>Node</li>
-														<li>Express</li>
-				
-														<li>React</li>
+													
 													</ul>
 													<button>VISUALIZAR</button>
 												</div>
@@ -414,9 +403,7 @@
 												
 												<h2>Projeto Churrascômetro</h2>
 												
-												<p>Projeto full-stack, onde o cliente pode realizar o cadastro na página, navegar em um menu
-													variado, com diversas opções para colocar no seu carrinho, efetuar a compra e acompanhar o status do pedido
-													é possivel também através do acesso de adminstrador monitorar todas as atividades acima
+												<p>O projeto é uma calculadora de quantidades para churrasco, desenvolvida com HTML, CSS e JavaScript. Os inputs permitem definir a quantidade de adultos, crianças e duração, e a aplicação retorna a quantidade ideal de alimentos, bebidas e outros itens necessários para o evento. A interface é intuitiva e o cálculo é realizado em tempo real. A calculadora evita desperdícios e garante a satisfação dos convidados.
 												</p>
 											</div>
 				
@@ -432,12 +419,8 @@
 														<li>HTML</li>
 														<li>CSS</li>
 														<li>Javascript</li>
-														<li>Sass</li>
-														<li>React</li>
-														<li>Node</li>
-														<li>Express</li>
-				
-														<li>React</li>
+														<li>Jquery</li>
+											
 													</ul>
 													<button>VISUALIZAR</button>
 												</div>
@@ -536,7 +519,7 @@
 				</div>
 
 			<div class="contact-container">
-				<div class="contact-column">
+				<div class="column contact-column">
 					<img class="column-icon move-image" src="./media/column-icons/email.webp" />
 					<span class="move-text">CONTATO</span>
 				</div>
@@ -546,32 +529,23 @@
 
 		
 
-						<form class="sectionContact" onsubmit="sendEmail(); reset(); return false;">
-
+						<form class="sectionContact" id="contact-form" action="http://localhost:3000/send-email" method="POST" enctype="multipart/form-data">
 							<div class="emailInfo">
-
-								<label>NOME</label>
-								<input type="text" id="name" placeholder="Insira nome" required>
-							
-								<label>EMAIL</label>
-								<input type="email" id="email" placeholder="Insira email" required>
-							
-								<label>ASSUNTO</label>
-								<input id="subject" placeholder="Insira assunto" required></input>
-
+							  <label for="name">NOME</label>
+							  <input type="text" id="name" name="name" placeholder="Insira nome" required>
+							  <label for="email">EMAIL</label>
+							  <input type="email" id="email" name="email" placeholder="Insira email" required>
+							  <label for="subject">ASSUNTO</label>
+							  <input id="subject" name="subject" placeholder="Insira assunto" required>
 							</div>
-
 							<div class="emailMessage">
-
-								<label>MENSAGEM</label>
-								<textarea id="message" placeholder="Insira menssagem" required></textarea>
-							
-								<button type="submit">ENVIAR</button>
-
+							  <label for="message">MENSAGEM</label>
+							  <textarea id="message" name="message" placeholder="Insira menssagem" required></textarea>
+							  <input type="file" id="file" name="file">
+							  <button name="submit" type="submit">ENVIAR</button>
+							  <p id="sucessMessage">#</p>
 							</div>
-
-							
-						</form>
+						  </form>
 						
 			
 					
