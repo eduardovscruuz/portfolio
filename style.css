@@ -895,7 +895,10 @@ MOBILE---------------------------------------- 1580px width */
 
 @media screen and (max-width: 900px){
 
-
+  body {
+    background-color: rgb(30, 30, 30);
+    overflow: unset;
+  }
   .main-container {
     display: flex;
     flex-direction: column;
