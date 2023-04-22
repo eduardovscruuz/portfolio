@@ -897,7 +897,7 @@ MOBILE---------------------------------------- 1580px width */
 
   body {
     background-color: rgb(30, 30, 30);
-    overflow: unset;
+    overflow: auto;
   }
   .main-container {
     display: flex;
