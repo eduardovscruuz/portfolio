@@ -12,10 +12,11 @@ if (window.matchMedia("(max-width: 767px)").matches) {
       const formData = new FormData(form);
          console.log('Sending....');
       // Send the form data asynchronously
-      fetch(form.action, {
-        method: form.method,
-        body: formData,
-      })
+      console.log('formData:', formData);
+fetch(form.action, {
+  method: form.method,
+  body: formData,
+})
       
       
         .then(response => {
