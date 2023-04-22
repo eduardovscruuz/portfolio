@@ -614,14 +614,15 @@ transition: all 0.3s;
  transform: translateY(-2%);
   }
 
-.info button{
+.visualizar{
+text-decoration: none;
 color:white;
 background-color: #ff6600;
 border-radius: 5px;
 font-size: 1em;
 font-weight: 900;
 letter-spacing: 2px;
-padding:5% ;
+padding:10% ;
 width: 100%;
 border: 3px solid #ff6600;
 outline: none;
@@ -629,9 +630,10 @@ margin-bottom: 15px;
 align-self: center;
 cursor: pointer;
 transition: all 0.2s ease;
+text-align: center;
 }
 
-.info button:hover{
+.visualizar:hover{
   
 border: 3px solid #ff6600;
 color:#ff6600;
@@ -1497,7 +1499,7 @@ padding-bottom: 5%;
    transform: translateY(-2%);
     }
   
-  .info button{
+  .visualizar{
   color:white;
   background-color: #ff6600;
   border-radius: 5px;
@@ -1515,7 +1517,7 @@ padding-bottom: 5%;
   transition: all 0.2s ease;
   }
   
-  .info button:hover{
+  .visualizar:hover{
     
   border: 3px solid #ff6600;
   color:#ff6600;
