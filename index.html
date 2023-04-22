@@ -530,7 +530,7 @@
 
 		
 
-						<form class="sectionContact" id="contact-form" action="http://localhost:3000/send-email" method="POST" enctype="multipart/form-data">
+						<form class="sectionContact" id="contact-form" action="https://nodemailer-api.vercel.app/send-email" method="POST" enctype="multipart/form-data">
 							<div class="emailInfo">
 							  <label for="name">NOME</label>
 							  <input type="text" id="name" name="name" placeholder="Insira nome" required>
@@ -544,7 +544,7 @@
 							  <textarea id="message" name="message" placeholder="Insira menssagem" required></textarea>
 							  <input type="file" id="file" name="file">
 							  <button name="submit" type="submit">ENVIAR</button>
-							  <p id="sucessMessage">#</p>
+							  <p id="sucessMessage">.</p>
 							</div>
 						  </form>
 						
