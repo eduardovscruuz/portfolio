@@ -1,4 +1,6 @@
- // Get a reference to the form element
+if (window.matchMedia("(max-width: 767px)").matches) {
+  
+  // Get a reference to the form element
  const form = document.getElementById('contact-form');
  const sucess = document.querySelector('#sucessMessage')
     // Listen for the form's submit event
@@ -52,7 +54,7 @@
         });
     });
 
-if (window.matchMedia("(max-width: 767px)").matches) {
+
 
     const homeContainer = document.querySelector(".home-container");
     const aboutContainer = document.querySelector(".about-container");
