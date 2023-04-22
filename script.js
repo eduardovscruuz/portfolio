@@ -40,7 +40,7 @@ if (window.matchMedia("(max-width: 800px)").matches) {
 
   // Get a reference to the form element
   const form = document.getElementById('contact-form');
-  const sucessMessage = document.querySelector('#sendMessage')
+  const sendMessage = document.querySelector('#sendMessage')
   // Listen for the form's submit event
   form.addEventListener('submit', event => {
     // Prevent the default form submission behavior
@@ -63,12 +63,12 @@ if (window.matchMedia("(max-width: 800px)").matches) {
           console.log('Email enviado com sucesso!');
           form.reset();
 
-          sucessMessage.innerHTML = 'Email enviado com sucesso!'
-          sucessMessage.style.opacity = 1
-          sucessMessage.style.transform = 'translateY(8px)'
+          sendMessage.innerHTML = 'Email enviado com sucesso!'
+          sendMessage.style.opacity = 1
+          sendMessage.style.transform = 'translateY(8px)'
           setTimeout(() => {
-            sucessMessage.style.opacity = 0;
-            sucessMessage.style.transform = 'translateY(0)';
+            sendMessage.style.opacity = 0;
+            sendMessage.style.transform = 'translateY(0)';
           }, 2400);
         } else {
           // There was an error sending the email
@@ -78,14 +78,14 @@ if (window.matchMedia("(max-width: 800px)").matches) {
         }
       })
       .catch(error => {
-        sucessMessage.innerHTML = 'Erro ao enviar email!'
-        sucessMessage.style.color = 'red'
-        sucessMessage.style.display = "block"
-        sucessMessage.style.opacity = 1
-        sucessMessage.style.transform = 'translateY(8px)'
+        sendMessage.innerHTML = 'Erro ao enviar email!'
+        sendMessage.style.color = 'red'
+        sendMessage.style.display = "block"
+        sendMessage.style.opacity = 1
+        sendMessage.style.transform = 'translateY(8px)'
         setTimeout(() => {
-          sucessMessage.style.opacity = 0;
-          sucessMessage.style.transform = 'translateY(0)';
+          sendMessage.style.opacity = 0;
+          sendMessage.style.transform = 'translateY(0)';
         }, 2400);
         // There was an error sending the email
 
@@ -102,7 +102,7 @@ else {
 
   // Get a reference to the form element
   const form = document.getElementById('contact-form');
-  const sucessMessage = document.querySelector('#sucessMessage')
+  const sendMessage = document.querySelector('#sendMessage')
   // Listen for the form's submit event
   form.addEventListener('submit', event => {
     // Prevent the default form submission behavior
@@ -124,12 +124,12 @@ else {
           console.log('Email enviado com sucesso!');
           form.reset();
 
-          sucessMessage.innerHTML = 'Email enviado com sucesso!'
-          sucessMessage.style.opacity = 1
-          sucessMessage.style.transform = 'translateY(8px)'
+          sendMessage.innerHTML = 'Email enviado com sucesso!'
+          sendMessage.style.opacity = 1
+          sendMessage.style.transform = 'translateY(8px)'
           setTimeout(() => {
-            sucessMessage.style.opacity = 0;
-            sucessMessage.style.transform = 'translateY(0)';
+            sendMessage.style.opacity = 0;
+            sendMessage.style.transform = 'translateY(0)';
           }, 2400);
         } else {
           // There was an error sending the email
@@ -139,14 +139,14 @@ else {
         }
       })
       .catch(error => {
-        sucessMessage.innerHTML = 'Erro ao enviar email!'
-        sucessMessage.style.color = 'red'
-        sucessMessage.style.display = "block"
-        sucessMessage.style.opacity = 1
-        sucessMessage.style.transform = 'translateY(8px)'
+        sendMessage.innerHTML = 'Erro ao enviar email!'
+        sendMessage.style.color = 'red'
+        sendMessage.style.display = "block"
+        sendMessage.style.opacity = 1
+        sendMessage.style.transform = 'translateY(8px)'
         setTimeout(() => {
-          sucessMessage.style.opacity = 0;
-          sucessMessage.style.transform = 'translateY(0)';
+          sendMessage.style.opacity = 0;
+          sendMessage.style.transform = 'translateY(0)';
         }, 2400);
         // There was an error sending the email
 
