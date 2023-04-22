@@ -1,3 +1,57 @@
+ // Get a reference to the form element
+ const form = document.getElementById('contact-form');
+ const sucess = document.querySelector('#sucessMessage')
+    // Listen for the form's submit event
+    form.addEventListener('submit', event => {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+  
+      // Create a new FormData object
+      const formData = new FormData(form);
+         console.log('Sending....');
+      // Send the form data asynchronously
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+      })
+      
+      
+        .then(response => {
+          if (response.ok) {
+            // The email was sent successfully
+            console.log('Email enviado com sucesso!'); 
+            form.reset();
+            
+            sucess.innerHTML = 'Email enviado com sucesso!'
+            sucess.style.opacity = 1
+            sucess.style.transform = 'translateY(8px)'
+            setTimeout(() => {
+             sucess.style.opacity = 0;
+             sucess.style.transform = 'translateY(0)';
+           }, 2400);
+          } else {
+            // There was an error sending the email
+           
+            console.error('Error sending email');
+          
+          }
+        })
+        .catch(error => {
+         sucess.innerHTML = 'Erro ao enviar email!'
+         sucess.style.color = 'red'
+         sucess.style.display = "block"
+         sucess.style.opacity = 1
+         sucess.style.transform = 'translateY(8px)'
+         setTimeout(() => {
+          sucess.style.opacity = 0;
+          sucess.style.transform = 'translateY(0)';
+        }, 2400);
+          // There was an error sending the email
+          
+          console.error('Error sending email:', error);
+        });
+    });
+
 if (window.matchMedia("(max-width: 767px)").matches) {
 
     const homeContainer = document.querySelector(".home-container");
@@ -291,64 +345,6 @@ window.onload = function(){
 
 
 }
-
-
-
-
- // Get a reference to the form element
- const form = document.getElementById('contact-form');
- const sucess = document.querySelector('#sucessMessage')
-    // Listen for the form's submit event
-    form.addEventListener('submit', event => {
-      // Prevent the default form submission behavior
-      event.preventDefault();
-  
-      // Create a new FormData object
-      const formData = new FormData(form);
-         console.log('Sending....');
-      // Send the form data asynchronously
-      fetch(form.action, {
-        method: form.method,
-        body: formData,
-      })
-      
-      
-        .then(response => {
-          if (response.ok) {
-            // The email was sent successfully
-            console.log('Email enviado com sucesso!'); 
-            form.reset();
-            
-            sucess.innerHTML = 'Email enviado com sucesso!'
-            sucess.style.opacity = 1
-            sucess.style.transform = 'translateY(8px)'
-            setTimeout(() => {
-             sucess.style.opacity = 0;
-             sucess.style.transform = 'translateY(0)';
-           }, 2400);
-          } else {
-            // There was an error sending the email
-           
-            console.error('Error sending email');
-          
-          }
-        })
-        .catch(error => {
-         sucess.innerHTML = 'Erro ao enviar email!'
-         sucess.style.color = 'red'
-         sucess.style.display = "block"
-         sucess.style.opacity = 1
-         sucess.style.transform = 'translateY(8px)'
-         setTimeout(() => {
-          sucess.style.opacity = 0;
-          sucess.style.transform = 'translateY(0)';
-        }, 2400);
-          // There was an error sending the email
-          
-          console.error('Error sending email:', error);
-        });
-    });
-
 
 }
 
