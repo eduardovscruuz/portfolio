@@ -316,7 +316,7 @@ else {
   //======================================================================================================================
 
   window.onload = function () {
-    const slides_count = 5;
+    const slides_count = 6;
     let startFrom = 1;
     let slider_button_left = $('.button_left:eq(0)');
     let slider_button_right = $('.button_right:eq(0)');
