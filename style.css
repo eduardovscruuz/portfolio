@@ -1094,7 +1094,7 @@ label {
   /* ESTILIZANDO OS PROJECTS --------------------------------------------------------------------------*/
 
   .projects-container {
-    height: 410vh; /* +75vh em cada project */
+    height: 490vh; /* +80vh em cada project */
 
     transition: all 0.5s;
   }
