@@ -20,110 +20,7 @@ if (window.matchMedia('(max-width: 800px)').matches) {
   slider_button_left.off('click');
   slider_button_right.off('click');
   slider_navElements.off('click');
-
-  // Get a reference to the form element
-  const form = document.getElementById('contact-form');
-  const sendMessage = document.querySelector('#sendMessage');
-  // Listen for the form's submit event
-  form.addEventListener('submit', (event) => {
-    // Prevent the default form submission behavior
-    event.preventDefault();
-
-    // Create a new FormData object
-    const formData = new FormData(form);
-    console.log('Enviando....');
-    // Send the form data asynchronously
-    console.log('formData:', formData);
-    fetch(form.action, {
-      method: form.method,
-      body: formData,
-    })
-      .then((response) => {
-        if (response.ok) {
-          // The email was sent successfully
-          console.log('Email enviado com sucesso!');
-          form.reset();
-
-          sendMessage.innerHTML = 'Email enviado com sucesso!';
-          sendMessage.style.opacity = 1;
-          sendMessage.style.transform = 'translateY(8px)';
-          setTimeout(() => {
-            sendMessage.style.opacity = 0;
-            sendMessage.style.transform = 'translateY(0)';
-          }, 2400);
-        } else {
-          // There was an error sending the email
-
-          console.error('Erro ao enviar email');
-        }
-      })
-      .catch((error) => {
-        sendMessage.innerHTML = 'Erro ao enviar email!';
-        sendMessage.style.color = 'red';
-        sendMessage.style.display = 'block';
-        sendMessage.style.opacity = 1;
-        sendMessage.style.transform = 'translateY(8px)';
-        setTimeout(() => {
-          sendMessage.style.opacity = 0;
-          sendMessage.style.transform = 'translateY(0)';
-        }, 2400);
-        // There was an error sending the email
-
-        console.error('Erro ao enviar email:', error);
-      });
-  });
 } else {
-  // Get a reference to the form element
-  const form = document.getElementById('contact-form');
-  const sendMessage = document.querySelector('#sendMessage');
-  // Listen for the form's submit event
-  form.addEventListener('submit', (event) => {
-    // Prevent the default form submission behavior
-    event.preventDefault();
-
-    // Create a new FormData object
-    const formData = new FormData(form);
-    console.log('Enviando...');
-    // Send the form data asynchronously
-    fetch(form.action, {
-      method: form.method,
-      body: formData,
-    })
-      .then((response) => {
-        if (response.ok) {
-          // The email was sent successfully
-          console.log('Email enviado com sucesso!');
-          form.reset();
-
-          sendMessage.innerHTML = 'Email enviado com sucesso!';
-          sendMessage.style.opacity = 1;
-          sendMessage.style.transform = 'translateY(8px)';
-          setTimeout(() => {
-            sendMessage.style.opacity = 0;
-            sendMessage.style.transform = 'translateY(0)';
-          }, 2400);
-        } else {
-          // There was an error sending the email
-
-          console.error('Erro ao enviar email');
-        }
-      })
-      .catch((error) => {
-        sendMessage.innerHTML = 'Erro ao enviar email!';
-        sendMessage.style.color = 'red';
-        sendMessage.style.display = 'block';
-        sendMessage.style.opacity = 1;
-        sendMessage.style.transform = 'translateY(8px)';
-        setTimeout(() => {
-          sendMessage.style.opacity = 0;
-          sendMessage.style.transform = 'translateY(0)';
-        }, 2400);
-        // There was an error sending the email
-
-        console.error('Erro ao enviar email:', error);
-      });
-  });
-
   const homeContainer = document.querySelector('.home-container');
   const aboutContainer = document.querySelector('.about-container');
   const skillsContainer = document.querySelector('.skills-container');
@@ -137,9 +34,9 @@ if (window.matchMedia('(max-width: 800px)').matches) {
   const contactColumn = document.querySelector('.contact-column');
 
   const homeContent = document.querySelector('.home-content-container'); ///
-  const aboutContent = document.querySelector('.about-container-content');
+  const aboutContent = document.querySelector('.about-content-container');
   const skillsContent = document.querySelector('.skills-content-container');
-  const projectsContent = document.querySelector('.projects-container-content');
+  const projectsContent = document.querySelector('.projects-content-container');
   const contactContent = document.querySelector('.contact-container-content');
 
   const slideHome = () => {
@@ -248,114 +145,143 @@ if (window.matchMedia('(max-width: 800px)').matches) {
   });
 
   //======================================================================================================================
+  const images = document.querySelectorAll('.tech-skills-icons img');
+  function addRotation(event) {
+    const img = event.target;
+    if (img.classList.contains('rotate')) return;
+    img.classList.add('rotate');
+    img.addEventListener(
+      'animationend',
+      () => {
+        img.classList.remove('rotate');
+      },
+      { once: true }
+    );
+  }
 
-  window.onload = function () {
-    const slides_count = 6;
-    let startFrom = 1;
-    let slider_button_left = $('.button_left:eq(0)');
-    let slider_button_right = $('.button_right:eq(0)');
-    let slides_container = $('.slides_container:eq(0)');
-    let slider_navigation = $('.navigation:eq(0)');
+  images.forEach((img) => {
+    img.addEventListener('mouseenter', addRotation);
+  });
 
-    for (let i = 0; i < slides_count; i++) {
-      newElement = document.createElement('span');
-      newElement.classList = 'nav_element';
-      slider_navigation.append(newElement);
-    }
-
-    let slider_navElements = $('.navigation:eq(0) .nav_element');
-    let slider_navAnimatedBlock = $('.navigation:eq(0) .navAnimatedBlock:eq(0)');
-
-    function slideFunction(to) {
-      slides_container.css({ right: parseFloat(75) * (to - 1) + 'vw' });
-    }
-
-    let curentSlide = startFrom;
-
-    slideFunction(startFrom);
-
-    function navAnimation(from, to) {
-      slider_navElement_width = parseFloat(slider_navElements.css('width'));
-      slider_navElement_margin = parseFloat(slider_navElements.css('margin-left'));
-
-      if (from < to) {
-        animatedBoxSize =
-          Math.abs(from - to) * slider_navElement_margin * 2 +
-          slider_navElement_width * (Math.abs(from - to) + 1) +
-          'px';
-        slider_navAnimatedBlock.animate({ width: animatedBoxSize }, 200);
-        slider_navAnimatedBlock.animate(
-          { width: slider_navElement_width, left: (to - 1) * 2 * slider_navElement_width + 'px' },
-          200
-        );
-      }
-
-      if (from > to) {
-        animatedBoxSize =
-          Math.abs(from - to) * slider_navElement_margin * 2 +
-          slider_navElement_width * (Math.abs(from - to) + 1) +
-          'px';
-        slider_navAnimatedBlock.animate(
-          { width: animatedBoxSize, left: (to - 1) * 2 * slider_navElement_width + 'px' },
-          200
-        );
-        slider_navAnimatedBlock.animate({ width: slider_navElement_width }, 200);
-      }
-    }
-
-    slider_button_left.on('click', function () {
-      console.log(curentSlide);
-      tempSlide = curentSlide;
-      if (curentSlide == 1) curentSlide = slides_count;
-      else {
-        curentSlide--;
-      }
-      slideFunction(curentSlide);
-      navAnimation(tempSlide, curentSlide, false);
-    });
-
-    slider_button_right.on('click', function () {
-      console.log(curentSlide);
-      tempSlide = curentSlide;
-      if (curentSlide == slides_count) curentSlide = 1;
-      else {
-        curentSlide++;
-      }
-      slideFunction(curentSlide);
-      navAnimation(tempSlide, curentSlide, true);
-    });
-
-    slider_navElements.on('click', function () {
-      navAnimation(curentSlide, slider_navElements.index(this) + 1);
-      curentSlide = slider_navElements.index(this) + 1;
-      slideFunction(curentSlide);
-    });
-  };
-}
-
-// Seleciona todas as imagens dentro do contêiner
-const images = document.querySelectorAll('.tech-skills-icons img');
-
-// Função para adicionar a animação
-function addRotation(event) {
-  const img = event.target;
-
-  // Evita que a animação seja reiniciada se já estiver em andamento
-  if (img.classList.contains('rotate')) return;
-
-  img.classList.add('rotate');
-
-  // Listener para remover a classe "rotate" automaticamente ao final da animação
-  img.addEventListener(
-    'animationend',
-    () => {
-      img.classList.remove('rotate');
+  // Dados do carrossel
+  const carouselData = [
+    {
+      name: 'Projeto 1',
+      image: '/assets/mockups/mockup.png',
+      linkGit: 'www.github.com',
+      linkSite: 'www.google.com',
+      techs: ['html', 'css', 'javascript'],
     },
-    { once: true } // Garante que o listener será executado apenas uma vez
-  );
-}
+    {
+      name: 'Projeto 2',
+      image: '/assets/mockups/mockup.png',
+      linkGit: 'www.github.com',
+      linkSite: 'www.google.com',
+      techs: ['angular', 'sass', 'javascript'],
+    },
+    {
+      name: 'Projeto 3',
+      image: '/assets/mockups/mockup.png',
+      linkGit: 'www.github.com',
+      linkSite: 'www.google.com',
+      techs: ['html', 'css', 'javascript', 'typescript'],
+    },
+  ];
 
-// Adiciona os listeners de eventos
-images.forEach((img) => {
-  img.addEventListener('mouseenter', addRotation);
+  // Seleciona o container do carrossel e dos indicadores
+  const carousel = document.querySelector('.carousel');
+  const indicatorsContainer = document.querySelector('.carousel-indicators');
+
+  // Insere os itens do carrossel dinamicamente
+  carouselData.forEach((item, index) => {
+    const carouselItem = document.createElement('div');
+    carouselItem.classList.add('carousel-item');
+
+    // Criação dinâmica da lista de tecnologias
+    const techsList = item.techs.map((tech) => `<li>${tech}</li>`).join('');
+
+    carouselItem.innerHTML = `
+    <img src="${item.image}" alt="${item.name}">
+    <div class="info">
+      <h3>${item.name}</h3>
+      <ul>${techsList}</ul>
+      <a href="${item.linkGit}" target="_blank">See the code</a>
+      <a href="${item.linkSite}" target="_blank">See it running</a>
+    </div>
+  `;
+
+    carousel.appendChild(carouselItem);
+
+    // Cria o indicador para cada item
+    const indicator = document.createElement('div');
+    indicator.classList.add('indicator');
+    if (index === 0) indicator.classList.add('active'); // Primeiro indicador ativo
+    indicator.dataset.index = index; // Armazena o índice
+    indicatorsContainer.appendChild(indicator);
+  });
+
+  // Controle do carrossel
+  let currentIndex = 0;
+
+  // Atualiza a posição do carrossel
+  function updateCarousel() {
+    const translateX = -currentIndex * 100;
+    carousel.style.transform = `translateX(${translateX}%)`;
+
+    // Atualiza os indicadores
+    document.querySelectorAll('.indicator').forEach((indicator, index) => {
+      indicator.classList.toggle('active', index === currentIndex);
+    });
+  }
+
+  // Botões de navegação
+  document.querySelector('.prev').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + carouselData.length) % carouselData.length;
+    updateCarousel();
+  });
+
+  document.querySelector('.next').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % carouselData.length;
+    updateCarousel();
+  });
+
+  // Clique nos indicadores
+  document.querySelectorAll('.indicator').forEach((indicator) => {
+    indicator.addEventListener('click', (e) => {
+      currentIndex = Number(e.target.dataset.index);
+      updateCarousel();
+    });
+  });
+
+  // Inicializa o carrossel
+  updateCarousel();
+}
+// Seleciona todas as imagens dentro do carrossel
+const images = document.querySelectorAll('.carousel-item img');
+const infos = document.querySelectorAll('.carousel-item .info');
+
+// Função para aplicar o efeito
+const applyHover = (img, info) => {
+  img.style.filter = 'grayscale(100%)'; // Aplica o filtro de desaturação
+  info.style.opacity = '1'; // Torna a informação visível
+};
+
+// Função para remover o efeito
+const removeHover = (img, info) => {
+  // Verifica se o mouse não está sobre a imagem nem sobre a info
+  if (!info.matches(':hover') && !img.matches(':hover')) {
+    img.style.filter = 'grayscale(0%)'; // Remove o filtro de desaturação
+    info.style.opacity = '0'; // Torna a informação invisível
+  }
+};
+
+// Adiciona os eventos de mouseenter e mouseleave para cada imagem e info
+images.forEach((img, index) => {
+  const info = infos[index];
+
+  img.addEventListener('mouseenter', () => applyHover(img, info));
+  info.addEventListener('mouseenter', () => applyHover(img, info));
+
+  img.addEventListener('mouseleave', () => removeHover(img, info));
+  info.addEventListener('mouseleave', () => removeHover(img, info));
 });

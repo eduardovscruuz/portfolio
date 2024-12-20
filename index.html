@@ -60,65 +60,42 @@
         <div class="column about-column">
           <img class="column-icon move-image" src="./assets/column-icons/about.png" />
         </div>
-        <div class="about-container-content">
-          <div class="contentAbout">
+        <div class="about-content-container">
+          <div class="about-content">
             <div class="navbar">
               <button>ToggleT</button>
               <h1>Sobre Mim</h1>
               <button>ToggleL</button>
             </div>
 
-            <section class="sectionAbout">
-              <div id="profile-container">
-                <img src="./assets/profile-pics/fundoBranco.JPG" id="profile" />
+			<section class="me-container">
+			<div class="me">
+				<div class="mePicture">
+					<img src="/assets/profile-pics/fundoBranco.JPG">
+				</div>
+							<div class="meText">
+								<p>
+							Olá, me chamo Eduardo, desenvolvedor full-stack que descobriu o mundo da programação em um momento um
+							tanto conturbado da minha vida, e em agosto de 2022 iniciei meus estudos e nunca mais olhei para trás.
+							</p>
+
+							<p>
+							Para mim, a programação foi um ponto de virada que me levou à descobrir minha verdadeira vocação na
+							vida. Enquanto estudava na faculdade de direito, sempre tive uma sensação de vazio e uma falta de
+							realização. No entanto, escolhi continuar nesse caminho porque não queria me sentir estagnado. Foram
+							durante os últimos semestres que descobri a programação, e imediatamente me conectei com ela. Desde
+							pequeno, sempre tive muita afinidade com tecnologia, e a possibilidade de criar algo capaz de resolver
+							desde os problemas simples até os mais complexos através da tela de um computador, é o que me atraiu
+							para essa área.
+							</p>
+
+							</div>
+			</div>
+				
+
+			</section>
+                
               </div>
-
-              <div id="paragr-container">
-                <p>
-                  Olá, me chamo Eduardo, desenvolvedor full-stack que descobriu o mundo da programação em um momento um
-                  tanto conturbado da minha vida, e em agosto de 2022 iniciei meus estudos e nunca mais olhei para trás.
-                </p>
-
-                <p>
-                  Para mim, a programação foi um ponto de virada que me levou à descobrir minha verdadeira vocação na
-                  vida. Enquanto estudava na faculdade de direito, sempre tive uma sensação de vazio e uma falta de
-                  realização. No entanto, escolhi continuar nesse caminho porque não queria me sentir estagnado. Foram
-                  durante os últimos semestres que descobri a programação, e imediatamente me conectei com ela. Desde
-                  pequeno, sempre tive muita afinidade com tecnologia, e a possibilidade de criar algo capaz de resolver
-                  desde os problemas simples até os mais complexos através da tela de um computador, é o que me atraiu
-                  para essa área.
-                </p>
-
-                <p>
-                  Desde então, tenho estado em uma jornada de aprendizado e crescimento constantes. Mergulhei
-                  profundamente em diferentes tecnologias e frameworks em geral, construindo projetos que demonstram
-                  minhas habilidades e criatividade. A cada novo desafio, sou impulsionado por uma paixão pela resolução
-                  de problemas e pela alegria de criar algo do zero. Como parte da sua equipe, você pode esperar de mim
-                  um desenvolvedor que não só é dedicado, mas também um rápido aprendiz e um grande colega de equipe.
-                  Meu compromisso com os resultados e minha habilidade de pensar fora da caixa me tornam valioso para
-                  qualquer projeto.
-                </p>
-
-                <p>
-                  Em resumo, sou um júnior determinado e entusiasmado que está ansioso para continuar crescendo cada vez
-                  mais. Com minha paixão pela área e minha determinação em alcançar o sucesso, estou confiante de que
-                  farei uma contribuição significativa para o mundo da tecnologia.
-                </p>
-
-                <!-- <p>
-									Hi, I'm Eduardo, a passionate junior developer who discovered the magic of programming in the midst of a challenging time. I started studying in August 2022 and I've never looked back since.
-								</p>
-								<p>
-									For me, programming was a turning point that led me to discover my true calling in life. While studying at the law school, I always felt a sense of emptiness and lack of fulfillment. However, I chose to continue on that path as I didn't want to remain stagnant. It was during the last semesters that I discovered programming and immediately felt a connection to it. From a young age, I always had a knack for technology, and the ability to create something out of nothing, solve complex problems through it, is what drew me to this field. 
-								</p>
-								<p>
-									Since then, I've been on a journey of constant learning and growth. I have dived deep into different techs and frameworks in general, building projects that showcase my skills and creativity. With each new challenge, I am fueled by a deep passion for problem-solving and the joy of creating something from scratch. As a part of your team, you can expect an individual who is not only hardworking and dedicated but also a fast learner and great team player. My commitment to my craft and ability to think outside the box makes me a valuable asset to any project.
-								</p>
-								<p>
-									In summary, I am a determined and enthusiastic junior developer who is excited to continue growing in my craft. With my newfound passion for programming and a drive to succeed, I am sure to make an impact in the tech world.
-								</p>  -->
-              </div>
-            </section>
           </div>
         </div>
       </div>
@@ -161,245 +138,32 @@
         </div>
       </div>
 
-      <div class="projects-container">
+	  <div class="projects-container">
         <div class="column projects-column">
           <img class="column-icon move-image" src="./assets/column-icons/projects.png" />
         </div>
 
-        <div class="projects-container-content">
-          <div class="mainly-container">
+        <div class="projects-content-container">
+          <div class="projects-content">
             <div class="navbar">
               <button>ToggleT</button>
               <h1>Projetos</h1>
               <button>ToggleL</button>
             </div>
-
-            <div class="page_section">
-              <div class="slider_container">
-                <div class="slider">
-                  <div class="slides_container">
-                    <div class="slide" style="left: 0px">
-                      <div class="roundEdges">
-                        <div class="projectTitle">
-                          <h2>Projeto React Users</h2>
-
-                          <p>
-                            O projeto é uma aplicação web que utiliza React para a interface do usuário e Node.js para o
-                            back-end. O cliente pode cadastrar e gerenciar usuários, com nome e idade, em uma página de
-                            cadastro e outra de listagem com opção de exclusão. O servidor back-end é construído com
-                            Express.js e integra com o banco de dados MongoDB utilizando Mongoose. Axios,
-                            react-router-dom e .env também são utilizados.
-                          </p>
-                        </div>
-
-                        <div class="projectDescription">
-                          <img src="./media/projects/project-react-user.png" />
-
-                          <div class="info">
-                            <h2>Tecnologias:</h2>
-                            <ul>
-                              <li>HTML</li>
-                              <li>CSS</li>
-                              <li>Javascript</li>
-                              <li>React</li>
-                              <li>Node</li>
-                              <li>Express</li>
-                              <li>MongoDB</li>
-                            </ul>
-                            <a
-                              class="visualizar"
-                              href="https://github.com/eduardovscruuz/react-users-project"
-                              target="_blank"
-                              >VISUALIZAR</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="slide" style="left: 100%">
-                      <div class="roundEdges">
-                        <div class="projectTitle">
-                          <h2>Projeto Galeria Sass</h2>
-
-                          <p>
-                            O projeto é uma galeria web desenvolvida com Sass (SCSS), com foco em estilização avançada e
-                            responsividade. Recursos interativos, como ampliação de imagens e efeitos de hover, também
-                            foram adicionados. O Sass permitiu criar um código CSS organizado e de fácil manutenção.
-                          </p>
-                        </div>
-
-                        <div class="projectDescription">
-                          <img src="./media/projects/project-sass-gallery.png" />
-
-                          <div class="info">
-                            <h2>Tecnologias:</h2>
-                            <ul>
-                              <li>HTML</li>
-                              <li>CSS</li>
-                              <li>Javascript</li>
-                              <li>Sass</li>
-                            </ul>
-                            <a
-                              class="visualizar"
-                              href="https://eduardovscruuz.github.io/gallery-sass-project/"
-                              target="_blank"
-                              >VISUALIZAR</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="slide" style="left: 200%">
-                      <div class="roundEdges">
-                        <div class="projectTitle">
-                          <h2>Projeto Churrascômetro</h2>
-
-                          <p>
-                            O projeto é uma calculadora de quantidades para churrasco, desenvolvida com HTML, CSS e
-                            JavaScript. Os inputs permitem definir a quantidade de adultos, crianças e duração, e a
-                            aplicação retorna a quantidade ideal de alimentos, bebidas e outros itens necessários para o
-                            evento. A interface é intuitiva e o cálculo é realizado em tempo real. A calculadora evita
-                            desperdícios e garante a satisfação dos convidados.
-                          </p>
-                        </div>
-
-                        <div class="projectDescription">
-                          <img src="./media/projects/project-churrascometro.png" />
-
-                          <div class="info">
-                            <h2>Tecnologias:</h2>
-                            <ul>
-                              <li>HTML</li>
-                              <li>CSS</li>
-                              <li>Javascript</li>
-                              <li>Jquery</li>
-                            </ul>
-                            <a
-                              class="visualizar"
-                              href="https://eduardovscruuz.github.io/projeto-churrascometro-/"
-                              target="_blank"
-                              >VISUALIZAR</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="slide" style="left: 300%">
-                      <div class="roundEdges">
-                        <div class="projectTitle">
-                          <h2>DevClub Burger</h2>
-
-                          <p>
-                            Projeto full-stack, no qual os clientes podem se cadastrar em uma página, explorar um menu
-                            diversificado com várias opções para adicionar ao carrinho, efetuar compras e acompanhar o
-                            status dos pedidos. Além disso, os administradores têm acesso exclusivo para monitorar todas
-                            essas atividades, bem como editar e adicionar produtos. Isso proporciona uma experiência
-                            completa tanto para os usuários finais quanto para os administradores, garantindo uma
-                            plataforma robusta e funcional.
-                          </p>
-                        </div>
-
-                        <div class="projectDescription">
-                          <img src="./media/projects/project-devburger.png" />
-
-                          <div class="info">
-                            <h2>Tecnologias:</h2>
-                            <ul>
-                              <li>HTML</li>
-                              <li>CSS</li>
-                              <li>Javascript</li>
-                              <li>React</li>
-                              <li>Node</li>
-                              <li>Express</li>
-                              <li>MaterialUI</li>
-                              <li>MongoDB</li>
-                              <li>PostgreSQL</li>
-                            </ul>
-                            <a
-                              class="visualizar"
-                              href="https://github.com/eduardovscruuz/dev-burger-project-Interface"
-                              target="_blank"
-                              >VISUALIZAR</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="slide" style="left: 400%">
-                      <div class="roundEdges">
-                        <div class="projectTitle">
-                          <h2>Convert Money</h2>
-
-                          <p>
-                            O projeto é um conversor de moedas altamente funcional, que utiliza uma API para fornecer de
-                            forma dinâmica os valores convertidos de Real Brasileiro para Dólar Americano, Dólar
-                            Canadense, Euro ou Bitcoin. Com essa ferramenta, os usuários poderão obter de maneira rápida
-                            e precisa as equivalências entre as moedas desejadas, facilitando o processo de conversão
-                            financeira.
-                          </p>
-                        </div>
-
-                        <div class="projectDescription">
-                          <img src="./media/projects/project-convertmoney.png" />
-
-                          <div class="info">
-                            <h2>Tecnologias:</h2>
-                            <ul>
-                              <li>HTML</li>
-                              <li>CSS</li>
-                              <li>Javascript</li>
-                              <li>Jquery</li>
-                            </ul>
-                            <a
-                              class="visualizar"
-                              href="https://eduardovscruuz.github.io/project-convert-money/"
-                              target="_blank"
-                              >VISUALIZAR</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="slide" style="left: 500%">
-                      <div class="roundEdges">
-                        <div class="projectTitle">
-                          <h2>Em breve</h2>
-
-                          <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et aliquam labore, nam eos qui
-                            illum dolorem delectus officia exercitationem optio adipisci molestiae repellat sunt
-                            aspernatur commodi quia rem quis id.
-                          </p>
-                        </div>
-
-                        <div class="projectDescription">
-                          <img src="./assets/mockups/project-soon.png" />
-
-                          <div class="info">
-                            <h2>Tecnologias:</h2>
-                            <ul>
-                              <li>------</li>
-                              <li>------</li>
-                              <li>------</li>
-                              <li>------</li>
-                              <li>------</li>
-                              <li>------</li>
-                            </ul>
-                            <a class="visualizar" href="#" target="_blank">VISUALIZAR</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="button_left"><i class="fas fa-angle-left"></i></div>
-                  <div class="button_right"><i class="fas fa-angle-right"></i></div>
-                  <div class="navigation">
-                    <span class="navAnimatedBlock"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
+			<div class="carousel-container">
+				<button class="carousel-button prev"><i class="fas fa-angle-left"></i> <i class="fas fa-angle-left"></i></button>
+				<div class="carousel">
+				  <!-- Itens do carrossel serão criados dinamicamente -->
+				</div>
+		  
+				<button class="carousel-button next">
+				  <i class="fas fa-angle-right"></i> <i class="fas fa-angle-right"></i>
+				</button>
+				<div class="carousel-indicators">
+				  <!-- Indicadores serão criados dinamicamente -->
+				</div>
+			  </div>
+           
           </div>
         </div>
       </div>
