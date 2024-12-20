@@ -37,7 +37,7 @@ if (window.matchMedia('(max-width: 800px)').matches) {
   const aboutContent = document.querySelector('.about-content-container');
   const skillsContent = document.querySelector('.skills-content-container');
   const projectsContent = document.querySelector('.projects-content-container');
-  const contactContent = document.querySelector('.contact-container-content');
+  const contactContent = document.querySelector('.contact-content-container');
 
   const slideHome = () => {
     homeContainer.style.paddingRight = '';

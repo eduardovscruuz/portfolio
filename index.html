@@ -172,38 +172,55 @@
         <div class="column contact-column">
           <img class="column-icon move-image" src="./assets/column-icons/contact.png" />
         </div>
-        <div class="contact-container-content">
-          <div class="contentContact">
+        <div class="contact-content-container">
+
+          <div class="contact-content">
+
             <div class="navbar">
               <button>ToggleT</button>
               <h1>Contato</h1>
               <button>ToggleL</button>
             </div>
-
-            <form
-              class="sectionContact"
-              id="contact-form"
-              action="https://nodemailer-api.vercel.app/send-email"
-              method="POST"
-              enctype="multipart/form-data"
-            >
-              <div class="emailInfo">
-                <label for="name">NOME</label>
-                <input type="text" id="name" name="name" placeholder="Insira nome" required />
-                <label for="email">EMAIL</label>
-                <input type="email" id="email" name="email" placeholder="Insira email" required />
-                <label for="subject">ASSUNTO</label>
-                <input id="subject" name="subject" placeholder="Insira assunto" required />
+          
+          <div class="form-container">
+            <div class="contact-form">
+              <div class="letschat">
+                <h2>Let's chat!</h2>
+                <p>Wheter you have a question, want to start new project, or simply wants to connect.</p>
+                <p> Feel free to send me a message in the contact form, or directly send me an e-mail in:  <span>eduardovscruuz@gmail.com</span>
+                </p>
               </div>
-              <div class="emailMessage">
-                <label for="message">MENSAGEM</label>
-                <textarea id="message" name="message" placeholder="Insira sua mensagem" required></textarea>
-                <!-- <input type="file" id="file" name="file"> -->
-                <button name="submit" type="submit">ENVIAR</button>
-                <p id="sendMessage">.</p>
-              </div>
-            </form>
+              <form action="#" method="post" class="form-info">
+                <div class="name">
+                  <label for="name"></label>
+                  <input type="text" placeholder="My name is" name="name" id="name_input" required />
+                </div>
+                <div class="email">
+                  <label for="email"></label>
+                  <input type="email" placeholder="My e-mail is" name="email" id="email_input" required />
+                </div>
+                <div class="subject">
+                  <label for="subject"></label>
+                  <input type="text" placeholder="Subject" name="email" id="subject_input" required />
+                </div>
+                <div class="message">
+                  <label for="message"></label>
+                  <textarea
+                    name="message"
+                    placeholder="I'd like to chat about"
+                    id="message_input"
+                    cols="30"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <div class="submit">
+                  <input type="submit" value="Send Message" id="form_button" />
+                </div>
+              </form>
+            </div>
           </div>
+      
         </div>
       </div>
     </main>

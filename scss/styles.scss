@@ -139,7 +139,7 @@ body {
 .home-content-container,
 .about-content-container,
 .skills-content-container,
-.contact-container-content {
+.contact-content-container {
   position: absolute;
   top: 0vh;
   left: 5vw;
@@ -167,7 +167,7 @@ body {
 /* DEIXANDO OS CONTEUDOS INVISIVEIS ATÉ SEREM CLICADOS --------------------------------------------------------------------------*/
 .about-content-container,
 .skills-content-container,
-.contact-container-content {
+.contact-content-container {
   display: none;
 }
 
@@ -178,11 +178,11 @@ body {
   left: 15vw;
 }
 
-.contact-container-content {
+.contact-content-container {
   left: 25vw;
 }
 
-/* ESTILIZANDO A HOME --------------------------------------------------------------------------*/
+//////////////////////// ESTILIZANDO A HOME
 .home-container {
   .home-content-container {
     .navbar {
@@ -262,7 +262,7 @@ body {
   }
 }
 
-/* ESTILIZANDO O ABOUT --------------------------------------------------------------------------*/
+//////////////////////// ESTILIZANDO O ABOUT
 .about-container {
   .about-content-container {
     .navbar {
@@ -309,7 +309,7 @@ body {
   }
 }
 
-/* ESTILIZANDO AS SKILLS --------------------------------------------------------------------------*/
+//////////////////////// ESTILIZANDO AS SKILLS
 .skills-container {
   .skills-content-container {
     width: 75vw;
@@ -371,8 +371,7 @@ body {
   }
 }
 
-/* ESTILIZANDO OS PROJECTS --------------------------------------------------------------------------*/
-
+//////////////////////// ESTILIZANDO OS PROJECTS
 .projects-container {
   height: 100vh;
   transition: all 0.5s;
@@ -550,7 +549,159 @@ body {
   }
 }
 
-/* ESTILIZANDO O CONTACT --------------------------------------------------------------------------*/
+//////////////////////// ESTILIZANDO O CONTACT
+.contact-container {
+  .contact-content-container {
+    .contact-content {
+      width: 100%;
+      height: 100%;
+      .navbar {
+        color: $dark-contact;
+      }
+
+      .form-container {
+        height: 90%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0% 10% 5% 10%;
+
+        .contact-form {
+          overflow: hidden;
+          border-radius: 15px;
+          max-height: 600px;
+          max-width: 1400px;
+          background-color: black;
+          display: flex;
+          .letschat {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: $dark-contact;
+            width: 50%;
+            padding: 3%;
+            text-align: center;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.26);
+
+            h2 {
+              text-transform: uppercase;
+              font-size: 4rem;
+              margin: 0;
+            }
+            p {
+              font-size: 1.2rem;
+              margin-top: 3%;
+              span {
+                color: black;
+              }
+            }
+          }
+
+          .form-info {
+            box-sizing: border-box;
+            padding: 5%;
+            width: 50%;
+            button {
+              overflow: visible;
+            }
+
+            button,
+            input,
+            textarea {
+              color: rgb(255, 255, 255);
+              font: inherit;
+              margin: 0;
+            }
+
+            input {
+              line-height: normal;
+            }
+
+            textarea {
+              overflow: auto;
+            }
+
+            #container {
+              width: 100%;
+              margin: 6px auto;
+              position: relative;
+            }
+
+            .email {
+              float: right;
+              width: 100%;
+            }
+
+            input[type='text'],
+            [type='email'],
+            textarea {
+              background: none;
+              border: none;
+              border-bottom: solid 2px $dark-contact;
+              color: #ffffff;
+              font-size: 1rem;
+              font-weight: 400;
+              letter-spacing: 1px;
+              margin: 0em 0 1.3em 0;
+              padding: 0 0 0.875em 0;
+              text-transform: uppercase;
+              width: 100%;
+              box-sizing: border-box;
+              transition: all 0.3s;
+            }
+
+            input[type='text']:focus,
+            [type='email']:focus,
+            textarea:focus {
+              outline: none;
+              padding: 0 0 0.875em 0;
+            }
+
+            .message,
+            .name,
+            .subject,
+            .telephone {
+              width: 100%;
+            }
+
+            textarea {
+              line-height: 150%;
+              height: 120px;
+              scrollbar-color: #474747 #000000;
+              resize: none;
+              width: 100%;
+            }
+
+            ::-webkit-input-placeholder {
+              color: #474544;
+            }
+
+            #form_button {
+              background: none;
+              border: solid 2px $dark-contact;
+              color: $dark-contact;
+              cursor: pointer;
+              text-transform: uppercase;
+              font-size: 1rem;
+              font-weight: bold;
+              outline: none;
+              padding: 20px 35px;
+              transition: all 0.3s;
+              &:hover {
+                background: #38a5ff;
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 /* MOBILE ----------------------------------------*/
 
@@ -628,7 +779,7 @@ body {
   .home-content-container,
   .about-content-container,
   .skills-content-container,
-  .contact-container-content {
+  .contact-content-container {
     position: unset;
     top: unset;
     left: unset;
@@ -662,7 +813,7 @@ body {
   /* DEIXANDO OS CONTEUDOS INVISIVEIS ATÉ SEREM CLICADOS --------------------------------------------------------------------------*/
   .about-content-container,
   .skills-content-container,
-  .contact-container-content {
+  .contact-content-container {
     display: unset;
   }
 
@@ -673,7 +824,7 @@ body {
     left: unset;
   }
 
-  .contact-container-content {
+  .contact-content-container {
     left: unset;
   }
 
@@ -1169,7 +1320,7 @@ body {
 
   /* ESTILIZANDO O CONTACT --------------------------------------------------------------------------*/
 
-  .contentContact {
+  .contact-content {
     height: 90vh;
     width: 100%;
     padding: 10%;
