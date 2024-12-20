@@ -68,34 +68,30 @@
               <button>ToggleL</button>
             </div>
 
-			<section class="me-container">
-			<div class="me">
-				<div class="mePicture">
-					<img src="/assets/profile-pics/fundoBranco.JPG">
-				</div>
-							<div class="meText">
-								<p>
-							Olá, me chamo Eduardo, desenvolvedor full-stack que descobriu o mundo da programação em um momento um
-							tanto conturbado da minha vida, e em agosto de 2022 iniciei meus estudos e nunca mais olhei para trás.
-							</p>
+            <section class="me-container">
+              <div class="me">
+                <div class="mePicture">
+                  <img src="/assets/profile-pics/fundoBranco.JPG" />
+                </div>
+                <div class="meText">
+                  <p>
+                    Olá, me chamo Eduardo, desenvolvedor full-stack que descobriu o mundo da programação em um momento
+                    um tanto conturbado da minha vida, e em agosto de 2022 iniciei meus estudos e nunca mais olhei para
+                    trás.
+                  </p>
 
-							<p>
-							Para mim, a programação foi um ponto de virada que me levou à descobrir minha verdadeira vocação na
-							vida. Enquanto estudava na faculdade de direito, sempre tive uma sensação de vazio e uma falta de
-							realização. No entanto, escolhi continuar nesse caminho porque não queria me sentir estagnado. Foram
-							durante os últimos semestres que descobri a programação, e imediatamente me conectei com ela. Desde
-							pequeno, sempre tive muita afinidade com tecnologia, e a possibilidade de criar algo capaz de resolver
-							desde os problemas simples até os mais complexos através da tela de um computador, é o que me atraiu
-							para essa área.
-							</p>
-
-							</div>
-			</div>
-				
-
-			</section>
-                
+                  <p>
+                    Para mim, a programação foi um ponto de virada que me levou à descobrir minha verdadeira vocação na
+                    vida. Enquanto estudava na faculdade de direito, sempre tive uma sensação de vazio e uma falta de
+                    realização. No entanto, escolhi continuar nesse caminho porque não queria me sentir estagnado. Foram
+                    durante os últimos semestres que descobri a programação, e imediatamente me conectei com ela. Desde
+                    pequeno, sempre tive muita afinidade com tecnologia, e a possibilidade de criar algo capaz de
+                    resolver desde os problemas simples até os mais complexos através da tela de um computador, é o que
+                    me atraiu para essa área.
+                  </p>
+                </div>
               </div>
+            </section>
           </div>
         </div>
       </div>
@@ -138,7 +134,7 @@
         </div>
       </div>
 
-	  <div class="projects-container">
+      <div class="projects-container">
         <div class="column projects-column">
           <img class="column-icon move-image" src="./assets/column-icons/projects.png" />
         </div>
@@ -150,20 +146,21 @@
               <h1>Projetos</h1>
               <button>ToggleL</button>
             </div>
-			<div class="carousel-container">
-				<button class="carousel-button prev"><i class="fas fa-angle-left"></i> <i class="fas fa-angle-left"></i></button>
-				<div class="carousel">
-				  <!-- Itens do carrossel serão criados dinamicamente -->
-				</div>
-		  
-				<button class="carousel-button next">
-				  <i class="fas fa-angle-right"></i> <i class="fas fa-angle-right"></i>
-				</button>
-				<div class="carousel-indicators">
-				  <!-- Indicadores serão criados dinamicamente -->
-				</div>
-			  </div>
-           
+            <div class="carousel-container">
+              <button class="carousel-button prev">
+                <i class="fas fa-angle-left"></i> <i class="fas fa-angle-left"></i>
+              </button>
+              <div class="carousel">
+                <!-- Itens do carrossel serão criados dinamicamente -->
+              </div>
+
+              <button class="carousel-button next">
+                <i class="fas fa-angle-right"></i> <i class="fas fa-angle-right"></i>
+              </button>
+              <div class="carousel-indicators">
+                <!-- Indicadores serão criados dinamicamente -->
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -173,54 +170,54 @@
           <img class="column-icon move-image" src="./assets/column-icons/contact.png" />
         </div>
         <div class="contact-content-container">
-
           <div class="contact-content">
-
             <div class="navbar">
               <button>ToggleT</button>
               <h1>Contato</h1>
               <button>ToggleL</button>
             </div>
-          
-          <div class="form-container">
-            <div class="contact-form">
-              <div class="letschat">
-                <h2>Let's chat!</h2>
-                <p>Wheter you have a question, want to start new project, or simply wants to connect.</p>
-                <p> Feel free to send me a message in the contact form, or directly send me an e-mail in:  <span>eduardovscruuz@gmail.com</span>
-                </p>
+
+            <div class="form-container">
+              <div class="contact-form">
+                <div class="letschat">
+                  <h2>Let's chat!</h2>
+                  <p>Wheter you have a question, want to start new project, or simply wants to connect.</p>
+                  <p>
+                    Feel free to send me a message in the contact form, or directly send me an e-mail in:
+                    <span>eduardovscruuz@gmail.com</span>
+                  </p>
+                </div>
+                <form action="#" method="post" class="form-info">
+                  <div class="name">
+                    <label for="name"></label>
+                    <input type="text" placeholder="My name is" name="name" id="name_input" required />
+                  </div>
+                  <div class="email">
+                    <label for="email"></label>
+                    <input type="email" placeholder="My e-mail is" name="email" id="email_input" required />
+                  </div>
+                  <div class="subject">
+                    <label for="subject"></label>
+                    <input type="text" placeholder="Subject" name="email" id="subject_input" required />
+                  </div>
+                  <div class="message">
+                    <label for="message"></label>
+                    <textarea
+                      name="message"
+                      placeholder="I'd like to chat about"
+                      id="message_input"
+                      cols="30"
+                      rows="5"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="submit">
+                    <input type="submit" value="Send Message" id="form_button" />
+                  </div>
+                </form>
               </div>
-              <form action="#" method="post" class="form-info">
-                <div class="name">
-                  <label for="name"></label>
-                  <input type="text" placeholder="My name is" name="name" id="name_input" required />
-                </div>
-                <div class="email">
-                  <label for="email"></label>
-                  <input type="email" placeholder="My e-mail is" name="email" id="email_input" required />
-                </div>
-                <div class="subject">
-                  <label for="subject"></label>
-                  <input type="text" placeholder="Subject" name="email" id="subject_input" required />
-                </div>
-                <div class="message">
-                  <label for="message"></label>
-                  <textarea
-                    name="message"
-                    placeholder="I'd like to chat about"
-                    id="message_input"
-                    cols="30"
-                    rows="5"
-                    required
-                  ></textarea>
-                </div>
-                <div class="submit">
-                  <input type="submit" value="Send Message" id="form_button" />
-                </div>
-              </form>
             </div>
           </div>
-      
         </div>
       </div>
     </main>

@@ -19,24 +19,6 @@ body {
   overflow: hidden;
 }
 
-/* CONFIGURAÇÕES GLOBAIS PARA OS CONTEÚDOS --------------------------------------------------------------------------*/
-.content {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-}
-
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  color: #61e4d5;
-  height: 10vh;
-  text-transform: uppercase;
-  letter-spacing: 15px;
-}
-
 .navbar {
   display: flex;
   width: 100%;
@@ -54,53 +36,6 @@ body {
   margin: 0;
 }
 
-/* CORES DAS COLUNAS --------------------------------------------------------------------------*/
-.contact-container .navbar {
-  color: #38a5ff;
-}
-
-.home-column {
-  background-color: #61e4d5;
-}
-
-.about-column {
-  background-color: #57d5e0;
-}
-
-.about {
-  color: #57d5e0;
-}
-
-.skills-column {
-  background-color: #4dc5ea;
-}
-
-.skills {
-  color: #4dc5ea;
-}
-
-.projects-column {
-  background-color: #43b5f5;
-}
-
-.projects {
-  color: #43b5f5;
-}
-
-.contact-column {
-  background-color: #38a5ff;
-}
-
-.contact {
-  color: #38a5ff;
-}
-
-.column-icon {
-  transition: all 0.2s ease;
-  max-width: 25px;
-}
-
-/* TAMANHO DAS COLUNAS --------------------------------------------------------------------------*/
 .column {
   font-weight: bold;
   display: flex;
@@ -108,12 +43,35 @@ body {
   justify-content: center;
   height: 100vh;
   width: 5vw;
-  transition: all 0.5s;
+  transition: all 0.3s;
   flex-direction: column;
   cursor: pointer;
 }
+.column:hover {
+  box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+.column .column-icon {
+  transition: all 0.2s ease;
+  max-width: 25px;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.404));
+}
+.column.home-column {
+  background-color: #61e4d5;
+}
+.column.about-column {
+  background-color: #57d5e0;
+}
+.column.skills-column {
+  background-color: #4dc5ea;
+}
+.column.projects-column {
+  background-color: #43b5f5;
+}
+.column.contact-column {
+  background-color: #38a5ff;
+}
 
-/* TAMANHO DOS CONTAINERS E PADDING INICIAL DA HOME --------------------------------------------------------------------------*/
+/* TAMANHO DOS CONTAINERS E PADDING INICIAL DA HOME -------------------------------------*/
 .home-container,
 .about-container,
 .skills-container,
@@ -127,7 +85,7 @@ body {
   padding-right: 75vw;
 }
 
-/* CONTAINER ONDE VAI O CONTEÚDO --------------------------------------------------------------------------*/
+/* CONTAINER ONDE VAI O CONTEÚDO ---------------------------------------*/
 .home-content-container,
 .about-content-container,
 .skills-content-container,
@@ -274,7 +232,7 @@ body {
   width: 100%;
   max-width: 300px;
   border-radius: 15px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 .about-container .about-content-container .me .meText {
   width: 75%;
@@ -282,6 +240,7 @@ body {
   color: white;
   font-size: 1rem;
   padding: 2%;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
 }
 .about-container .about-content-container .me .meText p {
   text-align: justify;
@@ -327,7 +286,7 @@ body {
 .skills-container .skills-content-container .skills-content .tech-skills-icons img {
   width: 90%;
   border-radius: 50%;
-  filter: drop-shadow(5px 5px 5px #000000);
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5019607843));
 }
 .skills-container .skills-content-container .skills-content .rotate {
   animation: flip 0.3s ease-in-out forwards;
@@ -539,7 +498,7 @@ body {
   width: 50%;
   padding: 3%;
   text-align: center;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.26);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
 }
 .contact-container .contact-content-container .contact-content .form-container .contact-form .letschat h2 {
   text-transform: uppercase;
