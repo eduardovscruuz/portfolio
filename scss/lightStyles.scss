@@ -1,9 +1,9 @@
-$dark-home: #61e4d5;
-$dark-about: #57d5e0;
-$dark-skills: #4dc5ea;
-$dark-projects: #43b5f5;
-$dark-contact: #38a5ff;
-$dark-background: #16191b;
+$light-home: #1595ff;
+$light-about: #257eff;
+$light-skills: #3566ff;
+$light-projects: #454eff;
+$light-contact: #5436ff;
+$light-background: #eefaff;
 
 * {
   font-family: 'Jost', sans-serif;
@@ -12,7 +12,7 @@ $dark-background: #16191b;
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(30, 30, 30);
+  background-color: $light-background;
   overflow: hidden;
 }
 
@@ -58,26 +58,27 @@ body {
   .column-icon {
     transition: all 0.2s ease;
     max-width: 25px;
-    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.404));
+    filter: drop-shadow(1px 1px 4px rgba(255, 255, 255, 0.61)) invert(99%) sepia(51%) saturate(2%) hue-rotate(243deg)
+      brightness(115%) contrast(101%);
   }
   &.home-column {
-    background-color: $dark-home;
+    background-color: $light-home;
   }
 
   &.about-column {
-    background-color: $dark-about;
+    background-color: $light-about;
   }
 
   &.skills-column {
-    background-color: $dark-skills;
+    background-color: $light-skills;
   }
 
   &.projects-column {
-    background-color: $dark-projects;
+    background-color: $light-projects;
   }
 
   &.contact-column {
-    background-color: $dark-contact;
+    background-color: $light-contact;
   }
 }
 
@@ -145,14 +146,14 @@ body {
 .home-container {
   .home-content-container {
     .navbar {
-      color: $dark-home;
+      color: $light-home;
     }
     .hello-container {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      color: white;
+      color: black;
       background-color: transparent;
       text-transform: uppercase;
       font-weight: bold;
@@ -165,7 +166,7 @@ body {
         h2 {
           font-size: clamp(3rem, 4vw, 10rem);
           span {
-            color: $dark-home;
+            color: $light-home;
           }
         }
         h3 {
@@ -189,30 +190,30 @@ body {
           margin-right: 2%;
         }
         #resume {
-          border: 2px solid $dark-home;
-          color: $dark-home;
+          border: 2px solid $light-home;
+          color: $light-home;
           padding: 10px 50px;
           &:hover {
-            color: black;
-            background-color: $dark-home;
+            color: white;
+            background-color: $light-home;
             transform: translateY(-8%);
           }
         }
         #linkedin {
-          border: 2px solid $dark-skills;
-          color: $dark-skills;
+          border: 2px solid $light-skills;
+          color: $light-skills;
           &:hover {
-            color: black;
-            background-color: $dark-skills;
+            color: white;
+            background-color: $light-skills;
             transform: translateY(-8%);
           }
         }
         #github {
-          border: 2px solid $dark-contact;
-          color: $dark-contact;
+          border: 2px solid $light-contact;
+          color: $light-contact;
           &:hover {
-            color: black;
-            background-color: $dark-contact;
+            color: white;
+            background-color: $light-contact;
             transform: translateY(-8%);
           }
         }
@@ -225,7 +226,7 @@ body {
 .about-container {
   .about-content-container {
     .navbar {
-      color: $dark-about;
+      color: $light-about;
     }
     .me-container {
       height: 90%;
@@ -247,17 +248,16 @@ body {
         height: 60%;
         max-width: 300px; // Defina a altura conforme necessário
 
-        background-image: url('/assets/profile-pics/fundoBranco.jpg');
+        background-image: url('/assets/profile-pics/fundoAzul.jpg');
         background-size: cover; // Isso ajusta a imagem para cobrir o elemento
         background-position: center; // Centraliza a imagem dentro do elemento
         border-radius: 15px;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
       }
-
       .meText {
         width: 75%;
         max-width: 1000px;
-        color: white;
+        color: black;
         font-size: 1rem;
         padding: 2%;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
@@ -275,7 +275,7 @@ body {
   .skills-content-container {
     width: 75vw;
     .navbar {
-      color: $dark-skills;
+      color: $light-skills;
     }
     .skills-content {
       height: 100%;
@@ -290,9 +290,9 @@ body {
         p {
           max-width: 1000px;
           font-size: 1rem;
-          color: white;
+          color: black;
           span {
-            color: $dark-skills;
+            color: $light-skills;
           }
         }
       }
@@ -358,7 +358,7 @@ body {
       flex-direction: column;
       align-items: center;
       .navbar {
-        color: $dark-projects;
+        color: $light-projects;
       }
       .carousel-container {
         width: 80%;
@@ -416,8 +416,8 @@ body {
           a {
             text-decoration: none;
             font-weight: bolder;
-            color: $dark-projects;
-            border: 1px solid $dark-projects;
+            color: $light-projects;
+            border: 1px solid $light-projects;
             background-color: #00000060;
             margin-top: 2%;
             padding: 2% 0%;
@@ -425,8 +425,8 @@ body {
             text-transform: uppercase;
             transition: all 0.3s;
             &:hover {
-              background-color: $dark-projects;
-              color: black;
+              background-color: $light-projects;
+              color: white;
               transform: translateY(-10%);
             }
           }
@@ -458,21 +458,20 @@ body {
           position: absolute;
           width: fit-content;
           transform: translateY(-50%);
-          background: rgba(0, 0, 0, 0.7);
-          color: $dark-projects;
+          color: $light-projects;
           border: none;
           cursor: pointer;
           z-index: 10;
           background-color: transparent;
           transition: all 0.3s;
           &:hover {
-            color: #000;
+            color: $light-background;
             transform: translateY(-50%) scale(110%);
           }
           i {
             margin: 0;
             font-size: 3rem;
-            -webkit-text-stroke: 2px $dark-projects;
+            -webkit-text-stroke: 2px $light-projects;
           }
           &.prev {
             left: 15%;
@@ -491,12 +490,12 @@ body {
           .indicator {
             width: 15px;
             height: 15px;
-            background-color: rgba(255, 255, 255, 0.3);
+            background-color: rgba(0, 0, 0, 0.5);
             border-radius: 50%;
             cursor: pointer;
             transition: background-color 0.3s ease;
             &.active {
-              background-color: $dark-projects;
+              background-color: $light-projects;
               transform: scale(125%);
             }
           }
@@ -513,7 +512,7 @@ body {
       width: 100%;
       height: 100%;
       .navbar {
-        color: $dark-contact;
+        color: $light-contact;
       }
 
       .form-container {
@@ -538,7 +537,7 @@ body {
             justify-content: center;
             align-items: center;
             color: white;
-            background-color: $dark-contact;
+            background-color: $light-contact;
             width: 50%;
             padding: 3%;
             text-align: center;
@@ -554,6 +553,8 @@ body {
               margin-top: 3%;
               span {
                 color: black;
+                font-weight: bold;
+                text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.25);
               }
             }
           }
@@ -598,7 +599,7 @@ body {
             textarea {
               background: none;
               border: none;
-              border-bottom: solid 2px $dark-contact;
+              border-bottom: solid 2px $light-contact;
               color: #ffffff;
               font-size: 1rem;
               font-weight: 400;
@@ -639,8 +640,8 @@ body {
 
             #form_button {
               background: none;
-              border: solid 2px $dark-contact;
-              color: $dark-contact;
+              border: solid 2px $light-contact;
+              color: $light-contact;
               cursor: pointer;
               text-transform: uppercase;
               font-size: 1rem;
@@ -649,8 +650,8 @@ body {
               padding: 20px 35px;
               transition: all 0.3s;
               &:hover {
-                background: #38a5ff;
-                color: black;
+                background: $light-contact;
+                color: white;
               }
             }
           }
@@ -686,7 +687,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    color: $dark-home;
+    color: $light-home;
     height: 10vh;
     text-transform: uppercase;
     letter-spacing: 15px;
@@ -793,7 +794,7 @@ body {
     display: none;
     justify-content: center;
     align-items: flex-end;
-    color: $dark-home;
+    color: $light-home;
     height: 10vh;
     text-transform: uppercase;
     letter-spacing: 15px;
@@ -810,7 +811,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: black;
     background-color: transparent;
     text-transform: uppercase;
     font-size: 120%;
@@ -857,8 +858,8 @@ body {
     background-color: transparent;
     border-radius: 5px;
     width: 90%;
-    border: 3px solid $dark-home;
-    color: $dark-home;
+    border: 3px solid $light-home;
+    color: $light-home;
     outline: none;
     padding: 5px;
     transition: all 0.3s;
@@ -868,13 +869,13 @@ body {
 
   #linkedin {
     background-color: transparent;
-    border: 3px solid $dark-skills;
-    color: $dark-skills;
+    border: 3px solid $light-skills;
+    color: $light-skills;
   }
   #github {
     background-color: transparent;
-    border: 3px solid $dark-contact;
-    color: $dark-contact;
+    border: 3px solid $light-contact;
+    color: $light-contact;
   }
 
   /* ESTILIZANDO O ABOUT --------------------------------------------------------------------------*/
@@ -884,7 +885,7 @@ body {
   }
 
   .about-content-container p {
-    color: white;
+    color: black;
     margin-bottom: 12px;
     text-transform: uppercase;
     text-align: justify;
@@ -942,7 +943,7 @@ body {
     margin-top: 10%;
     margin-left: 10vw;
     margin-right: 10vw;
-    color: white;
+    color: black;
   }
 
   .section-skills h1 {
@@ -992,7 +993,7 @@ body {
   }
 
   .icons {
-    color: white;
+    color: black;
     font-size: 0.7em;
     width: 17%;
     height: 40%;
@@ -1089,7 +1090,7 @@ body {
     display: flex;
     align-items: unset;
     justify-content: center;
-    color: white;
+    color: black;
     font-weight: 300;
     font-family: 'Comfortaa';
   }
@@ -1100,7 +1101,7 @@ body {
     top: 50%;
     height: 60px;
     width: 60px;
-    background-color: $dark-projects;
+    background-color: $light-projects;
     transform: translate(0, -50%);
     border-radius: 50%;
     display: none;
@@ -1117,9 +1118,9 @@ body {
     cursor: pointer;
     transform: translate(0, -50%) scale(1.2);
     transition: ease 0.5s;
-    color: $dark-projects;
+    color: $light-projects;
     background-color: rgb(30, 30, 30);
-    border: 1px solid $dark-projects;
+    border: 1px solid $light-projects;
   }
 
   .button_right {
@@ -1152,11 +1153,11 @@ body {
   .navAnimatedBlock {
     display: none;
     position: absolute;
-    background-color: $dark-projects;
+    background-color: $light-projects;
     margin: 0 5px;
     width: 10px;
     height: 10px;
-    box-shadow: 0 0 1px 1px $dark-projects;
+    box-shadow: 0 0 1px 1px $light-projects;
     border-radius: 20px;
   }
 
@@ -1179,7 +1180,7 @@ body {
   .projectTitle {
     height: unset;
     padding: 5%;
-    color: white;
+    color: black;
     text-align: center;
     letter-spacing: 2px;
     display: flex;
@@ -1211,7 +1212,7 @@ body {
 
     margin-left: unset;
 
-    color: white;
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -1245,15 +1246,15 @@ body {
   }
 
   .visualizar {
-    color: white;
-    background-color: $dark-projects;
+    color: black;
+    background-color: $light-projects;
     border-radius: 5px;
     font-size: 1em;
     font-weight: 900;
     letter-spacing: 2px;
     padding: 20px;
     width: 100%;
-    border: 3px solid $dark-projects;
+    border: 3px solid $light-projects;
     outline: none;
     margin-bottom: unset;
     line-height: 0;
@@ -1263,8 +1264,8 @@ body {
   }
 
   .visualizar:hover {
-    border: 3px solid $dark-projects;
-    color: $dark-projects;
+    border: 3px solid $light-projects;
+    color: $light-projects;
     transform: scale(105%);
     background-color: rgb(40, 40, 40);
   }
@@ -1293,7 +1294,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    color: $dark-contact;
+    color: $light-contact;
     font-weight: bolder;
 
     max-width: unset;
@@ -1319,9 +1320,9 @@ body {
 
   button {
     font-weight: bolder;
-    background-color: $dark-contact;
-    border: 3px solid $dark-contact;
-    color: white;
+    background-color: $light-contact;
+    border: 3px solid $light-contact;
+    color: black;
     font-size: 0.7em;
     padding: 5%;
     width: 100%;
@@ -1334,8 +1335,8 @@ body {
   }
 
   button:hover {
-    border: 3px solid $dark-contact;
-    color: $dark-contact;
+    border: 3px solid $light-contact;
+    color: $light-contact;
     transform: scale(102%);
     background-color: rgb(40, 40, 40);
   }

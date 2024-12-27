@@ -285,3 +285,14 @@ images.forEach((img, index) => {
   img.addEventListener('mouseleave', () => removeHover(img, info));
   info.addEventListener('mouseleave', () => removeHover(img, info));
 });
+
+const themeStylesheet = document.getElementById('theme-stylesheet');
+const toggleButtons = document.getElementsByClassName('theme-toggle');
+
+for (let i = 0; i < toggleButtons.length; i++) {
+  toggleButtons[i].addEventListener('click', () => {
+    const themeStylesheet = document.getElementById('theme-stylesheet');
+    const currentTheme = themeStylesheet.getAttribute('href');
+    themeStylesheet.setAttribute('href', currentTheme === 'css/styles.css' ? 'css/lightStyles.css' : 'css/styles.css');
+  });
+}
