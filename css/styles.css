@@ -35,6 +35,15 @@ body {
   width: auto;
   margin: 0;
 }
+.navbar .theme-toggle {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.navbar .theme-toggle img {
+  width: 25px;
+  filter: grayscale(100%) opacity(50%);
+}
 
 .column {
   font-weight: bold;
@@ -372,6 +381,7 @@ body {
   left: 50%;
   transform: translate(-50%, -55%);
   background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
   border-radius: 15px;
   color: #fff;
   text-align: center;

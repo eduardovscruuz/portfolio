@@ -166,25 +166,54 @@ if (window.matchMedia('(max-width: 800px)').matches) {
   // Dados do carrossel
   const carouselData = [
     {
-      name: 'Projeto 1',
-      image: '/assets/mockups/mockup.png',
+      name: 'Gustavo G. Advogado',
+      image: '/assets/mockups/project-adv.png',
+      linkGit: 'www.github.com',
+      linkSite: 'www.google.com',
+      techs: ['html', 'sass', 'javascript', 'node.js'],
+    },
+    {
+      name: 'To-Do Web App',
+      image: '/assets/mockups/project-todo.png',
+      linkGit: 'www.github.com',
+      linkSite: 'www.google.com',
+      techs: ['angular', 'sass', 'typescript', 'node.js', 'nest.js'],
+    },
+    {
+      name: 'Office Quotes',
+      image: '/assets/mockups/project-office-quotes.png',
+      linkGit: 'www.github.com',
+      linkSite: 'www.google.com',
+      techs: ['angular', 'sass', 'typescript', 'c#', '.net'],
+    },
+
+    {
+      name: 'Sass Gallery',
+      image: '/assets/mockups/project-sass-gallery.png',
+      linkGit: 'www.github.com',
+      linkSite: 'www.google.com',
+      techs: ['html', 'sass'],
+    },
+    {
+      name: 'Convert Money',
+      image: '/assets/mockups/project-convert.png',
       linkGit: 'www.github.com',
       linkSite: 'www.google.com',
       techs: ['html', 'css', 'javascript'],
     },
     {
-      name: 'Projeto 2',
-      image: '/assets/mockups/mockup.png',
+      name: 'Churrascômetro',
+      image: '/assets/mockups/project-churras.png',
       linkGit: 'www.github.com',
       linkSite: 'www.google.com',
-      techs: ['angular', 'sass', 'javascript'],
+      techs: ['html', 'css', 'javascript'],
     },
     {
-      name: 'Projeto 3',
-      image: '/assets/mockups/mockup.png',
+      name: 'E-Commerce Store',
+      image: '/assets/mockups/project-empty.png',
       linkGit: 'www.github.com',
       linkSite: 'www.google.com',
-      techs: ['html', 'css', 'javascript', 'typescript'],
+      techs: ['Soon...'],
     },
   ];
 
