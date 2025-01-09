@@ -36,18 +36,22 @@
           <div class="home-content">
             <div class="navbar">
               <button class="theme-toggle"><img src="/assets/light-bulb.png" /></button>
-              <h1>Início</h1>
-              <button>IDIOMA</button>
+              <h1 data-translate="homeTitle">Início</h1>
+              <div class="lang-toggle">
+                <button class="pt" onclick="changeLanguage('pt')">PT-BR</button>
+                <span> | </span>
+                <button class="en" class="disabled-lang" onclick="changeLanguage('en')">EN-US</button>
+              </div>
             </div>
 
             <section class="hello-container">
               <div class="hello">
-                <h2>OLÁ, EU SOU <span>EDUARDO</span></h2>
-                <h3>Desenvolvedor Full Stack, bem-vindo(a) ao meu portfólio!</h3>
+                <h2 data-translate="title"></h2>
+                <h3 data-translate="description"></h3>
               </div>
 
               <div class="social-links-buttons">
-                <a id="resume" href="./resumes/curriculo-eduardo-cruz.pdf" download>Currículo</a>
+                <a data-translate="resume" id="resume" href="./resumes/curriculo-eduardo-cruz.pdf" download></a>
                 <a id="linkedin" href="https://www.linkedin.com/in/eduardovscruuz/" target="_blank">LinkedIn</a>
                 <a id="github" href="https://github.com/eduardovscruuz" target="_blank">GitHub</a>
               </div>
@@ -64,31 +68,20 @@
           <div class="about-content">
             <div class="navbar">
               <button class="theme-toggle"><img src="/assets/light-bulb.png" /></button>
-              <h1>Sobre Mim</h1>
-              <button>IDIOMA</button>
+              <h1 data-translate="aboutTitle"></h1>
+              <div class="lang-toggle">
+                <button class="pt" onclick="changeLanguage('pt')">PT-BR</button>
+                <span> | </span>
+                <button class="en" class="disabled-lang" onclick="changeLanguage('en')">EN-US</button>
+              </div>
             </div>
 
             <section class="me-container">
               <div class="me">
-                <div class="mePicture">
-                  <!-- <img src="/assets/profile-pics/fundoBranco.JPG" /> -->
-                </div>
+                <div class="mePicture"></div>
                 <div class="meText">
-                  <p>
-                    Olá, me chamo Eduardo, desenvolvedor full-stack que descobriu o mundo da programação em um momento
-                    um tanto conturbado da minha vida, e em agosto de 2022 iniciei meus estudos e nunca mais olhei para
-                    trás.
-                  </p>
-
-                  <p>
-                    Para mim, a programação foi um ponto de virada que me levou à descobrir minha verdadeira vocação na
-                    vida. Enquanto estudava na faculdade de direito, sempre tive uma sensação de vazio e uma falta de
-                    realização. No entanto, escolhi continuar nesse caminho porque não queria me sentir estagnado. Foram
-                    durante os últimos semestres que descobri a programação, e imediatamente me conectei com ela. Desde
-                    pequeno, sempre tive muita afinidade com tecnologia, e a possibilidade de criar algo capaz de
-                    resolver desde os problemas simples até os mais complexos através da tela de um computador, é o que
-                    me atraiu para essa área.
-                  </p>
+                  <p data-translate="meText1"></p>
+                  <p data-translate="meText2"></p>
                 </div>
               </div>
             </section>
@@ -104,17 +97,15 @@
           <div class="skills-content">
             <div class="navbar">
               <button class="theme-toggle"><img src="/assets/light-bulb.png" /></button>
-              <h1>Habilidades</h1>
-              <button>IDIOMA</button>
+              <h1 data-translate="skillsTitle"></h1>
+              <div class="lang-toggle">
+                <button class="pt" onclick="changeLanguage('pt')">PT-BR</button>
+                <span> | </span>
+                <button class="en" class="disabled-lang" onclick="changeLanguage('en')">EN-US</button>
+              </div>
             </div>
             <section class="info-skills">
-              <p>
-                My tech stack emphasizes strongly typed languages and <span>object-oriented programming</span> ,
-                ensuring both robustness and <span>scalability</span>. On the front end, I leverage TypeScript with
-                Angular and SASS to build elegant, functional interfaces. On the back end, I specialize in NestJS, C#,
-                and .NET to deliver efficient, well-structured APIs. With experience in relational and non-relational
-                databases, <span>I tailor the best solutions</span> to fit each project’s needs.
-              </p>
+              <p data-translate="techInfo"></p>
               <div class="tech-skills-icons">
                 <img src="/assets/tech-icons/javascript.png" alt="Javascript" />
                 <img src="/assets/tech-icons/sass.png" alt="Sass" />
@@ -143,8 +134,12 @@
           <div class="projects-content">
             <div class="navbar">
               <button class="theme-toggle"><img src="/assets/light-bulb.png" /></button>
-              <h1>Projetos</h1>
-              <button>IDIOMA</button>
+              <h1 data-translate="projectsTitle">Projetos</h1>
+              <div class="lang-toggle">
+                <button class="pt" onclick="changeLanguage('pt')">PT-BR</button>
+                <span> | </span>
+                <button class="en" class="disabled-lang" onclick="changeLanguage('en')">EN-US</button>
+              </div>
             </div>
             <div class="carousel-container">
               <button class="carousel-button prev">
@@ -173,19 +168,20 @@
           <div class="contact-content">
             <div class="navbar">
               <button class="theme-toggle"><img src="/assets/light-bulb.png" /></button>
-              <h1>Contato</h1>
-              <button>IDIOMA</button>
+              <h1 data-translate="contactTitle">Contato</h1>
+              <div class="lang-toggle">
+                <button class="pt" onclick="changeLanguage('pt')">PT-BR</button>
+                <span> | </span>
+                <button class="en" class="disabled-lang" onclick="changeLanguage('en')">EN-US</button>
+              </div>
             </div>
 
             <div class="form-container">
               <div class="contact-form">
                 <div class="letschat">
-                  <h2>Let's chat!</h2>
-                  <p>Wheter you have a question, want to start new project, or simply wants to connect.</p>
-                  <p>
-                    Feel free to send me a message in the contact form, or directly send me an e-mail in:
-                    <span>eduardovscruuz@gmail.com</span>
-                  </p>
+                  <h2 data-translate="chat1"></h2>
+                  <p data-translate="chat2"></p>
+                  <p data-translate="chat3"></p>
                 </div>
                 <form action="#" method="post" class="form-info">
                   <div class="name">
