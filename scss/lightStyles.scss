@@ -563,7 +563,8 @@ body {
           border-radius: 15px;
           max-height: 600px;
           max-width: 1400px;
-          background-color: black;
+          background-color: rgb(255, 255, 255);
+          box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
           display: flex;
           .letschat {
             box-sizing: border-box;
@@ -674,7 +675,7 @@ body {
             }
 
             ::-webkit-input-placeholder {
-              color: #474544;
+              color: #46464675;
             }
 
             #form_button {

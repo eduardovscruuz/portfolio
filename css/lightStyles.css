@@ -517,7 +517,8 @@ body {
   border-radius: 15px;
   max-height: 600px;
   max-width: 1400px;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
   display: flex;
 }
 .contact-container .contact-content-container .contact-content .form-container .contact-form .letschat {
@@ -617,7 +618,7 @@ body {
   width: 100%;
 }
 .contact-container .contact-content-container .contact-content .form-container .contact-form .form-info ::-webkit-input-placeholder {
-  color: #474544;
+  color: rgba(70, 70, 70, 0.4588235294);
 }
 .contact-container .contact-content-container .contact-content .form-container .contact-form .form-info #form_button {
   background: none;
