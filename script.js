@@ -16,10 +16,6 @@ if (window.matchMedia('(max-width: 800px)').matches) {
   skillsColumn.removeEventListener('click', slideSkills);
   projectsColumn.removeEventListener('click', slideProjects);
   contactColumn.removeEventListener('click', slideContact);
-
-  slider_button_left.off('click');
-  slider_button_right.off('click');
-  slider_navElements.off('click');
 } else {
   const homeContainer = document.querySelector('.home-container');
   const aboutContainer = document.querySelector('.about-container');
@@ -145,187 +141,194 @@ if (window.matchMedia('(max-width: 800px)').matches) {
   });
 
   //======================================================================================================================
-  const images = document.querySelectorAll('.tech-skills-icons img');
-  function addRotation(event) {
-    const img = event.target;
-    if (img.classList.contains('rotate')) return;
-    img.classList.add('rotate');
-    img.addEventListener(
-      'animationend',
-      () => {
-        img.classList.remove('rotate');
-      },
-      { once: true }
-    );
-  }
+}
 
-  images.forEach((img) => {
-    img.addEventListener('mouseenter', addRotation);
-  });
+const techIcons = document.querySelectorAll('.tech-skills-icons img');
+function addRotation(event) {
+  const img = event.target;
+  if (img.classList.contains('rotate')) return;
+  img.classList.add('rotate');
+  img.addEventListener(
+    'animationend',
+    () => {
+      img.classList.remove('rotate');
+    },
+    { once: true }
+  );
+}
 
-  // Dados do carrossel
-  const carouselData = [
-    {
-      name: 'Gustavo G. Advogado',
-      image: '/assets/mockups/project-adv.png',
-      linkGit: 'www.github.com',
-      linkSite: 'www.google.com',
-      techs: ['html', 'sass', 'javascript', 'node.js'],
-    },
-    {
-      name: 'To-Do Web App',
-      image: '/assets/mockups/project-todo.png',
-      linkGit: 'www.github.com',
-      linkSite: 'www.google.com',
-      techs: ['angular', 'sass', 'typescript', 'node.js', 'nest.js'],
-    },
-    {
-      name: 'Office Quotes',
-      image: '/assets/mockups/project-office-quotes.png',
-      linkGit: 'www.github.com',
-      linkSite: 'www.google.com',
-      techs: ['angular', 'sass', 'typescript', 'c#', '.net'],
-    },
+techIcons.forEach((img) => {
+  img.addEventListener('mouseenter', addRotation);
+});
 
-    {
-      name: 'Sass Gallery',
-      image: '/assets/mockups/project-sass-gallery.png',
-      linkGit: 'www.github.com',
-      linkSite: 'www.google.com',
-      techs: ['html', 'sass'],
-    },
-    {
-      name: 'Convert Money',
-      image: '/assets/mockups/project-convert.png',
-      linkGit: 'www.github.com',
-      linkSite: 'www.google.com',
-      techs: ['html', 'css', 'javascript'],
-    },
-    {
-      name: 'Churrascômetro',
-      image: '/assets/mockups/project-churras.png',
-      linkGit: 'www.github.com',
-      linkSite: 'www.google.com',
-      techs: ['html', 'css', 'javascript'],
-    },
-    {
-      name: 'E-Commerce Store',
-      image: '/assets/mockups/project-empty.png',
-      linkGit: 'www.github.com',
-      linkSite: 'www.google.com',
-      techs: ['Soon...'],
-    },
-  ];
+// Dados do carrossel
+const carouselData = [
+  {
+    name: 'Gustavo G. Advogado',
+    image: '/assets/mockups/project-adv.png',
+    linkGit: 'www.github.com',
+    linkSite: 'www.google.com',
+    techs: ['html', 'sass', 'javascript', 'node.js'],
+  },
+  {
+    name: 'To-Do Web App',
+    image: '/assets/mockups/project-todo.png',
+    linkGit: 'www.github.com',
+    linkSite: 'www.google.com',
+    techs: ['angular', 'sass', 'typescript', 'node.js', 'nest.js'],
+  },
+  {
+    name: 'Office Quotes',
+    image: '/assets/mockups/project-office-quotes.png',
+    linkGit: 'www.github.com',
+    linkSite: 'www.google.com',
+    techs: ['angular', 'sass', 'typescript', 'c#', '.net'],
+  },
 
-  // Seleciona o container do carrossel e dos indicadores
-  const carousel = document.querySelector('.carousel');
-  const indicatorsContainer = document.querySelector('.carousel-indicators');
+  {
+    name: 'Sass Gallery',
+    image: '/assets/mockups/project-sass-gallery.png',
+    linkGit: 'www.github.com',
+    linkSite: 'www.google.com',
+    techs: ['html', 'sass'],
+  },
+  {
+    name: 'Convert Money',
+    image: '/assets/mockups/project-convert.png',
+    linkGit: 'www.github.com',
+    linkSite: 'www.google.com',
+    techs: ['html', 'css', 'javascript'],
+  },
+  {
+    name: 'Churrascômetro',
+    image: '/assets/mockups/project-churras.png',
+    linkGit: 'www.github.com',
+    linkSite: 'www.google.com',
+    techs: ['html', 'css', 'javascript'],
+  },
+  {
+    name: 'E-Commerce Store',
+    image: '/assets/mockups/project-empty.png',
+    linkGit: 'www.github.com',
+    linkSite: 'www.google.com',
+    techs: ['Soon...'],
+  },
+];
 
-  // Insere os itens do carrossel dinamicamente
-  carouselData.forEach((item, index) => {
-    const carouselItem = document.createElement('div');
-    carouselItem.classList.add('carousel-item');
+// Seleciona o container do carrossel e dos indicadores
+const carousel = document.querySelector('.carousel');
+const indicatorsContainer = document.querySelector('.carousel-indicators');
 
-    // Criação dinâmica da lista de tecnologias
-    const techsList = item.techs.map((tech) => `<li>${tech}</li>`).join('');
+// Insere os itens do carrossel dinamicamente
+carouselData.forEach((item, index) => {
+  const carouselItem = document.createElement('div');
+  carouselItem.classList.add('carousel-item');
 
-    carouselItem.innerHTML = `
+  // Criação dinâmica da lista de tecnologias
+  const techsList = item.techs.map((tech) => `<li>${tech}</li>`).join('');
+
+  carouselItem.innerHTML = `
     <img src="${item.image}" alt="${item.name}">
     <div class="info">
       <h3>${item.name}</h3>
       <ul>${techsList}</ul>
+      
       <a data-translate="projBtn1" href="${item.linkGit}" target="_blank"></a>
       <a data-translate="projBtn2" href="${item.linkSite}" target="_blank"></a>
+      
+      
     </div>
   `;
 
-    carousel.appendChild(carouselItem);
+  carousel.appendChild(carouselItem);
 
-    // Cria o indicador para cada item
-    const indicator = document.createElement('div');
-    indicator.classList.add('indicator');
-    if (index === 0) indicator.classList.add('active'); // Primeiro indicador ativo
-    indicator.dataset.index = index; // Armazena o índice
-    indicatorsContainer.appendChild(indicator);
-  });
-
-  // Controle do carrossel
-  let currentIndex = 0;
-
-  // Atualiza a posição do carrossel
-  function updateCarousel() {
-    const translateX = -currentIndex * 100;
-    carousel.style.transform = `translateX(${translateX}%)`;
-
-    // Atualiza os indicadores
-    document.querySelectorAll('.indicator').forEach((indicator, index) => {
-      indicator.classList.toggle('active', index === currentIndex);
-    });
-  }
-
-  // Botões de navegação
-  document.querySelector('.prev').addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + carouselData.length) % carouselData.length;
-    updateCarousel();
-  });
-
-  document.querySelector('.next').addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % carouselData.length;
-    updateCarousel();
-  });
-
-  // Clique nos indicadores
-  document.querySelectorAll('.indicator').forEach((indicator) => {
-    indicator.addEventListener('click', (e) => {
-      currentIndex = Number(e.target.dataset.index);
-      updateCarousel();
-    });
-  });
-
-  // Inicializa o carrossel
-  updateCarousel();
-}
-// Seleciona todas as imagens dentro do carrossel
-const images = document.querySelectorAll('.carousel-item img');
-const infos = document.querySelectorAll('.carousel-item .info');
-
-// Função para aplicar o efeito
-const applyHover = (img, info) => {
-  img.style.filter = 'grayscale(100%)'; // Aplica o filtro de desaturação
-  info.style.opacity = '1'; // Torna a informação visível
-};
-
-// Função para remover o efeito
-const removeHover = (img, info) => {
-  // Verifica se o mouse não está sobre a imagem nem sobre a info
-  if (!info.matches(':hover') && !img.matches(':hover')) {
-    img.style.filter = 'grayscale(0%)'; // Remove o filtro de desaturação
-    info.style.opacity = '0'; // Torna a informação invisível
-  }
-};
-
-// Adiciona os eventos de mouseenter e mouseleave para cada imagem e info
-images.forEach((img, index) => {
-  const info = infos[index];
-
-  img.addEventListener('mouseenter', () => applyHover(img, info));
-  info.addEventListener('mouseenter', () => applyHover(img, info));
-
-  img.addEventListener('mouseleave', () => removeHover(img, info));
-  info.addEventListener('mouseleave', () => removeHover(img, info));
+  // Cria o indicador para cada item
+  const indicator = document.createElement('div');
+  indicator.classList.add('indicator');
+  if (index === 0) indicator.classList.add('active'); // Primeiro indicador ativo
+  indicator.dataset.index = index; // Armazena o índice
+  indicatorsContainer.appendChild(indicator);
 });
 
-const themeStylesheet = document.getElementById('theme-stylesheet');
-const toggleButtons = document.getElementsByClassName('theme-toggle');
+// Controle do carrossel
+let currentIndex = 0;
 
-for (let i = 0; i < toggleButtons.length; i++) {
-  toggleButtons[i].addEventListener('click', () => {
-    const themeStylesheet = document.getElementById('theme-stylesheet');
-    const currentTheme = themeStylesheet.getAttribute('href');
-    themeStylesheet.setAttribute('href', currentTheme === 'css/styles.css' ? 'css/lightStyles.css' : 'css/styles.css');
+// Atualiza a posição do carrossel
+function updateCarousel() {
+  const translateX = -currentIndex * 100;
+  carousel.style.transform = `translateX(${translateX}%)`;
+
+  // Atualiza os indicadores
+  document.querySelectorAll('.indicator').forEach((indicator, index) => {
+    indicator.classList.toggle('active', index === currentIndex);
   });
 }
 
+// Botões de navegação
+document.querySelector('.prev').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + carouselData.length) % carouselData.length;
+  updateCarousel();
+});
+
+document.querySelector('.next').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % carouselData.length;
+  updateCarousel();
+});
+
+// Clique nos indicadores
+document.querySelectorAll('.indicator').forEach((indicator) => {
+  indicator.addEventListener('click', (e) => {
+    currentIndex = Number(e.target.dataset.index);
+    updateCarousel();
+  });
+});
+
+// Inicializa o carrossel
+updateCarousel();
+
+//////////////////////////////////// EFEITOS HOVER NO CARROSEL
+const applyHoverEffects = () => {
+  const images = document.querySelectorAll('.carousel-item img');
+  const infos = document.querySelectorAll('.carousel-item .info');
+
+  const applyHover = (img, info) => {
+    img.style.filter = 'grayscale(100%)';
+    info.style.opacity = '1';
+  };
+
+  const removeHover = (img, info) => {
+    if (!info.matches(':hover') && !img.matches(':hover')) {
+      img.style.filter = 'grayscale(0%)';
+      info.style.opacity = '0';
+    }
+  };
+
+  images.forEach((img, index) => {
+    const info = infos[index];
+    img.addEventListener('mouseenter', () => applyHover(img, info));
+    info.addEventListener('mouseenter', () => applyHover(img, info));
+
+    img.addEventListener('mouseleave', () => removeHover(img, info));
+    info.addEventListener('mouseleave', () => removeHover(img, info));
+  });
+};
+
+// Aplica o efeito apenas em telas grandes
+const mediaQueryHover = window.matchMedia('(min-width: 801px)');
+
+const handleHoverEffects = () => {
+  if (mediaQueryHover.matches) {
+    applyHoverEffects();
+  }
+};
+
+// Verifica o tamanho inicial da tela
+handleHoverEffects();
+
+// Atualiza os efeitos quando o tamanho da tela muda
+mediaQueryHover.addEventListener('change', handleHoverEffects);
+
+//////////////////////////////////// LINGUAGEM
 const translations = {
   en: {
     homeTitle: 'Home',
@@ -384,16 +387,12 @@ const translations = {
     submit_value: 'Enviar Mensagem',
   },
 };
-// Função para alterar o idioma
 function changeLanguage(lang) {
   document.getElementById('name_input').setAttribute('placeholder', translations[lang].name_placeholder);
   document.getElementById('email_input').setAttribute('placeholder', translations[lang].email_placeholder);
   document.getElementById('subject_input').setAttribute('placeholder', translations[lang].subject_placeholder);
   document.getElementById('message_input').setAttribute('placeholder', translations[lang].message_placeholder);
-
-  // Atualizar o valor do botão de envio
   document.getElementById('form_button').setAttribute('value', translations[lang].submit_value);
-  // Selecionar todos os elementos que precisam de tradução
   const translatableElements = document.querySelectorAll('[data-translate]');
 
   translatableElements.forEach((element) => {
@@ -403,18 +402,48 @@ function changeLanguage(lang) {
     }
   });
 
-  // Gerenciar classes nos botões de idioma
-  const btnEn = document.querySelectorAll('.en'); // Seleciona todos os elementos com classe 'en'
-  const btnPt = document.querySelectorAll('.pt'); // Seleciona todos os elementos com classe 'pt'
+  const btnEn = document.querySelectorAll('.en');
+  const btnPt = document.querySelectorAll('.pt');
 
   if (lang === 'en') {
-    btnEn.forEach((btn) => btn.classList.remove('disabled-lang')); // Adiciona a classe desabilitada a todos os botões EN
-    btnPt.forEach((btn) => btn.classList.add('disabled-lang')); // Remove a classe desabilitada de todos os botões PT
+    btnEn.forEach((btn) => btn.classList.remove('disabled-lang'));
+    btnPt.forEach((btn) => btn.classList.add('disabled-lang'));
   } else if (lang === 'pt') {
-    btnPt.forEach((btn) => btn.classList.remove('disabled-lang')); // Adiciona a classe desabilitada a todos os botões PT
-    btnEn.forEach((btn) => btn.classList.add('disabled-lang')); // Remove a classe desabilitada de todos os botões EN
+    btnPt.forEach((btn) => btn.classList.remove('disabled-lang'));
+    btnEn.forEach((btn) => btn.classList.add('disabled-lang'));
   }
 }
+window.onload = () => {
+  changeLanguage('pt');
+};
 
-// Define um idioma padrão ao carregar a página
-window.onload = () => changeLanguage('pt');
+const themeStylesheet = document.getElementById('theme-stylesheet');
+const themeToggle = document.querySelector('.theme-toggle');
+const mediaQuery = window.matchMedia('(max-width: 800px)');
+
+// Estado atual do tema (padrão: light)
+let currentTheme = 'light';
+
+function updateStylesheet() {
+  const isMobile = mediaQuery.matches;
+  const themeMap = {
+    light: isMobile ? 'css/lightMobileStyles.css' : 'css/lightStyles.css',
+    dark: isMobile ? 'css/mobileStyles.css' : 'css/styles.css',
+  };
+  themeStylesheet.href = themeMap[currentTheme];
+}
+
+// Alterna o tema entre dark e light
+function toggleTheme() {
+  currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+  updateStylesheet();
+}
+
+// Adiciona o evento de clique ao botão
+themeToggle.addEventListener('click', toggleTheme);
+
+// Adiciona um listener para mudanças na largura da tela
+mediaQuery.addEventListener('change', updateStylesheet);
+
+// Inicializa a folha de estilo com base no tamanho atual da tela
+updateStylesheet();
