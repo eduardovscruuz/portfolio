@@ -416,13 +416,11 @@ function changeLanguage(lang) {
 window.onload = () => {
   changeLanguage('pt');
 };
-
 const themeStylesheet = document.getElementById('theme-stylesheet');
-const themeToggle = document.querySelector('.theme-toggle');
+const themeToggles = document.querySelectorAll('.theme-toggle'); // Seleciona todos os botões
 const mediaQuery = window.matchMedia('(max-width: 800px)');
 
-// Estado atual do tema (padrão: light)
-let currentTheme = 'light';
+let currentTheme = 'dark';
 
 function updateStylesheet() {
   const isMobile = mediaQuery.matches;
@@ -439,8 +437,10 @@ function toggleTheme() {
   updateStylesheet();
 }
 
-// Adiciona o evento de clique ao botão
-themeToggle.addEventListener('click', toggleTheme);
+// Adiciona o evento de clique a cada botão
+themeToggles.forEach((button) => {
+  button.addEventListener('click', toggleTheme);
+});
 
 // Adiciona um listener para mudanças na largura da tela
 mediaQuery.addEventListener('change', updateStylesheet);
