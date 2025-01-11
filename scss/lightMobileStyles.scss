@@ -66,11 +66,13 @@ main {
         .lang-toggle {
           .pt,
           .en {
+            font-size: 1rem;
             background: none;
             border: none;
             color: white;
           }
           span {
+            font-size: 1rem;
             color: white;
             font-weight: bold;
           }
@@ -142,7 +144,7 @@ main {
         }
         .scroll-down {
           position: sticky;
-          transform: translateY(15vh);
+          margin-top: 8vh;
         }
         .scroll-down span:nth-child(2) {
           animation-delay: -0.2s;

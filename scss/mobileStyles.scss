@@ -62,17 +62,16 @@ main {
         }
 
         .lang-toggle {
-          .pt {
+          .pt,
+          .en {
+            font-size: 1rem;
             background: none;
             border: none;
           }
           span {
+            font-size: 1rem;
             color: black;
             font-weight: bold;
-          }
-          .en {
-            background: none;
-            border: none;
           }
           .disabled-lang {
             color: rgba(0, 0, 0, 0.404);
@@ -142,7 +141,7 @@ main {
         }
         .scroll-down {
           position: sticky;
-          transform: translateY(15vh);
+          margin-top: 8vh;
         }
         .scroll-down span:nth-child(2) {
           animation-delay: -0.2s;

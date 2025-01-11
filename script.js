@@ -1,147 +1,127 @@
-if (window.matchMedia('(max-width: 800px)').matches) {
-  const homeColumn = document.querySelector('.home-column');
-  const aboutColumn = document.querySelector('.about-column');
-  const skillsColumn = document.querySelector('.skills-column');
-  const projectsColumn = document.querySelector('.projects-column');
-  const contactColumn = document.querySelector('.contact-column');
+const homeContainer = document.querySelector('.home-container');
+const aboutContainer = document.querySelector('.about-container');
+const skillsContainer = document.querySelector('.skills-container');
+const projectsContainer = document.querySelector('.projects-container');
+const contactContainer = document.querySelector('.contact-container');
 
-  const slideHome = () => {};
-  const slideAbout = () => {};
-  const slideSkills = () => {};
-  const slideProjects = () => {};
-  const slideContact = () => {};
+const homeColumn = document.querySelector('.home-column'); ///
+const aboutColumn = document.querySelector('.about-column');
+const skillsColumn = document.querySelector('.skills-column');
+const projectsColumn = document.querySelector('.projects-column');
+const contactColumn = document.querySelector('.contact-column');
 
-  homeColumn.removeEventListener('click', slideHome);
-  aboutColumn.removeEventListener('click', slideAbout);
-  skillsColumn.removeEventListener('click', slideSkills);
-  projectsColumn.removeEventListener('click', slideProjects);
-  contactColumn.removeEventListener('click', slideContact);
-} else {
-  const homeContainer = document.querySelector('.home-container');
-  const aboutContainer = document.querySelector('.about-container');
-  const skillsContainer = document.querySelector('.skills-container');
-  const projectsContainer = document.querySelector('.projects-container');
-  const contactContainer = document.querySelector('.contact-container');
+const homeContent = document.querySelector('.home-content-container'); ///
+const aboutContent = document.querySelector('.about-content-container');
+const skillsContent = document.querySelector('.skills-content-container');
+const projectsContent = document.querySelector('.projects-content-container');
+const contactContent = document.querySelector('.contact-content-container');
 
-  const homeColumn = document.querySelector('.home-column'); ///
-  const aboutColumn = document.querySelector('.about-column');
-  const skillsColumn = document.querySelector('.skills-column');
-  const projectsColumn = document.querySelector('.projects-column');
-  const contactColumn = document.querySelector('.contact-column');
+const slideHome = () => {
+  homeContainer.style.paddingRight = '';
+  aboutContainer.style.padding = '0vw';
+  skillsContainer.style.padding = '';
+  projectsContainer.style.padding = '';
+  contactContainer.style.padding = '0vw';
 
-  const homeContent = document.querySelector('.home-content-container'); ///
-  const aboutContent = document.querySelector('.about-content-container');
-  const skillsContent = document.querySelector('.skills-content-container');
-  const projectsContent = document.querySelector('.projects-content-container');
-  const contactContent = document.querySelector('.contact-content-container');
+  homeContent.style.display = '';
+  aboutContent.style.display = 'none';
+  skillsContent.style.display = 'none';
+  projectsContent.style.display = 'none';
+  contactContent.style.display = 'none';
+};
 
-  const slideHome = () => {
-    homeContainer.style.paddingRight = '';
-    aboutContainer.style.padding = '0vw';
-    skillsContainer.style.padding = '';
-    projectsContainer.style.padding = '';
-    contactContainer.style.padding = '0vw';
+const slideAbout = () => {
+  homeContainer.style.padding = '0vw';
+  aboutContainer.style.paddingRight = '75vw';
+  skillsContainer.style.padding = '0vw';
+  projectsContainer.style.padding = '0vw';
+  contactContainer.style.padding = '0vw';
 
-    homeContent.style.display = '';
-    aboutContent.style.display = 'none';
-    skillsContent.style.display = 'none';
-    projectsContent.style.display = 'none';
-    contactContent.style.display = 'none';
-  };
+  homeContent.style.display = 'none';
+  aboutContent.style.display = 'flex';
+  skillsContent.style.display = 'none';
+  projectsContent.style.display = 'none';
+  contactContent.style.display = 'none';
+};
 
-  const slideAbout = () => {
-    homeContainer.style.padding = '0vw';
-    aboutContainer.style.paddingRight = '75vw';
-    skillsContainer.style.padding = '0vw';
-    projectsContainer.style.padding = '0vw';
-    contactContainer.style.padding = '0vw';
+const slideSkills = () => {
+  homeContainer.style.padding = '0vw';
+  aboutContainer.style.padding = '0vw';
+  skillsContainer.style.paddingRight = '75vw';
+  projectsContainer.style.padding = '0vw';
+  contactContainer.style.padding = '0vw';
 
-    homeContent.style.display = 'none';
-    aboutContent.style.display = 'flex';
-    skillsContent.style.display = 'none';
-    projectsContent.style.display = 'none';
-    contactContent.style.display = 'none';
-  };
+  homeContent.style.display = 'none';
+  aboutContent.style.display = 'none';
+  skillsContent.style.display = 'flex';
+  projectsContent.style.display = 'none';
+  contactContent.style.display = 'none';
+};
+const slideProjects = () => {
+  homeContainer.style.padding = '0vw';
+  aboutContainer.style.padding = '0vw';
+  skillsContainer.style.padding = '0vw';
+  projectsContainer.style.paddingRight = '75vw';
+  contactContainer.style.padding = '0vw';
 
-  const slideSkills = () => {
-    homeContainer.style.padding = '0vw';
-    aboutContainer.style.padding = '0vw';
-    skillsContainer.style.paddingRight = '75vw';
-    projectsContainer.style.padding = '0vw';
-    contactContainer.style.padding = '0vw';
+  homeContent.style.display = 'none';
+  aboutContent.style.display = 'none';
+  skillsContent.style.display = 'none';
+  projectsContent.style.display = 'flex';
+  contactContent.style.display = 'none';
+};
 
-    homeContent.style.display = 'none';
-    aboutContent.style.display = 'none';
-    skillsContent.style.display = 'flex';
-    projectsContent.style.display = 'none';
-    contactContent.style.display = 'none';
-  };
-  const slideProjects = () => {
-    homeContainer.style.padding = '0vw';
-    aboutContainer.style.padding = '0vw';
-    skillsContainer.style.padding = '0vw';
-    projectsContainer.style.paddingRight = '75vw';
-    contactContainer.style.padding = '0vw';
+const slideContact = () => {
+  homeContainer.style.padding = '0vw';
+  aboutContainer.style.padding = '0vw';
+  skillsContainer.style.padding = '0vw';
+  projectsContainer.style.padding = '0vw';
+  contactContainer.style.paddingRight = '75vw';
 
-    homeContent.style.display = 'none';
-    aboutContent.style.display = 'none';
-    skillsContent.style.display = 'none';
-    projectsContent.style.display = 'flex';
-    contactContent.style.display = 'none';
-  };
+  homeContent.style.display = 'none';
+  aboutContent.style.display = 'none';
+  skillsContent.style.display = 'none';
+  projectsContent.style.display = 'none';
+  contactContent.style.display = 'flex';
+};
 
-  const slideContact = () => {
-    homeContainer.style.padding = '0vw';
-    aboutContainer.style.padding = '0vw';
-    skillsContainer.style.padding = '0vw';
-    projectsContainer.style.padding = '0vw';
-    contactContainer.style.paddingRight = '75vw';
+homeColumn.addEventListener('click', slideHome);
+aboutColumn.addEventListener('click', slideAbout);
+skillsColumn.addEventListener('click', slideSkills);
+projectsColumn.addEventListener('click', slideProjects);
+contactColumn.addEventListener('click', slideContact);
 
-    homeContent.style.display = 'none';
-    aboutContent.style.display = 'none';
-    skillsContent.style.display = 'none';
-    projectsContent.style.display = 'none';
-    contactContent.style.display = 'flex';
-  };
+//=======================================================================================
 
-  homeColumn.addEventListener('click', slideHome);
-  aboutColumn.addEventListener('click', slideAbout);
-  skillsColumn.addEventListener('click', slideSkills);
-  projectsColumn.addEventListener('click', slideProjects);
-  contactColumn.addEventListener('click', slideContact);
+const columns = document.querySelectorAll('.column');
 
-  //=======================================================================================
+const expandColumn = (column) => {
+  column.style.width = '7vw';
 
-  const columns = document.querySelectorAll('.column');
+  columns.forEach((c) => {
+    if (c !== column) {
+      c.style.width = '4.5vw';
+    }
+  });
+};
 
-  const expandColumn = (column) => {
-    column.style.width = '7vw';
+const reduceColumns = () => {
+  columns.forEach((c) => {
+    c.style.width = '5vw';
+  });
+};
 
-    columns.forEach((c) => {
-      if (c !== column) {
-        c.style.width = '4.5vw';
-      }
-    });
-  };
-
-  const reduceColumns = () => {
-    columns.forEach((c) => {
-      c.style.width = '5vw';
-    });
-  };
-
-  columns.forEach((column) => {
-    column.addEventListener('mouseover', () => {
-      expandColumn(column);
-    });
-
-    column.addEventListener('mouseleave', () => {
-      reduceColumns();
-    });
+columns.forEach((column) => {
+  column.addEventListener('mouseover', () => {
+    expandColumn(column);
   });
 
-  //======================================================================================================================
-}
+  column.addEventListener('mouseleave', () => {
+    reduceColumns();
+  });
+});
+
+//======================================================================================================================
 
 const techIcons = document.querySelectorAll('.tech-skills-icons img');
 function addRotation(event) {
