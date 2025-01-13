@@ -1,5 +1,4 @@
 @import './_variables.scss';
-
 .column-icon {
   display: none;
 }
@@ -28,9 +27,9 @@
 }
 
 body {
-  background-color: $light-background;
+  background-color: $dark-background;
   width: 100vw;
-  color: black;
+  color: white;
 }
 
 main {
@@ -43,7 +42,7 @@ main {
     .home-content {
       .navbar {
         z-index: 2;
-        background: linear-gradient(148deg, $light-home 0%, $light-contact 100%);
+        background: linear-gradient(148deg, rgba(97, 228, 213, 1) 0%, rgba(56, 165, 255, 1) 100%);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -56,8 +55,7 @@ main {
           background: none;
           border: none;
           img {
-            filter: drop-shadow(0px -3px 10px #ffd900);
-
+            filter: grayscale(100%) contrast(40%) opacity(80%);
             width: 70%;
             transform: rotate(-90deg);
           }
@@ -69,15 +67,15 @@ main {
             font-size: 1rem;
             background: none;
             border: none;
-            color: white;
+            color: black;
           }
           span {
             font-size: 1rem;
-            color: white;
+            color: black;
             font-weight: bold;
           }
           .disabled-lang {
-            color: rgba(255, 255, 255, 0.404);
+            color: rgba(0, 0, 0, 0.404);
           }
         }
       }
@@ -94,7 +92,7 @@ main {
             text-align: center;
             font-size: 1.5rem;
             span {
-              color: $light-home;
+              color: $dark-home;
             }
           }
           h3 {
@@ -110,8 +108,8 @@ main {
           display: flex;
           flex-direction: column;
           a {
-            border: 2px solid $light-home;
-            color: $light-home;
+            border: 2px solid $dark-home;
+            color: $dark-home;
             margin-bottom: 15px;
             padding: 10px;
             text-decoration: none;
@@ -121,30 +119,30 @@ main {
             font-size: 1rem;
             font-weight: 600;
             &:active {
-              color: white;
-              background-color: $light-home;
+              background: $dark-home;
+              color: black;
             }
           }
           #linkedin {
-            border: 2px solid $light-skills;
-            color: $light-skills;
+            border: 2px solid $dark-skills;
+            color: $dark-skills;
             &:active {
-              color: white;
-              background-color: $light-skills;
+              background: $dark-skills;
+              color: black;
             }
           }
           #github {
-            border: 2px solid $light-contact;
-            color: $light-contact;
+            border: 2px solid $dark-contact;
+            color: $dark-contact;
             &:active {
-              color: white;
-              background-color: $light-contact;
+              background: $dark-contact;
+              color: black;
             }
           }
         }
         .scroll-down {
           position: sticky;
-          margin-top: 8vh;
+          margin-top: 5vh;
         }
         .scroll-down span:nth-child(2) {
           animation-delay: -0.2s;
@@ -156,8 +154,8 @@ main {
           display: block;
           width: 20px;
           height: 20px;
-          border-bottom: 2px solid $light-home;
-          border-right: 2px solid $light-home;
+          border-bottom: 2px solid $dark-home;
+          border-right: 2px solid $dark-home;
           transform: rotate(45deg);
           margin: -10px;
           animation: animate 2s infinite;
@@ -188,7 +186,7 @@ main {
     align-items: center;
     padding: 10%;
     .navbar {
-      color: $light-about;
+      color: $dark-about;
       h1 {
         text-align: center;
         text-transform: uppercase;
@@ -216,7 +214,7 @@ main {
 
       .meText {
         max-width: 1000px;
-        color: black;
+        color: white;
         font-size: 1rem;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
         p {
@@ -233,7 +231,7 @@ main {
     padding: 10%;
     .navbar {
       text-transform: uppercase;
-      color: $light-skills;
+      color: $dark-skills;
       text-align: center;
     }
     .skills-content {
@@ -248,9 +246,9 @@ main {
           margin: 20px 0px;
           text-align: justify;
           font-size: 1rem;
-          color: black;
+          color: white;
           span {
-            color: $light-skills;
+            color: $dark-skills;
           }
         }
       }
@@ -283,7 +281,7 @@ main {
       .navbar {
         text-transform: uppercase;
         text-align: center;
-        color: $light-projects;
+        color: $dark-projects;
         margin-bottom: 20px;
       }
       .carousel-container {
@@ -319,16 +317,16 @@ main {
           a {
             font-size: 1rem;
             text-decoration: none;
-            color: $light-projects;
-            border: 2px solid $light-projects;
-            background-color: white;
+            color: $dark-projects;
+            border: 2px solid $dark-projects;
+            background-color: black;
             text-transform: uppercase;
             width: 100%;
             padding: 10px;
             margin-top: 10px;
             &:active {
-              color: white;
-              background-color: $light-projects;
+              background: $dark-projects;
+              color: black;
             }
           }
 
@@ -370,7 +368,7 @@ main {
       .navbar {
         text-align: center;
         text-transform: uppercase;
-        color: $light-contact;
+        color: $dark-contact;
         margin-bottom: 20px;
       }
 
@@ -385,10 +383,9 @@ main {
           overflow: hidden;
           border-radius: 15px;
           max-width: 1400px;
-          background-color: white;
+          background-color: black;
           display: flex;
           flex-direction: column;
-          box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
           .letschat {
             box-sizing: border-box;
             display: flex;
@@ -396,7 +393,7 @@ main {
             justify-content: center;
             align-items: center;
             color: white;
-            background-color: $light-contact;
+            background-color: $dark-contact;
             padding: 10%;
             text-align: center;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
@@ -412,9 +409,8 @@ main {
               margin-top: 4%;
               a {
                 color: black;
-                text-shadow: 1px 1px 3px rgb(132, 130, 252);
                 text-decoration: none;
-                &:active {
+                &:hover {
                   cursor: pointer;
                   text-decoration: underline;
                 }
@@ -425,7 +421,6 @@ main {
           .form-info {
             box-sizing: border-box;
             padding: 10%;
-
             button {
               overflow: visible;
             }
@@ -462,7 +457,7 @@ main {
             textarea {
               background: none;
               border: none;
-              border-bottom: solid 2px $light-contact;
+              border-bottom: solid 2px $dark-contact;
               color: #ffffff;
               font-size: 0.8rem;
               font-weight: 400;
@@ -497,13 +492,13 @@ main {
             }
 
             ::-webkit-input-placeholder {
-              color: #46464675;
+              color: #474544;
             }
 
             #form_button {
               background: none;
-              border: solid 2px $light-contact;
-              color: $light-contact;
+              border: solid 2px $dark-contact;
+              color: $dark-contact;
               cursor: pointer;
               text-transform: uppercase;
               font-size: 1rem;
@@ -513,8 +508,8 @@ main {
               width: 100%;
               padding: 10px;
               &:active {
-                background: $light-contact;
-                color: white;
+                background: $dark-contact;
+                color: black;
               }
             }
           }

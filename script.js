@@ -320,9 +320,9 @@ const translations = {
       'My tech stack emphasizes strongly typed languages and <span>object-oriented programming</span>, ensuring both robustness and <span>scalability</span>. On the front end, I leverage TypeScript with Angular and SASS to build elegant, functional interfaces. On the back end, I specialize in NestJS, C#, and .NET to deliver efficient, well-structured APIs. With experience in relational and non-relational databases, <span>I tailor the best solutions</span> to fit each project’s needs.',
     aboutTitle: 'About Me',
     meText1:
-      'My name is Eduardo Cruz, a student of Systems Analysis and Development, and a full-stack developer at the beginning of my career. I’ve been in the programming field since 2023, and during this time, I’ve had the opportunity to explore a bit of each of the main technologies, which allowed me to identify the ones where I can deliver the best results.',
+      'My name is Eduardo Cruz, and I’m a Systems Analysis and Development student, as well as an full-stack developer at the early stages of my career. Since I started my programmer’s journey in 2023, I’ve had the opportunity to explore a wide range of technologies which has helped me identify those where I can deliver the best results.',
     meText2:
-      'Outside of my professional life, I can say that I’m an enthusiast of Stoic philosophy, cinema, cooking, and, of course, technology in its various forms. I believe these interests complement my creative and logical vision, which reflects in the way I approach challenges both in programming and in my personal life.',
+      'Beyond my professional life,  I have a deep appreciation for Stoic philosophy, cinema, cooking and, of course, technology in all its forms. I believe these interests enhance my ability to think creatively and logically, shaping the way I approach problems both professionally and personally.',
 
     projectsTitle: 'Projects',
     projBtn1: 'See the code',
@@ -348,9 +348,9 @@ const translations = {
       'Minha stack de tecnologias enfatiza linguagens fortemente tipadas e <span>programação orientada a objetos</span>, garantindo tanto a robustez quanto a <span>escalabilidade</span>. No front-end, utilizo TypeScript com Angular e SASS para criar interfaces elegantes e funcionais. No back-end, sou especializado em NestJS, C# e .NET, entregando APIs eficientes e bem estruturadas. Com experiência em bancos de dados relacionais e não relacionais, <span>adapto as melhores soluções</span> às necessidades de cada projeto.',
     aboutTitle: 'Sobre Mim',
     meText1:
-      'Me chamo Eduardo Cruz, estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor full stack em início de carreira. Estou na área da programação desde 2023 e, desde então, tive a oportunidade de explorar um pouco de cada uma das principais tecnologias, o que me permitiu identificar aquelas nas quais consigo entregar os melhores resultados.',
+      'Me chamo Eduardo Cruz, sou estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor full stack em início de carreira. Estou na área de desenvolvimento desde 2023 e, desde então, tive a oportunidade de explorar um pouco de cada uma das principais tecnologias, o que me permitiu, hoje, trabalhar com aquelas nas quais acredito que posso entregar os melhores resultados.',
     meText2:
-      'Fora do âmbito profissional, posso dizer que sou um entusiasta da filosofia estóica, do cinema, da culinária e, claro, tecnologia em suas diversas formas. Acredito que esses interesses complementam minha visão criativa e lógica, o que reflete na forma como abordo os desafios tanto na programação quanto na vida pessoal.',
+      'Fora do âmbito profissional, posso dizer que sou grande entusiasta da filosofia estóica, do cinema, culinária e, claro, tecnologia em suas diferentes formas. Acredito que esses interesses complementam minha visão criativa e lógica, o que reflete na forma como abordo problemas tanto na programação quanto na vida pessoal.',
 
     projectsTitle: 'Projetos',
     projBtn1: 'Ver o código',
@@ -405,15 +405,15 @@ let currentTheme = 'dark';
 function updateStylesheet() {
   const isMobile = mediaQuery.matches;
   const themeMap = {
-    light: isMobile ? 'css/lightMobileStyles.css' : 'css/lightStyles.css',
-    dark: isMobile ? 'css/mobileStyles.css' : 'css/styles.css',
+    light: isMobile ? 'css/mobileLight.css' : 'css/desktopLight.css',
+    dark: isMobile ? 'css/mobileDark.css' : 'css/desktopDark.css',
   };
   themeStylesheet.href = themeMap[currentTheme];
 }
 
 // Alterna o tema entre dark e light
 function toggleTheme() {
-  currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+  currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
   updateStylesheet();
 }
 

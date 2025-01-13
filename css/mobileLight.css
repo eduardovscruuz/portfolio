@@ -29,9 +29,9 @@
 }
 
 body {
-  background-color: #16191b;
+  background-color: #eefaff;
   width: 100vw;
-  color: white;
+  color: black;
 }
 
 main {
@@ -41,7 +41,7 @@ main {
 
 .home-container .home-content-container .home-content .navbar {
   z-index: 2;
-  background: linear-gradient(148deg, rgb(97, 228, 213) 0%, rgb(56, 165, 255) 100%);
+  background: linear-gradient(148deg, #1595ff 0%, #5436ff 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -56,7 +56,7 @@ main {
   border: none;
 }
 .home-container .home-content-container .home-content .navbar .theme-toggle img {
-  filter: grayscale(100%) contrast(40%) opacity(80%);
+  filter: drop-shadow(0px -3px 10px #ffd900);
   width: 70%;
   transform: rotate(-90deg);
 }
@@ -65,14 +65,15 @@ main {
   font-size: 1rem;
   background: none;
   border: none;
+  color: white;
 }
 .home-container .home-content-container .home-content .navbar .lang-toggle span {
   font-size: 1rem;
-  color: black;
+  color: white;
   font-weight: bold;
 }
 .home-container .home-content-container .home-content .navbar .lang-toggle .disabled-lang {
-  color: rgba(0, 0, 0, 0.404);
+  color: rgba(255, 255, 255, 0.404);
 }
 .home-container .home-content-container .home-content .hello-container {
   margin-top: 10vh;
@@ -88,7 +89,7 @@ main {
   font-size: 1.5rem;
 }
 .home-container .home-content-container .home-content .hello-container .hello h2 span {
-  color: #61e4d5;
+  color: #1595ff;
 }
 .home-container .home-content-container .home-content .hello-container .hello h3 {
   font-size: 0.8rem;
@@ -102,8 +103,8 @@ main {
   flex-direction: column;
 }
 .home-container .home-content-container .home-content .hello-container .social-links-buttons a {
-  border: 2px solid #61e4d5;
-  color: #61e4d5;
+  border: 2px solid #1595ff;
+  color: #1595ff;
   margin-bottom: 15px;
   padding: 10px;
   text-decoration: none;
@@ -114,28 +115,28 @@ main {
   font-weight: 600;
 }
 .home-container .home-content-container .home-content .hello-container .social-links-buttons a:active {
-  background: #61e4d5;
-  color: black;
+  color: white;
+  background-color: #1595ff;
 }
 .home-container .home-content-container .home-content .hello-container .social-links-buttons #linkedin {
-  border: 2px solid #4dc5ea;
-  color: #4dc5ea;
+  border: 2px solid #3566ff;
+  color: #3566ff;
 }
 .home-container .home-content-container .home-content .hello-container .social-links-buttons #linkedin:active {
-  background: #4dc5ea;
-  color: black;
+  color: white;
+  background-color: #3566ff;
 }
 .home-container .home-content-container .home-content .hello-container .social-links-buttons #github {
-  border: 2px solid #38a5ff;
-  color: #38a5ff;
+  border: 2px solid #5436ff;
+  color: #5436ff;
 }
 .home-container .home-content-container .home-content .hello-container .social-links-buttons #github:active {
-  background: #38a5ff;
-  color: black;
+  color: white;
+  background-color: #5436ff;
 }
 .home-container .home-content-container .home-content .hello-container .scroll-down {
   position: sticky;
-  margin-top: 8vh;
+  margin-top: 5vh;
 }
 .home-container .home-content-container .home-content .hello-container .scroll-down span:nth-child(2) {
   animation-delay: -0.2s;
@@ -147,8 +148,8 @@ main {
   display: block;
   width: 20px;
   height: 20px;
-  border-bottom: 2px solid #61e4d5;
-  border-right: 2px solid #61e4d5;
+  border-bottom: 2px solid #1595ff;
+  border-right: 2px solid #1595ff;
   transform: rotate(45deg);
   margin: -10px;
   animation: animate 2s infinite;
@@ -175,7 +176,7 @@ main {
   padding: 10%;
 }
 .about-container .about-content-container .navbar {
-  color: #57d5e0;
+  color: #257eff;
 }
 .about-container .about-content-container .navbar h1 {
   text-align: center;
@@ -202,7 +203,7 @@ main {
 }
 .about-container .about-content-container .me .meText {
   max-width: 1000px;
-  color: white;
+  color: black;
   font-size: 1rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
 }
@@ -216,7 +217,7 @@ main {
 }
 .skills-container .skills-content-container .navbar {
   text-transform: uppercase;
-  color: #4dc5ea;
+  color: #3566ff;
   text-align: center;
 }
 .skills-container .skills-content-container .skills-content {
@@ -233,10 +234,10 @@ main {
   margin: 20px 0px;
   text-align: justify;
   font-size: 1rem;
-  color: white;
+  color: black;
 }
 .skills-container .skills-content-container .skills-content .info-skills p span {
-  color: #4dc5ea;
+  color: #3566ff;
 }
 .skills-container .skills-content-container .skills-content .tech-skills-icons {
   margin-top: 2%;
@@ -262,7 +263,7 @@ main {
 .projects-container .projects-content-container .projects-content .navbar {
   text-transform: uppercase;
   text-align: center;
-  color: #43b5f5;
+  color: #454eff;
   margin-bottom: 20px;
 }
 .projects-container .projects-content-container .projects-content .carousel-container {
@@ -298,17 +299,17 @@ main {
 .projects-container .projects-content-container .projects-content .carousel-container .info a {
   font-size: 1rem;
   text-decoration: none;
-  color: #43b5f5;
-  border: 2px solid #43b5f5;
-  background-color: black;
+  color: #454eff;
+  border: 2px solid #454eff;
+  background-color: white;
   text-transform: uppercase;
   width: 100%;
   padding: 10px;
   margin-top: 10px;
 }
 .projects-container .projects-content-container .projects-content .carousel-container .info a:active {
-  background: #43b5f5;
-  color: black;
+  color: white;
+  background-color: #454eff;
 }
 .projects-container .projects-content-container .projects-content .carousel-container .info ul li {
   display: inline;
@@ -336,7 +337,7 @@ main {
 .contact-container .contact-content-container .contact-content .navbar {
   text-align: center;
   text-transform: uppercase;
-  color: #38a5ff;
+  color: #5436ff;
   margin-bottom: 20px;
 }
 .contact-container .contact-content-container .contact-content .form-container {
@@ -350,9 +351,10 @@ main {
   overflow: hidden;
   border-radius: 15px;
   max-width: 1400px;
-  background-color: black;
+  background-color: white;
   display: flex;
   flex-direction: column;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
 }
 .contact-container .contact-content-container .contact-content .form-container .contact-form .letschat {
   box-sizing: border-box;
@@ -361,7 +363,7 @@ main {
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: #38a5ff;
+  background-color: #5436ff;
   padding: 10%;
   text-align: center;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
@@ -378,9 +380,10 @@ main {
 }
 .contact-container .contact-content-container .contact-content .form-container .contact-form .letschat p a {
   color: black;
+  text-shadow: 1px 1px 3px rgb(132, 130, 252);
   text-decoration: none;
 }
-.contact-container .contact-content-container .contact-content .form-container .contact-form .letschat p a:hover {
+.contact-container .contact-content-container .contact-content .form-container .contact-form .letschat p a:active {
   cursor: pointer;
   text-decoration: underline;
 }
@@ -418,7 +421,7 @@ main {
 .contact-container .contact-content-container .contact-content .form-container .contact-form .form-info textarea {
   background: none;
   border: none;
-  border-bottom: solid 2px #38a5ff;
+  border-bottom: solid 2px #5436ff;
   color: #ffffff;
   font-size: 0.8rem;
   font-weight: 400;
@@ -449,12 +452,12 @@ main {
   width: 100%;
 }
 .contact-container .contact-content-container .contact-content .form-container .contact-form .form-info ::-webkit-input-placeholder {
-  color: #474544;
+  color: rgba(70, 70, 70, 0.4588235294);
 }
 .contact-container .contact-content-container .contact-content .form-container .contact-form .form-info #form_button {
   background: none;
-  border: solid 2px #38a5ff;
-  color: #38a5ff;
+  border: solid 2px #5436ff;
+  color: #5436ff;
   cursor: pointer;
   text-transform: uppercase;
   font-size: 1rem;
@@ -465,8 +468,8 @@ main {
   padding: 10px;
 }
 .contact-container .contact-content-container .contact-content .form-container .contact-form .form-info #form_button:active {
-  background: #38a5ff;
-  color: black;
+  background: #5436ff;
+  color: white;
 }
 
-/*# sourceMappingURL=mobileStyles.css.map */
+/*# sourceMappingURL=mobileLight.css.map */
