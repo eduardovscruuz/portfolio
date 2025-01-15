@@ -322,7 +322,7 @@ const translations = {
     meText1:
       'My name is Eduardo Cruz, and I’m a Systems Analysis and Development student, as well as an full-stack developer at the early stages of my career. Since I started my programmer’s journey in 2023, I’ve had the opportunity to explore a wide range of technologies which has helped me identify those where I can deliver the best results.',
     meText2:
-      'Beyond my professional life,  I have a deep appreciation for Stoic philosophy, cinema, cooking and, of course, technology in all its forms. I believe these interests enhance my ability to think creatively and logically, shaping the way I approach problems both professionally and personally.',
+      'Beyond my professional life,  I have a deep appreciation for Stoic philosophy, cinema, cooking, and of course, technology in all its forms. I believe these interests enhance my ability to think creatively and logically, shaping the way I approach problems both professionally and personally.',
 
     projectsTitle: 'Projects',
     projBtn1: 'See the code',
@@ -350,7 +350,7 @@ const translations = {
     meText1:
       'Me chamo Eduardo Cruz, sou estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor full stack em início de carreira. Estou na área de desenvolvimento desde 2023 e, desde então, tive a oportunidade de explorar um pouco de cada uma das principais tecnologias, o que me permitiu, hoje, trabalhar com aquelas nas quais acredito que posso entregar os melhores resultados.',
     meText2:
-      'Fora do âmbito profissional, posso dizer que sou grande entusiasta da filosofia estóica, do cinema, culinária e, claro, tecnologia em suas diferentes formas. Acredito que esses interesses complementam minha visão criativa e lógica, o que reflete na forma como abordo problemas tanto na programação quanto na vida pessoal.',
+      'Fora do âmbito profissional, posso dizer que sou grande entusiasta da filosofia estóica, do cinema, culinária, e claro, tecnologia em suas diferentes formas. Acredito que esses interesses complementam minha visão criativa e lógica, o que reflete na forma como abordo problemas tanto na programação quanto na vida pessoal.',
 
     projectsTitle: 'Projetos',
     projBtn1: 'Ver o código',
