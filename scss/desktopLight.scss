@@ -42,7 +42,7 @@ body {
     border: none;
 
     img {
-      width: 25px;
+      width: 30px;
       filter: drop-shadow(0px -3px 10px #ffd900);
     }
   }
@@ -57,6 +57,7 @@ body {
       letter-spacing: 2px;
       transition: all 0.4s;
       border-bottom: 2px solid transparent;
+      font-weight: 600;
       &:hover {
         border-bottom: 2px solid black;
       }
@@ -193,6 +194,7 @@ body {
         margin-bottom: 1%;
         h2 {
           font-size: clamp(3rem, 4vw, 10rem);
+          line-height: 1.2;
           span {
             color: transparent;
             background: $light-gradient;
@@ -204,6 +206,7 @@ body {
         }
         h3 {
           font-size: clamp(1.1rem, 1.5vw, 10rem);
+          font-weight: 500;
         }
       }
       .social-links-buttons {
@@ -279,13 +282,13 @@ body {
       .mePicture {
         width: 100%;
         height: 60%;
-        max-width: 300px; // Defina a altura conforme necessário
+        max-width: 300px;
         transition: all 0.3s;
         background-image: url('/assets/profile-pics/fundoAzul.jpg');
-        background-size: cover; // Isso ajusta a imagem para cobrir o elemento
-        background-position: center; // Centraliza a imagem dentro do elemento
+        background-size: cover;
+        background-position: center;
         border-radius: 15px;
-        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
       }
       .meText {
         width: 75%;
@@ -343,7 +346,7 @@ body {
         img {
           width: 90%;
           border-radius: 50%;
-          filter: drop-shadow(5px 5px 5px #00000080);
+          filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.3));
         }
       }
 
@@ -564,7 +567,7 @@ body {
           max-height: 600px;
           max-width: 1400px;
           background-color: rgb(255, 255, 255);
-          box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
           display: flex;
           .letschat {
             box-sizing: border-box;
