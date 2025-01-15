@@ -153,9 +153,9 @@ const carouselData = [
   {
     name: 'To-Do Web App',
     image: '/assets/mockups/project-todo.png',
-    linkGit: 'www.github.com',
-    linkSite: 'www.google.com',
-    techs: ['angular', 'sass', 'typescript', 'node.js', 'nest.js'],
+    linkGit: 'https://github.com/eduardovscruuz/angular-todo-list',
+    linkSite: 'https://angular-todo-list-nine.vercel.app/',
+    techs: ['angular', 'sass', 'typescript', 'node.js'],
   },
   {
     name: 'Office Quotes',
