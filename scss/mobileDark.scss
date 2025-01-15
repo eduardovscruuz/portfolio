@@ -92,7 +92,12 @@ main {
             text-align: center;
             font-size: 1.5rem;
             span {
-              color: $dark-home;
+              color: transparent;
+              background: $dark-gradient;
+              background-size: 300%;
+              background-clip: text;
+              -webkit-background-clip: text;
+              animation: gradientMove 5s infinite;
             }
           }
           h3 {

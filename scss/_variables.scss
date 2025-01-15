@@ -4,9 +4,23 @@ $dark-skills: #4dc5ea;
 $dark-projects: #43b5f5;
 $dark-contact: #38a5ff;
 $dark-background: #16191b;
+$dark-gradient: linear-gradient(120deg, $dark-home, $dark-about, $dark-contact, $dark-about, $dark-home);
 $light-home: #1595ff;
 $light-about: #257eff;
 $light-skills: #3566ff;
 $light-projects: #454eff;
 $light-contact: #5436ff;
 $light-background: #eefaff;
+$light-gradient: linear-gradient(120deg, $light-home, $light-about, $light-contact, $light-about, $light-home);
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

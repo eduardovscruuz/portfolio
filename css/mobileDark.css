@@ -1,3 +1,14 @@
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .column-icon {
   display: none;
 }
@@ -89,7 +100,12 @@ main {
   font-size: 1.5rem;
 }
 .home-container .home-content-container .home-content .hello-container .hello h2 span {
-  color: #61e4d5;
+  color: transparent;
+  background: linear-gradient(120deg, #61e4d5, #57d5e0, #38a5ff, #57d5e0, #61e4d5);
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: gradientMove 5s infinite;
 }
 .home-container .home-content-container .home-content .hello-container .hello h3 {
   font-size: 0.8rem;

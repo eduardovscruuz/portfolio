@@ -94,7 +94,12 @@ main {
             text-align: center;
             font-size: 1.5rem;
             span {
-              color: $light-home;
+              color: transparent;
+              background: $light-gradient;
+              background-size: 300%;
+              background-clip: text;
+              -webkit-background-clip: text;
+              animation: gradientMove 5s infinite;
             }
           }
           h3 {
@@ -463,7 +468,7 @@ main {
               background: none;
               border: none;
               border-bottom: solid 2px $light-contact;
-              color: #ffffff;
+              color: black;
               font-size: 0.8rem;
               font-weight: 400;
               letter-spacing: 1px;

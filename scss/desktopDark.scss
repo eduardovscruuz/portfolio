@@ -193,7 +193,12 @@ body {
         h2 {
           font-size: clamp(3rem, 4vw, 10rem);
           span {
-            color: $dark-home;
+            color: transparent;
+            background: $dark-gradient;
+            background-size: 300%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation: gradientMove 5s infinite;
           }
         }
         h3 {

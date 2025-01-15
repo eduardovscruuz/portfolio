@@ -1,4 +1,15 @@
 @charset "UTF-8";
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 * {
   font-family: "Jost", sans-serif;
   padding: 0;
@@ -187,7 +198,12 @@ body {
   font-size: clamp(3rem, 4vw, 10rem);
 }
 .home-container .home-content-container .hello-container .hello h2 span {
-  color: #1595ff;
+  color: transparent;
+  background: linear-gradient(120deg, #1595ff, #257eff, #5436ff, #257eff, #1595ff);
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: gradientMove 5s infinite;
 }
 .home-container .home-content-container .hello-container .hello h3 {
   font-size: clamp(1.1rem, 1.5vw, 10rem);
@@ -588,7 +604,7 @@ body {
   background: none;
   border: none;
   border-bottom: solid 2px #5436ff;
-  color: #ffffff;
+  color: black;
   font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: 1px;

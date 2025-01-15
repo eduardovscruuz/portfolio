@@ -317,7 +317,7 @@ const translations = {
     resume: 'Resume',
     skillsTitle: 'Skills',
     techInfo:
-      'My tech stack emphasizes strongly typed languages and <span>object-oriented programming</span>, ensuring both robustness and <span>scalability</span>. On the front end, I leverage TypeScript with Angular and SASS to build elegant, functional interfaces. On the back end, I specialize in NestJS, C#, and .NET to deliver efficient, well-structured APIs. With experience in relational and non-relational databases, <span>I tailor the best solutions</span> to fit each project’s needs.',
+      'My tech stack emphasizes strongly typed languages and <span>object-oriented programming</span>, ensuring both robustness and <span>scalability</span>. On the front end, I leverage TypeScript with Angular and SASS to build elegant, functional interfaces. On the back end, I specialize in C# and .NET to deliver efficient, well-structured APIs, with additional experience in Node.js with NestJS. Experience in relational and non-relational databases, <span>I tailor the best solutions</span> to fit each project’s needs.',
     aboutTitle: 'About Me',
     meText1:
       'My name is Eduardo Cruz, and I’m a Systems Analysis and Development student, as well as an full-stack developer at the early stages of my career. Since I started my programmer’s journey in 2023, I’ve had the opportunity to explore a wide range of technologies which has helped me identify those where I can deliver the best results.',
@@ -346,7 +346,7 @@ const translations = {
     resume: 'Currículo',
     skillsTitle: 'Habilidades',
     techInfo:
-      'Minha stack de tecnologias enfatiza linguagens fortemente tipadas e <span>programação orientada a objetos</span>, garantindo tanto a robustez quanto a <span>escalabilidade</span>. No front-end, utilizo TypeScript com Angular e SASS para criar interfaces elegantes e funcionais. No back-end, sou especializado em NestJS, C# e .NET, entregando APIs eficientes e bem estruturadas. Com experiência em bancos de dados relacionais e não relacionais, <span>adapto as melhores soluções</span> às necessidades de cada projeto.',
+      'Minha stack de tecnologias enfatiza linguagens fortemente tipadas e <span>programação orientada a objetos</span>, garantindo tanto a robustez quanto a <span>escalabilidade</span>. No front-end, utilizo TypeScript com Angular e SASS para criar interfaces elegantes e funcionais. No back-end, sou especializado C# e .NET, entregando APIs eficientes e bem estruturadas, tendo também conhecimento em Node.js com NestJS. Com experiência em bancos de dados relacionais e não relacionais, <span>adapto as melhores soluções</span> às necessidades de cada projeto.',
     aboutTitle: 'Sobre Mim',
     meText1:
       'Me chamo Eduardo Cruz, sou estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor full stack em início de carreira. Estou na área de desenvolvimento desde 2023 e, desde então, tive a oportunidade de explorar um pouco de cada uma das principais tecnologias, o que me permitiu, hoje, trabalhar com aquelas nas quais acredito que posso entregar os melhores resultados.',
