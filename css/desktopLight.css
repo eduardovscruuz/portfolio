@@ -297,6 +297,50 @@ body {
   text-align: justify;
   margin-bottom: 10px;
 }
+.about-container .about-content-container .me .about-links-container {
+  display: flex;
+  justify-content: flex-start;
+}
+.about-container .about-content-container .me .about-links-container #linkedin-btn,
+.about-container .about-content-container .me .about-links-container #github-btn,
+.about-container .about-content-container .me .about-links-container #whatsapp-btn,
+.about-container .about-content-container .me .about-links-container #instagram-btn {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  margin-top: 5px;
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.about-container .about-content-container .me .about-links-container #linkedin-btn:hover,
+.about-container .about-content-container .me .about-links-container #github-btn:hover,
+.about-container .about-content-container .me .about-links-container #whatsapp-btn:hover,
+.about-container .about-content-container .me .about-links-container #instagram-btn:hover {
+  transform: translateY(-8%);
+}
+.about-container .about-content-container .me .about-links-container #linkedin-btn:active,
+.about-container .about-content-container .me .about-links-container #github-btn:active,
+.about-container .about-content-container .me .about-links-container #whatsapp-btn:active,
+.about-container .about-content-container .me .about-links-container #instagram-btn:active {
+  filter: opacity(80%);
+}
+.about-container .about-content-container .me .about-links-container #linkedin-btn {
+  background-image: url("/assets/links-icons/linkedin-blue.png");
+}
+.about-container .about-content-container .me .about-links-container #github-btn {
+  background-image: url("/assets/links-icons/github-blue.png");
+}
+.about-container .about-content-container .me .about-links-container #whatsapp-btn {
+  background-image: url("/assets/links-icons/whatsapp-blue.png");
+}
+.about-container .about-content-container .me .about-links-container #instagram-btn {
+  background-image: url("/assets/links-icons/instagram-blue.png");
+}
 
 .skills-container .skills-content-container {
   width: 75vw;

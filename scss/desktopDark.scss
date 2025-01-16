@@ -302,6 +302,45 @@ body {
           margin-bottom: 10px;
         }
       }
+      .about-links-container {
+        display: flex;
+        justify-content: flex-start;
+        #linkedin-btn,
+        #github-btn,
+        #whatsapp-btn,
+        #instagram-btn {
+          width: 40px;
+          height: 40px;
+          margin-right: 10px;
+          margin-top: 5px;
+          display: inline-block;
+          background-color: transparent;
+          border: none;
+          background-size: cover;
+          background-position: center;
+          cursor: pointer;
+          transition: transform 0.3s;
+          &:hover {
+            transform: translateY(-8%);
+          }
+          &:active {
+            filter: opacity(80%);
+          }
+        }
+        #linkedin-btn {
+          background-image: url('/assets/links-icons/linkedin-white.png');
+        }
+        #github-btn {
+          background-image: url('/assets/links-icons/github-white.png');
+        }
+        #whatsapp-btn {
+          background-image: url('/assets/links-icons/whatsapp-white.png');
+        }
+
+        #instagram-btn {
+          background-image: url('/assets/links-icons/instagram-white.png');
+        }
+      }
     }
   }
 }

@@ -309,6 +309,11 @@ handleHoverEffects();
 mediaQueryHover.addEventListener('change', handleHoverEffects);
 
 //////////////////////////////////// LINGUAGEM
+
+const resumes = {
+  pt: './resumes/curriculo-eduardo-cruz.pdf',
+  en: './resumes/resume-eduardo-cruz.pdf',
+};
 const translations = {
   en: {
     homeTitle: 'Home',
@@ -394,7 +399,14 @@ function changeLanguage(lang) {
     btnPt.forEach((btn) => btn.classList.remove('disabled-lang'));
     btnEn.forEach((btn) => btn.classList.add('disabled-lang'));
   }
+
+  // Atualizar o link do currículo
+  const resumeButton = document.getElementById('resume');
+  if (resumeButton) {
+    resumeButton.setAttribute('href', resumes[lang]);
+  }
 }
+
 window.onload = () => {
   changeLanguage('pt');
 };

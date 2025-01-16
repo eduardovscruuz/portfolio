@@ -227,6 +227,42 @@ main {
           margin-bottom: 10px;
         }
       }
+      .about-links-container {
+        display: flex;
+        justify-content: center;
+        #linkedin-btn,
+        #github-btn,
+        #whatsapp-btn,
+        #instagram-btn {
+          width: 50px;
+          height: 50px;
+          margin: 10px 10px;
+          display: inline-block;
+          background-color: transparent;
+          border: none;
+          background-size: cover;
+          background-position: center;
+          cursor: pointer;
+          transition: transform 0.3s;
+
+          &:active {
+            transform: translateY(-8%);
+          }
+        }
+        #linkedin-btn {
+          background-image: url('/assets/links-icons/linkedin-white.png');
+        }
+        #github-btn {
+          background-image: url('/assets/links-icons/github-white.png');
+        }
+        #whatsapp-btn {
+          background-image: url('/assets/links-icons/whatsapp-white.png');
+        }
+
+        #instagram-btn {
+          background-image: url('/assets/links-icons/instagram-white.png');
+        }
+      }
     }
   }
 }
