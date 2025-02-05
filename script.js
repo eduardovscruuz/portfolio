@@ -160,9 +160,9 @@ const carouselData = [
   {
     name: 'Office Quotes',
     image: '/assets/mockups/project-office-quotes.png',
-    linkGit: 'https://example.com/',
-    linkSite: 'https://example.com/',
-    techs: ['angular', 'sass', 'typescript', 'c#', '.net'],
+    linkGit: 'https://github.com/eduardovscruuz/OfficeQuotes-Angular',
+    linkSite: 'https://office-quotes-angular.vercel.app/en',
+    techs: ['angular', 'sass', 'typescript', 'c#', '.net', 'azure'],
   },
 
   {
