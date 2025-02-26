@@ -146,9 +146,9 @@ const carouselData = [
   {
     name: 'Gustavo G. Advogado',
     image: '/assets/mockups/project-adv.png',
-    linkGit: 'https://example.com/',
-    linkSite: 'https://example.com/',
-    techs: ['html', 'sass', 'javascript', 'node.js'],
+    linkGit: 'https://github.com/eduardovscruuz/att-freelagustavoadv',
+    linkSite: 'https://www.advogadogustavogouvea.com.br/',
+    techs: ['html', 'sass', 'javascript', 'node.js', 'express'],
   },
   {
     name: 'To-Do Web App',
@@ -320,15 +320,14 @@ const translations = {
     title: "HELLO, I'M <span>EDUARDO</span>",
     description: 'FULL STACK DEVELOPER, WELCOME TO MY PORTFOLIO!',
     resume: 'Resume',
+    aboutTitle: 'About Me',
+    meText1:
+      'My name is Eduardo Cruz, a student of Systems Analysis and Development and a full-stack developer, currently working as a software development intern at <a href="https://www.instagram.com/lojasnalin/">Lojas Nalin</a> (Brazilian clothing retail store). Since I started my programmer’s journey in 2023, I’ve had the opportunity to explore a wide range of technologies which has helped me identify those where I can deliver the best results.',
+    meText2:
+      'Beyond my professional life,  I have a deep appreciation for Stoic philosophy, cinema, cooking, and of course, technology in all its forms. I believe these interests enhance my ability to think creatively and logically, shaping the way I approach problems both professionally and personally.',
     skillsTitle: 'Skills',
     techInfo:
       'My tech stack emphasizes strongly typed languages and <span>object-oriented programming</span>, ensuring both robustness and <span>scalability</span>. On the front end, I leverage TypeScript with Angular and SASS to build elegant, functional interfaces. On the back end, I specialize in C# and .NET to deliver efficient, well-structured APIs, with additional experience in Node.js with NestJS. Experience in relational and non-relational databases, <span>I tailor the best solutions</span> to fit each project’s needs.',
-    aboutTitle: 'About Me',
-    meText1:
-      'My name is Eduardo Cruz, and I’m a Systems Analysis and Development student, as well as an full-stack developer at the early stages of my career. Since I started my programmer’s journey in 2023, I’ve had the opportunity to explore a wide range of technologies which has helped me identify those where I can deliver the best results.',
-    meText2:
-      'Beyond my professional life,  I have a deep appreciation for Stoic philosophy, cinema, cooking, and of course, technology in all its forms. I believe these interests enhance my ability to think creatively and logically, shaping the way I approach problems both professionally and personally.',
-
     projectsTitle: 'Projects',
     projBtn1: 'See the code',
     projBtn2: 'See it running',
@@ -349,14 +348,14 @@ const translations = {
     title: 'OLÁ, EU SOU <span>EDUARDO</span>',
     description: 'Desenvolvedor Full Stack, bem-vindo(a) ao meu portfólio!',
     resume: 'Currículo',
+    aboutTitle: 'Sobre Mim',
+    meText1:
+      'Me chamo Eduardo Cruz, estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor full stack, atualmente como estagiário de desenvolvimento de software nas <a href="https://cartaonalin.com.br/lojas/">Lojas Nalin</a>. Estou na área de desenvolvimento desde 2023 e, desde então, tive a oportunidade de explorar um pouco de cada uma das principais tecnologias, o que me permitiu, hoje, trabalhar com aquelas nas quais acredito que posso entregar os melhores resultados.',
+    meText2:
+      'Fora do âmbito profissional, posso dizer que sou grande entusiasta da filosofia estóica, do cinema, culinária, e claro, tecnologia em suas diferentes formas. Acredito que esses interesses complementam minha visão criativa e lógica, o que reflete na forma como abordo problemas tanto na programação quanto na vida pessoal.',
     skillsTitle: 'Habilidades',
     techInfo:
       'Minha stack de tecnologias enfatiza linguagens fortemente tipadas e <span>programação orientada a objetos</span>, garantindo tanto a robustez quanto a <span>escalabilidade</span>. No front-end, utilizo TypeScript com Angular e SASS para criar interfaces elegantes e funcionais. No back-end, sou especializado C# e .NET, entregando APIs eficientes e bem estruturadas, tendo também conhecimento em Node.js com NestJS. Com experiência em bancos de dados relacionais e não relacionais, <span>adapto as melhores soluções</span> às necessidades de cada projeto.',
-    aboutTitle: 'Sobre Mim',
-    meText1:
-      'Me chamo Eduardo Cruz, sou estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor full stack em início de carreira. Estou na área de desenvolvimento desde 2023 e, desde então, tive a oportunidade de explorar um pouco de cada uma das principais tecnologias, o que me permitiu, hoje, trabalhar com aquelas nas quais acredito que posso entregar os melhores resultados.',
-    meText2:
-      'Fora do âmbito profissional, posso dizer que sou grande entusiasta da filosofia estóica, do cinema, culinária, e claro, tecnologia em suas diferentes formas. Acredito que esses interesses complementam minha visão criativa e lógica, o que reflete na forma como abordo problemas tanto na programação quanto na vida pessoal.',
 
     projectsTitle: 'Projetos',
     projBtn1: 'Ver o código',

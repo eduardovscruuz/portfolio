@@ -227,6 +227,14 @@ main {
   text-align: justify;
   margin-bottom: 10px;
 }
+.about-container .about-content-container .me .meText p a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+.about-container .about-content-container .me .meText p a:active {
+  text-decoration: underline;
+}
 .about-container .about-content-container .me .about-links-container {
   display: flex;
   justify-content: center;

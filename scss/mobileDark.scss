@@ -225,6 +225,15 @@ main {
         p {
           text-align: justify;
           margin-bottom: 10px;
+          a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+
+            &:active {
+              text-decoration: underline;
+            }
+          }
         }
       }
       .about-links-container {

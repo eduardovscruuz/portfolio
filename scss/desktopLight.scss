@@ -300,6 +300,16 @@ body {
         p {
           text-align: justify;
           margin-bottom: 10px;
+
+          a {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
         }
       }
 
