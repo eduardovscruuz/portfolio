@@ -322,7 +322,7 @@ const translations = {
     resume: 'Resume',
     aboutTitle: 'About Me',
     meText1:
-      'My name is Eduardo Cruz, a student of Systems Analysis and Development and a full-stack developer, currently working as a software development intern at <a href="https://www.instagram.com/lojasnalin/">Lojas Nalin</a> (Brazilian clothing retail store). Since I started my programmer’s journey in 2023, I’ve had the opportunity to explore a wide range of technologies which has helped me identify those where I can deliver the best results.',
+      'My name is Eduardo Cruz, a student of Systems Analysis and Development and a full-stack developer, currently working as a software development intern at <a href="https://www.instagram.com/lojasnalin/" target="_blank">Lojas Nalin</a> (Brazilian clothing retail store). Since I started my programmer’s journey in 2023, I’ve had the opportunity to explore a wide range of technologies which has helped me identify those where I can deliver the best results.',
     meText2:
       'Beyond my professional life,  I have a deep appreciation for Stoic philosophy, cinema, cooking, and of course, technology in all its forms. I believe these interests enhance my ability to think creatively and logically, shaping the way I approach problems both professionally and personally.',
     skillsTitle: 'Skills',
@@ -350,7 +350,7 @@ const translations = {
     resume: 'Currículo',
     aboutTitle: 'Sobre Mim',
     meText1:
-      'Me chamo Eduardo Cruz, estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor full stack, atualmente como estagiário de desenvolvimento de software nas <a href="https://cartaonalin.com.br/lojas/">Lojas Nalin</a>. Estou na área de desenvolvimento desde 2023 e, desde então, tive a oportunidade de explorar um pouco de cada uma das principais tecnologias, o que me permitiu, hoje, trabalhar com aquelas nas quais acredito que posso entregar os melhores resultados.',
+      'Me chamo Eduardo Cruz, estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor full stack, atualmente como estagiário de desenvolvimento de software nas <a href="https://www.instagram.com/lojasnalin/" target="_blank">Lojas Nalin</a>. Estou na área de desenvolvimento desde 2023 e, desde então, tive a oportunidade de explorar um pouco de cada uma das principais tecnologias, o que me permitiu, hoje, trabalhar com aquelas nas quais acredito que posso entregar os melhores resultados.',
     meText2:
       'Fora do âmbito profissional, posso dizer que sou grande entusiasta da filosofia estóica, do cinema, culinária, e claro, tecnologia em suas diferentes formas. Acredito que esses interesses complementam minha visão criativa e lógica, o que reflete na forma como abordo problemas tanto na programação quanto na vida pessoal.',
     skillsTitle: 'Habilidades',
