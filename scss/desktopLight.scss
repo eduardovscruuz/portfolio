@@ -1,4 +1,67 @@
-@import './_variables.scss';
+@use './_variables.scss' as *;
+
+// Bloco de Toast (Light)
+.notification-toast {
+  position: fixed;
+  bottom: -100px;
+  right: 20px;
+  background: white;
+  color: #2d2d2d;
+  padding: 15px 25px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 1000;
+
+  &.visible {
+    bottom: 20px;
+    opacity: 1;
+  }
+
+  .toast-icon {
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+  }
+
+  .progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: #4CAF50;
+    width: 0%;
+    transition: width 4s linear;
+  }
+
+  &.success {
+    background: #4CAF50;
+    color: white;
+    .toast-icon {
+      animation: none;
+      filter: invert(1);
+    }
+  }
+
+  &.error {
+    background: #f44336;
+    color: white; // Adicionado para consistência
+    .toast-icon {
+      animation: none;
+      filter: invert(1);
+    }
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+// Fim do Bloco de Toast
 
 * {
   font-family: 'Jost', sans-serif;
@@ -319,7 +382,7 @@ body {
         #linkedin-btn,
         #github-btn,
         #whatsapp-btn,
-        #instagram-btn {
+        #leetcode-btn {
           width: 40px;
           height: 40px;
           margin-right: 10px;
@@ -348,9 +411,9 @@ body {
           background-image: url('/assets/links-icons/whatsapp-blue.png');
         }
 
-        #instagram-btn {
-          background-image: url('/assets/links-icons/instagram-blue.png');
-        }
+        #leetcode-btn {
+            background-image: url('/assets/links-icons/leetcode-blue.png');
+}
       }
     }
   }

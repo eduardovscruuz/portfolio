@@ -9,6 +9,65 @@
     background-position: 0% 50%;
   }
 }
+.notification-toast {
+  position: fixed;
+  bottom: -100px;
+  right: 20px;
+  background: white;
+  color: #2d2d2d;
+  padding: 15px 25px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 1000;
+}
+.notification-toast.visible {
+  bottom: 20px;
+  opacity: 1;
+}
+.notification-toast .toast-icon {
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+.notification-toast .progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: #4CAF50;
+  width: 0%;
+  transition: width 4s linear;
+}
+.notification-toast.success {
+  background: #4CAF50;
+  color: white;
+}
+.notification-toast.success .toast-icon {
+  animation: none;
+  filter: invert(1);
+}
+.notification-toast.error {
+  background: #f44336;
+  color: white;
+}
+.notification-toast.error .toast-icon {
+  animation: none;
+  filter: invert(1);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .column-icon {
   display: none;
 }
@@ -242,7 +301,7 @@ main {
 .about-container .about-content-container .me .meText .about-links-container #linkedin-btn,
 .about-container .about-content-container .me .meText .about-links-container #github-btn,
 .about-container .about-content-container .me .meText .about-links-container #whatsapp-btn,
-.about-container .about-content-container .me .meText .about-links-container #instagram-btn {
+.about-container .about-content-container .me .meText .about-links-container #leetcode-btn {
   width: 50px;
   height: 50px;
   margin: 10px 10px;
@@ -257,7 +316,7 @@ main {
 .about-container .about-content-container .me .meText .about-links-container #linkedin-btn:active,
 .about-container .about-content-container .me .meText .about-links-container #github-btn:active,
 .about-container .about-content-container .me .meText .about-links-container #whatsapp-btn:active,
-.about-container .about-content-container .me .meText .about-links-container #instagram-btn:active {
+.about-container .about-content-container .me .meText .about-links-container #leetcode-btn:active {
   transform: translateY(-8%);
 }
 .about-container .about-content-container .me .meText .about-links-container #linkedin-btn {
@@ -269,8 +328,8 @@ main {
 .about-container .about-content-container .me .meText .about-links-container #whatsapp-btn {
   background-image: url("/assets/links-icons/whatsapp-blue.png");
 }
-.about-container .about-content-container .me .meText .about-links-container #instagram-btn {
-  background-image: url("/assets/links-icons/instagram-blue.png");
+.about-container .about-content-container .me .meText .about-links-container #leetcode-btn {
+  background-image: url("/assets/links-icons/leetcode-blue.png");
 }
 
 .skills-container .skills-content-container {
@@ -327,9 +386,6 @@ main {
   color: #454eff;
   margin-bottom: 20px;
 }
-.projects-container .projects-content-container .projects-content .carousel-container {
-  /* Indicadores */
-}
 .projects-container .projects-content-container .projects-content .carousel-container .carousel .carousel-item {
   width: 100%;
   margin-top: 50px;
@@ -385,6 +441,9 @@ main {
 }
 .projects-container .projects-content-container .projects-content .carousel-container .carousel-button {
   display: none;
+}
+.projects-container .projects-content-container .projects-content .carousel-container {
+  /* Indicadores */
 }
 .projects-container .projects-content-container .projects-content .carousel-container .carousel-indicators {
   display: none;
