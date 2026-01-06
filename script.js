@@ -323,10 +323,11 @@ const translations = {
     resume: "Resume",
     aboutTitle: "About Me",
     meText1:
-      'My name is Eduardo Cruz, I am a full stack developer and a Systems Analysis and Development student, working in the technology field since 2023. I have gained experience in companies of different sizes and contexts — from retail at <a href="https://www.lojasnalin.com.br" target="_blank"><b>Lojas Nalin</b></a>, to the banking sector at <a href="https://www.btgpactual.com/nosso-dna" target="_blank"><b>Banco BTG Pactual</b></a>, and currently at <a href="https://connectsea.com.br" target="_blank"><b>ConnectSea</b></a>, developing solutions for port logistics and foreign trade.',
-    meText2:
-      "These experiences have provided me not only with technical knowledge, but also with the ability to quickly adapt to new contexts and contribute to results in complex scenarios. My focus is on writing clean, scalable, and efficient code, and what motivates me the most is turning challenging problems into solutions that truly make a difference for the business.",
-    skillsTitle: "Skills",
+  'I have been in the technology field since 2023, focusing on software development and building applications aimed at solving real-world problems. During this time, I gained experience as an intern in companies from very different contexts — from retail at <a href="https://www.lojasnalin.com.br" target="_blank"><b>Lojas Nalin</b></a> to the banking sector at <a href="https://www.btgpactual.com/nosso-dna" target="_blank"><b>Banco BTG Pactual</b></a>.',
+
+meText2:
+  'I currently work as a <b>junior developer</b> at <a href="https://connectsea.com.br" target="_blank"><b>ConnectSea</b></a>, contributing to systems used in real port logistics and foreign trade operations. My focus is on writing clean, scalable, and efficient code, prioritizing well-thought-out solutions that are easy to maintain and make sense in the long term.',
+ skillsTitle: "Skills",
     techInfo:
       "My tech stack emphasizes strongly typed languages and <span>object-oriented programming</span>, ensuring both robustness and <span>scalability</span>. On the front end, I leverage TypeScript with Angular, Next.js, and SASS/Tailwind to build elegant, functional interfaces. On the back end, I specialize in C# and .NET to deliver efficient, well-structured APIs. With experience in relational databases like SQL Server and ORMs such as Entity Framework, <span>I tailor the best solutions</span> to fit each project’s needs, often utilizing Docker and Azure for deployment.",
     projectsTitle: "Projects",
@@ -352,9 +353,10 @@ const translations = {
     resume: "Currículo",
     aboutTitle: "Sobre Mim",
     meText1:
-      'Me chamo Eduardo Cruz, sou desenvolvedor full stack e estudante de Análise e Desenvolvimento de Sistemas, atuando na área de tecnologia desde 2023. Passei por experiências em empresas de diferentes portes e contextos, de varejo nas <a href="https://www.lojasnalin.com.br" target="_blank"><b>Lojas Nalin</b></a>, no setor bancário, com o <a href="https://www.btgpactual.com/nosso-dna" target="_blank"><b>Banco BTG Pactual</b></a>, e atualmente na <a href="https://connectsea.com.br" target="_blank"><b>ConnectSea</b></a>, desenvolvendo soluções para logística portuária e comércio exterior.',
-    meText2:
-      "Essas vivências me trouxeram não apenas bagagem técnica, mas também a habilidade de me adaptar rapidamente a novos contextos e contribuir para resultados em cenários complexos. Tenho como foco escrever código limpo, escalável e eficiente, e o que mais me motiva é transformar problemas desafiadores em soluções que realmente façam diferença para o negócio.",
+  'Estou na área de tecnologia desde 2023, com foco em desenvolvimento de software e na construção de aplicações voltadas para resolver problemas reais. Nesse período, tive experiências como estagiário em empresas de contextos bem diferentes — do varejo, nas <a href="https://www.lojasnalin.com.br" target="_blank"><b>Lojas Nalin</b></a>, ao setor bancário, no <a href="https://www.btgpactual.com/nosso-dna" target="_blank"><b>Banco BTG Pactual</b></a>.',
+
+meText2:
+  'Atualmente atuo como desenvolvedor <b>júnior</b> na <a href="https://connectsea.com.br" target="_blank"><b>ConnectSea</b></a>, participando da construção de sistemas usados em operações reais de logística portuária e comércio exterior. Tenho como foco escrever código limpo, escalável e eficiente, priorizando soluções bem pensadas e fáceis de manter, sempre buscando clareza e decisões técnicas que façam sentido no longo prazo.',
     skillsTitle: "Habilidades",
     techInfo:
       "Minha stack de tecnologias enfatiza linguagens fortemente tipadas e <span>programação orientada a objetos</span>, garantindo tanto a robustez quanto a <span>escalabilidade</span>. No front-end, utilizo TypeScript com Angular, Next.js e SASS/Tailwind para criar interfaces elegantes e funcionais. No back-end, sou especializado em C# e .NET, entregando APIs eficientes e bem estruturadas. Com experiência em bancos de dados relacionais como SQL Server e ORMs como Entity Framework, <span>adapto as melhores soluções</span> às necessidades de cada projeto, frequentemente utilizando Docker e Azure para deploy.",
