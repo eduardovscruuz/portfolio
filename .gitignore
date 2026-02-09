@@ -7,3 +7,5 @@
 /dataSources/
 /dataSources.local.xml
 /.vscode
+.DS_Store
+assets/.DS_Store
