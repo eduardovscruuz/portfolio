@@ -312,8 +312,8 @@ mediaQueryHover.addEventListener("change", handleHoverEffects);
 //////////////////////////////////// LINGUAGEM
 
 const resumes = {
-  pt: "./resumes/curriculo-eduardo-cruz.pdf",
-  en: "./resumes/resume-eduardo-cruz.pdf",
+  pt: "./resumes/eduardo-cruz-curriculo.pdf",
+  en: "./resumes/eduardo-cruz-resume.pdf",
 };
 const translations = {
   en: {
